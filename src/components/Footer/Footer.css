@@ -1,7 +1,47 @@
 .footer {
     width: 100vw;
-    height: 20vh;
+    height: 30vh;
     background-color: #070070;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.socialMediaBox {
+    display: flex;
+    text-align: center;
+    height: 80%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+.footerDiv {
+    display: flex;
+    height: 60%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: white;
+}
+
+.socialMedia {
+    color: white;
+    font-size:20px;
+}
+
+.socialMediaIcon:hover {
+    color:rgb(139, 145, 149);
+}
+
+.logoFooter {
+    width: 200px;
+}
+
+.footerDiv h4 {
+    color: white;
+}
+
+.socialMediaText{
+    color: white;
 }
 
 .socialMediaIcon {
@@ -9,54 +49,12 @@
     margin: 0px 20px;
 }
 
-.socialMedia {
-    padding: 1em 0;
-    text-align: center;
-    width: 100%;
-}
-
-.socialMediaIcon:hover {
-    color:rgb(205, 205, 205);
-}
-
-.logoFooter {
-    width: 200px;
-}
-
-.contactFooter {
-    color: white;
-}
-
-.footerDiv {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-/* .copied {
-    background-color: white;
-    width: 100px;
-} */
 .copied {
-    /* background-color: white;
-    width: 100px;
-    position: absolute;
-    top: calc(100% + 10px);
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #f1f1f1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    opacity: 0;
-    z-index: 1;
-    transition: opacity 0.3s, transform 0.3s; */
-
     color: white;
     width: 100px;
     position: absolute;
     border-radius: 8px;
     top: 108%;
-    /* top: calc(108% + 0px); */
     left: 44%;
     transform: translateX(-50%);
     background-color: #000000;
@@ -66,8 +64,8 @@
     transition: opacity 0.3s, transform 0.3s;
 }
   
-/* copied.active {
+copied.active {
     opacity: 1;
     transform: translate(-50%, -10px);
-} */
+}
   

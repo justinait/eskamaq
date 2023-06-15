@@ -20,37 +20,44 @@ function Footer() {
   return (
     <div className='footer'>
          
-        <div className='socialMedia'>
+        <div className='socialMediaBox'>
         
-            <EmailIcon
-                // onClick={() => {          navigator.clipboard.writeText('sven@eskamaq.com')        }}
-                onClick={handleClick}
-                className='socialMediaIcon'
-                fontSize='large'
-            />
-            {showCopied && (
-                // <div className="copied">copiado</div>
-                <div className={`copied ${showCopied ? 'active' : ''}`}>copied </div>
-            )}
+            <div className='socialMedia'>
+                <EmailIcon
+                    onClick={handleClick}
+                    className='socialMediaIcon'
+                    fontSize='large'
+                />
+                {/* <p className='socialMediaText'>Sven@eskamaq.com</p> */}
+                {showCopied && (
+                    <div className={`copied ${showCopied ? 'active' : ''}`}>copiado </div>
+                )}
+                Sven@eskamaq.com
+            </div>
             
-            <a href='https://www.linkedin.com/in/sven-kloeckner-833728131/' target="_blank">
-                <LinkedInIcon className='socialMediaIcon' fontSize='large' />
-            </a>
+            <div className='socialMedia'>
+                <a href='https://wa.link/znoo7b' target="_blank">
+                    <WhatsAppIcon className='socialMediaIcon' fontSize='large' />
+                </a>
+                343 5034079
 
-            <a href='https://wa.link/znoo7b' target="_blank">
-                <WhatsAppIcon className='socialMediaIcon' fontSize='large' />
-            </a>
+            </div>
+            
+            <div className='socialMedia'>
+                <a href='https://www.linkedin.com/in/sven-kloeckner-833728131/' target="_blank">
+                    <LinkedInIcon className='socialMediaIcon' fontSize='large' />
+                </a>
+                https://www.linkedin.com/in/sven-kloeckner-833728131
+                
+            </div>
+            
         </div>
         
         <div className='footerDiv'>
+
             <img src='./Logo-Blanco.png' alt="ESKAMAQ" className='logoFooter' />
-
-            <p className='contactFooter'>
-                Cel: +54 9 343 5034079
-                <br/>
-                Sven@eskamaq.com
-            </p>
-
+            <h4>Contactanos!</h4>
+            ©2023 Eskamaq. Desarrollado por Justina Iturraspe
         </div>
         
     </div>
