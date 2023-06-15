@@ -1,0 +1,18 @@
+.logo {
+    width: 40vw;
+}
+
+.navbar-collapse {
+    flex-grow: 0 !important;
+}
+
+.navbar-expand-lg .navbar-collapse {
+    font-size: 22px;
+}
+
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-collapse {
+        font-size: 22px;
+    }
+}
