@@ -42,11 +42,11 @@ function Footer() {
                 343 5034079
             </div>
             
-            <div className='socialMedia'>
+            <div className='socialMedia linkedin'>
                 <a href='https://www.linkedin.com/in/sven-kloeckner-833728131/' target="_blank">
                     <LinkedInIcon className='socialMediaIcon' fontSize='large' />
                 </a>
-                https://www.linkedin.com/in/sven-kloeckner-833728131
+                linkedin.com/in/sven-kloeckner-833728131
             </div>
             
         </div>

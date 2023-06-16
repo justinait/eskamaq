@@ -4,8 +4,7 @@
     height: 40vh;
     background-color: #070070;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    flex-direction: column;
 }
 
 .socialMediaBox {
@@ -22,10 +21,17 @@
     flex-direction: column;
     justify-content: space-evenly;
     color: white;
+    align-items: center;
 }
 
 .socialMedia {
     color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.linkedin {
+    font-size: 14px;
 }
 
 .socialMediaIcon:hover {
@@ -33,7 +39,7 @@
 }
 
 .logoFooter {
-    width: 70%;
+    width: 60%;
 }
 
 .socialMediaText{
@@ -69,11 +75,13 @@ copied.active {
 
     .footer {
         height: 30vh;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
     }    
 
-
-    .socialMedia {
-        font-size:20px;
+    .footerDiv{
+        align-items: unset;
     }
-    /* en realidad supongo q voy a hacer 20px p * en home pero x lo pronto */
+
 }
