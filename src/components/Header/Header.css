@@ -1,5 +1,5 @@
 .logo {
-    width: 40vw;
+    width: 50vw;
 }
 
 .navbar-collapse {
@@ -15,4 +15,8 @@
     .navbar-expand-lg .navbar-collapse {
         font-size: 22px;
     }
+    .logo {
+        width: 30vw;
+    }
+    
 }

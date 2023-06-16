@@ -12,6 +12,7 @@ function App() {
     <BrowserRouter>
       <div className='app'>
         < Header />
+        < Contact />
         <div className='content'>
 
           <Routes >

@@ -9,7 +9,7 @@ function Header() {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        <NavLink className='title' to="/">            <img src='./Logo-Azul.png' alt="ESKAMAQ" className='logo' />        </NavLink>
+        <NavLink className='title' href="/">            <img src='./Logo-Azul.png' alt="ESKAMAQ" className='logo' />        </NavLink>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
