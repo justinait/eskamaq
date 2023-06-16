@@ -40,7 +40,6 @@ function Footer() {
                     <WhatsAppIcon className='socialMediaIcon' fontSize='large' />
                 </a>
                 343 5034079
-
             </div>
             
             <div className='socialMedia'>
@@ -48,7 +47,6 @@ function Footer() {
                     <LinkedInIcon className='socialMediaIcon' fontSize='large' />
                 </a>
                 https://www.linkedin.com/in/sven-kloeckner-833728131
-                
             </div>
             
         </div>
@@ -56,7 +54,6 @@ function Footer() {
         <div className='footerDiv'>
 
             <img src='./Logo-Blanco.png' alt="ESKAMAQ" className='logoFooter' />
-            <h4>Contactanos!</h4>
             ©2023 Eskamaq. Desarrollado por Justina Iturraspe
         </div>
         

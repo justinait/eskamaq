@@ -1,6 +1,7 @@
 .footer {
+    flex-shrink: 0;
     width: 100vw;
-    height: 30vh;
+    height: 40vh;
     background-color: #070070;
     display: flex;
     align-items: center;
@@ -25,7 +26,6 @@
 
 .socialMedia {
     color: white;
-    font-size:20px;
 }
 
 .socialMediaIcon:hover {
@@ -33,11 +33,7 @@
 }
 
 .logoFooter {
-    width: 200px;
-}
-
-.footerDiv h4 {
-    color: white;
+    width: 70%;
 }
 
 .socialMediaText{
@@ -68,4 +64,16 @@ copied.active {
     opacity: 1;
     transform: translate(-50%, -10px);
 }
-  
+
+@media (min-width: 992px) {
+
+    .footer {
+        height: 30vh;
+    }    
+
+
+    .socialMedia {
+        font-size:20px;
+    }
+    /* en realidad supongo q voy a hacer 20px p * en home pero x lo pronto */
+}

@@ -10,18 +10,24 @@ import Brands from './components/Brands/Brands';
 function App() {
   return (
     <BrowserRouter>
-      < Header />
-      <Routes>
-        <Route path='/' element={< Home />} />
-        
-        <Route path='/contact' element={< Contact />} />
-        
-        <Route path='/company' element={< Company />} />
+      <div className='app'>
+        < Header />
+        <div className='content'>
 
-        <Route path='/brands' element={< Brands />} />
+          <Routes >
+            
+            <Route path='/' element={< Home />} />
+              
+            <Route path='/contact' element={< Contact />} />
+            
+            <Route path='/company' element={< Company />} />
 
-      </Routes>
-      < Footer />
+            <Route path='/brands' element={< Brands />} />
+
+          </Routes>
+        </div>
+        < Footer />
+      </div>
     </BrowserRouter>
     
   );

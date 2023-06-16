@@ -1,3 +1,18 @@
+* {
+    font-size: 14px;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
 .homeImage {
-    height: 100vh;
+    width: 100vw;
+    padding: 10vw;
 }
