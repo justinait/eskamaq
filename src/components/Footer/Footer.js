@@ -28,7 +28,6 @@ function Footer() {
                     className='socialMediaIcon'
                     fontSize='large'
                 />
-                {/* <p className='socialMediaText'>Sven@eskamaq.com</p> */}
                 {showCopied && (
                     <div className={`copied ${showCopied ? 'active' : ''}`}>copiado </div>
                 )}
