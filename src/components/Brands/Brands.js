@@ -9,8 +9,7 @@ function Brands({brandsArray}) {
   return (
     <>
       {brandsArray.map((e, i) => {
-        //esto no me devuelve el item, me devuelve el acceso al array xq al ser objeto viste q medio mambo
-        console.log({e})
+        
         return (
           
           Object.values(e).map(element => {
