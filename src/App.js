@@ -4,8 +4,7 @@ import Contact from './components/Contact/Contact';
 import Home from './components/Home/Home';
 import Footer from './components/Footer/Footer';
 import Company from './components/Company/Company';
-import Brands from './components/Brands/Brands';
-
+import BrandsContainer from './components/BrandsContainer/BrandsContainer';
 
 function App() {
   return (
@@ -13,6 +12,7 @@ function App() {
       <div className='app'>
         < Header />
         < Contact />
+
         <div className='content'>
 
           <Routes >
@@ -23,11 +23,12 @@ function App() {
             
             <Route path='/company' element={< Company />} />
 
-            <Route path='/brands' element={< Brands />} />
+            <Route path='/brands/:brand' element={< BrandsContainer />} />
 
           </Routes>
         </div>
         < Footer />
+        
       </div>
     </BrowserRouter>
     
