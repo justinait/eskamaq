@@ -12,7 +12,7 @@ function App() {
       <div className='app'>
         < Header />
         < Contact />
-
+        
         <div className='content'>
 
           <Routes >
@@ -23,12 +23,11 @@ function App() {
             
             <Route path='/company' element={< Company />} />
 
-            <Route path='/brands/:brand' element={< BrandsContainer />} />
+            <Route path='/:brand' element={< BrandsContainer />} />
 
           </Routes>
         </div>
         < Footer />
-        
       </div>
     </BrowserRouter>
     

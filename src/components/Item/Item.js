@@ -1,7 +1,7 @@
 import React from 'react'
+import './Item.css'
 
 function Item({dataItem}) {
-  console.log({dataItem});
   
   let objectLength = Object.keys(dataItem).length;
   let array=[];
@@ -10,10 +10,11 @@ function Item({dataItem}) {
   }
   
   return (
-    <div>
+    <div className='itemContainer'>
 
-      <img src={dataItem.image}/>  
-      <p> {dataItem.name} </p>    
+      <img src={dataItem.image} className='itemImage'/>  
+      <h4> {dataItem.name} </h4>
+      <p>{dataItem.machine}</p>
 
     </div>  
     

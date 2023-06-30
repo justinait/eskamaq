@@ -17,13 +17,13 @@ function Header() {
             {/* <Nav.Link href="/contact">Contacto</Nav.Link> */}
             <Nav.Link href="/company">La empresa</Nav.Link>
             <NavDropdown title="Marcas" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/brands/Gopfert">Göpfert</NavDropdown.Item>
-              <NavDropdown.Item href="/brands/Bahmuller">Bahmüller</NavDropdown.Item>
-              <NavDropdown.Item href="/brands/BGM">BGM</NavDropdown.Item>
-              <NavDropdown.Item href="/brands/Minda">Minda</NavDropdown.Item>
-              <NavDropdown.Item href="/brands/JBMachinery">JB Machinery</NavDropdown.Item>
-              <NavDropdown.Item href="/brands/Vistron">Vistron</NavDropdown.Item>
-              <NavDropdown.Item href="/brands/CorrpalSystems">Corrpal Systems</NavDropdown.Item>
+              <NavDropdown.Item href="/Gopfert">Göpfert</NavDropdown.Item>
+              <NavDropdown.Item href="/Bahmuller">Bahmüller</NavDropdown.Item>
+              <NavDropdown.Item href="/BGM">BGM</NavDropdown.Item>
+              <NavDropdown.Item href="/Minda">Minda</NavDropdown.Item>
+              <NavDropdown.Item href="/JBMachinery">JB Machinery</NavDropdown.Item>
+              <NavDropdown.Item href="/Vistron">Vistron</NavDropdown.Item>
+              <NavDropdown.Item href="/CorrpalSystems">Corrpal Systems</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
