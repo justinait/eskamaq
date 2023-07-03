@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
+import './Brands.css'
 import Item from '../Item/Item'
 
 {/* <p className='MarcaTitle'>Nombre de la Marca</p> */}
@@ -11,10 +12,13 @@ function Brands({brandsArray}) {
       {brandsArray.map((e, i) => {
         
         return (
-          
-          Object.values(e).map(element => {
-            return            <Item key={element.id+i} dataItem={element}/>
-          })
+          <div className='brandsContainer'>
+          { 
+          Object.values(e).map((element) => {
+            return         <Item key={element.id+i} dataItem={element}/>
+          })}
+
+          </div>
           
         )
       })}
