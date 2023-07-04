@@ -1,5 +1,7 @@
 import React from 'react'
 import './Item.css'
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 function Item({dataItem}) {
   
@@ -11,10 +13,18 @@ function Item({dataItem}) {
   
   return (
     <div className='itemContainer'>
+      <Carousel className='carouselHome'>
+        {dataItem.image && dataItem.image.map((e, index) => (
+          <div key={index}>
+            <img src={e} alt={`Imagen ${index}`} />
+          </div>
+        ))}
+      </Carousel>
 
-      <img src={dataItem.image} className='itemImage'/>  
-      <h4> {dataItem.name} </h4>
-      <p>{dataItem.machine}</p>
+      <h5> {dataItem.name} </h5>
+      <p>
+        {Array.isArray(dataItem.machine) ? dataItem.machine.join(', ') : dataItem.machine}
+      </p>
 
     </div>  
     
