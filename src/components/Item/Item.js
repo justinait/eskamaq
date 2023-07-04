@@ -13,13 +13,17 @@ function Item({dataItem}) {
   
   return (
     <div className='itemContainer'>
-      <Carousel className='carouselHome'>
-        {dataItem.image && dataItem.image.map((e, index) => (
-          <div key={index}>
-            <img src={e} alt={`Imagen ${index}`} />
-          </div>
-        ))}
-      </Carousel>
+
+      {Array.isArray(dataItem.image) ? (
+
+        <Carousel className='carouselHome'>
+          {dataItem.image && dataItem.image.map((e, index) => (
+            <div key={index}>
+              <img src={e} alt={`Imagen ${index}`} />
+            </div>
+          ))}
+        </Carousel>
+      ) : (        <img src={dataItem.image} alt={dataItem.name} />        )}
 
       <h5> {dataItem.name} </h5>
       <p>

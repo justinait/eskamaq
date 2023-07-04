@@ -13,6 +13,7 @@
         display: none;
     }
 }
+
 @media (min-width: 592px) {
     .itemContainer {
         width: 45vw;
