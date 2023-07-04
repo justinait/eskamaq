@@ -68,6 +68,13 @@ copied.active {
     transform: translate(-50%, -10px);
 }
 
+@media (min-width: 592px) {
+
+    .footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }    
+}
 @media (min-width: 992px) {
 
     .footer {
