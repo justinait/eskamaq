@@ -6,15 +6,16 @@ import Item from '../Item/Item'
 
 function Brands({brandsArray}) {
 
-  // console.log({brandsArray[0]});
   return (
     <>
       {brandsArray.map((e, i) => {
-        
+
+        const values = Object.values(e);
+        const valuesExceptLast = values.slice(0, values.length - 1);
         return (
           <div className='brandsContainer'>
           { 
-          Object.values(e).map((element) => {
+          valuesExceptLast.map((element) => {
             return         <Item key={element.id+i} dataItem={element}/>
           })}
 

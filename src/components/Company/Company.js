@@ -3,7 +3,7 @@ import './Company.css'
 
 function Company() {
   return (
-    <div>Company</div>
+    <div>Eskamaq</div>
   )
 }
 
