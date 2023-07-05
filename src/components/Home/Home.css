@@ -13,8 +13,8 @@
 }
 
 .homeImage {
-    width: 100vw;
-    padding: 10vw;
+    width: 100%;
+    /* padding: 10vw; */
 }
 
 
