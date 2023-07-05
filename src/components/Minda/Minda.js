@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Corrpal() {
+function Minda() {
   return (
     <div>
         <ul>
@@ -16,4 +16,4 @@ function Corrpal() {
   )
 }
 
-export default Corrpal
+export default Minda

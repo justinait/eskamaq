@@ -5,7 +5,7 @@ import Home from './components/Home/Home';
 import Footer from './components/Footer/Footer';
 import Company from './components/Company/Company';
 import BrandsContainer from './components/BrandsContainer/BrandsContainer';
-import Corrpal from './components/Corrpal/Corrpal';
+import Minda from './components/Minda/Minda';
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
             
             <Route path='/company' element={< Company />} />
 
-            <Route path='/CorrpalSystems' element={< Corrpal />} />
+            <Route path='/Minda' element={< Minda />} />
 
             <Route path='/:brand' element={< BrandsContainer />} />
 
