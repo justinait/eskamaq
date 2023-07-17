@@ -4,3 +4,21 @@
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
+.categoryByMachine {
+    margin-top: 15%;
+    max-width: 100%;
+    margin: 15% 0 0 10%;
+    flex-direction: column;
+}
+
+
+@media (min-width: 800px){
+    .categoryByMachine {
+        flex-direction: row;
+        margin: 15% 0 0 5%;
+    }
+    .machineButton {
+        border-radius: 0px !important;
+    }
+}

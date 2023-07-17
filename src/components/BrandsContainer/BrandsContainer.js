@@ -31,7 +31,6 @@ function BrandsContainer() {
             })
             
             let array = Object.values(brandItems)
-            // console.log(array)     contiene objetitos
 
             return array
         }
