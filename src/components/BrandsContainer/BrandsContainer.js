@@ -6,7 +6,7 @@ import Brands from '../Brands/Brands';
 
 function BrandsContainer() {
     
-  const [listBrands, setListBrands] = useState([])
+  const [listBrand, setListBrand] = useState([])
   const { brand } = useParams();
 
     const getBrands = async () => {
@@ -41,13 +41,13 @@ function BrandsContainer() {
         
         getBrands()
         .then( (res) => { 
-            setListBrands(res)
+            setListBrand(res)
         })
     }, [brand])
 
     return(
         <div>
-            <Brands brandsArray={listBrands}/>
+            <Brands brandArray={listBrand}/>
         </div>
     )
 }
