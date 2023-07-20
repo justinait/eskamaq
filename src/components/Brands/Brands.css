@@ -12,13 +12,13 @@
     flex-direction: column;
 }
 
+.machineButton {
+    border-radius: 0px !important;
+}
 
 @media (min-width: 800px){
     .categoryByMachine {
         flex-direction: row;
-        margin: 15% 0 0 5%;
-    }
-    .machineButton {
-        border-radius: 0px !important;
+        margin: 5% 0 0 5%;
     }
 }

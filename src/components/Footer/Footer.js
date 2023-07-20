@@ -38,7 +38,7 @@ function Footer() {
                 <a href='https://wa.link/znoo7b' target="_blank">
                     <WhatsAppIcon className='socialMediaIcon' fontSize='large' />
                 </a>
-                343 5034079
+                +54 9 343 503 4079 
             </div>
             
             <div className='socialMedia linkedin'>

@@ -33,23 +33,23 @@ function Brands({ brandArray }) {
                 Todas
               </Button>
               {Array.isArray(machines) &&
-                machines.map((machine, index) => (
+                machines.map((e, index) => (
                   <Button
                     key={index}
                     className='machineButton'
                     variant="outline-secondary"
-                    onClick={() => setSelected(machine)}
-                    active={selected === machine}
+                    onClick={() => setSelected(e)}
+                    active={selected === e}
                   >
-                    {machine}
+                    {e}
                   </Button>
                 ))}
             </ButtonGroup>
 
             <div className='brandsContainer'>
-              {valuesExceptLast.map((element) => {
-                if (selected === 'todas' || (Array.isArray(machines) && selected === element.machine)) {
-                  return <Item key={element.id} dataItem={element} />;
+              {valuesExceptLast.map((e) => {
+                if (selected === 'todas' || (Array.isArray(machines) && selected === e.machine)) {
+                  return <Item key={e.id} dataItem={e} />;
                 }
                 return null;
               })}

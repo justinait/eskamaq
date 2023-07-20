@@ -18,9 +18,9 @@ function Header() {
             <Nav.Link href="/company">La empresa</Nav.Link>
             <NavDropdown title="Marcas" id="basic-nav-dropdown">
               <NavDropdown.Item href="/Gopfert">Göpfert</NavDropdown.Item>
-              <NavDropdown.Item href="/CorrpalSystems">Corrpal Systems</NavDropdown.Item>
+              <NavDropdown.Item href="/Corrpal">Corrpal Systems</NavDropdown.Item>
               <NavDropdown.Item href="/Bahmuller">Bahmüller</NavDropdown.Item>
-              <NavDropdown.Item href="/BGM">BGM</NavDropdown.Item>
+              <NavDropdown.Item href="/BGM">BGM Flexo Folder Gluer</NavDropdown.Item>
               <NavDropdown.Item href="/JBMachinery">JB Machinery</NavDropdown.Item>
               <NavDropdown.Item href="/Vistron">Vistron</NavDropdown.Item>
               <NavDropdown.Item href="/StockMaschinenbau">Stock Maschinenbau</NavDropdown.Item>
