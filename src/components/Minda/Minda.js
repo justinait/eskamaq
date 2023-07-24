@@ -1,10 +1,16 @@
 import React from 'react'
+import './Minda.css'
 
 function Minda() {
   return (
-    <div>
-      <h6>Intralogistica automatizada e integral para todos los procesos de producción corrugado</h6>
-      <ul>
+    <div className='mindaContainer'>
+      <div className='mindaYoutubeContainer'>
+        <iframe className='mindaYoutube' src="https://www.youtube.com/embed/KjS_4SuPv0c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+
+      <div className='mindaInfo'>
+        <h6>Intralogistica automatizada e integral para todos los procesos de producción corrugado</h6>
+        <ul>
           <li>Manejo de bobinas de papel    </li>        
           <li>Salida de corrugado    </li>        
           <li>Sistemas de almacenamiento    </li>        
@@ -12,7 +18,9 @@ function Minda() {
           <li>Machine Periphery    </li>        
           <li>Manejo de producto terminado    </li>        
           <li>Almacén vertical de gran altura    </li>        
-      </ul>
+        </ul>  
+      </div>
+      
     </div>
   )
 }

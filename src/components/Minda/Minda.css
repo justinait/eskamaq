@@ -1,0 +1,46 @@
+/* .mindaContainer {
+    display: flex;
+    flex-direction: row;
+} */
+
+.mindaInfo {
+    display: none;
+}
+
+.mindaYoutubeContainer {
+    width: 70%;
+    position: relative;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    margin: 10% auto 0;
+}
+
+.mindaYoutube {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width: 682px) {
+
+    .mindaYoutubeContainer {
+        margin: 5% auto 0;
+    }
+    .mindaYoutube {
+        height: 75%;
+    }
+    
+}
+
+@media (min-width: 1000px) {
+
+    .mindaYoutubeContainer {
+        margin: 5% auto 0;
+    }
+    .mindaYoutube {
+        height: 65%;
+    }
+    
+}
