@@ -1,0 +1,22 @@
+.videoCorrpal {
+    width: 70%;
+    overflow: hidden;
+    margin: 10% auto 0;
+}
+@media (min-width: 682px) {
+
+    .videoCorrpal {
+        margin: 5% auto 0;
+        height: 75%;
+    }
+    
+}
+
+@media (min-width: 1000px) {
+
+    .videoCorrpal {
+        margin: 5% auto 0;
+        height: 65%;
+    }
+    
+}
