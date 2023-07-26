@@ -4,7 +4,7 @@ import './Home.css'
 function Home() {
   return (
     <div>
-        <img src='./homeaux.jpg' alt="" className='homeImage' />      
+        <img src='./PenhaGopfertHome.png' alt="" className='homeImage' />      
     </div>
   )
 }

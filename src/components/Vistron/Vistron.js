@@ -1,12 +1,27 @@
 import React from 'react'
 import './Vistron.css'
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 function Vistron() {
+    const images = [
+        '../../Vistron/vistron1.png',
+        '../../Vistron/vistron2.png'
+    ];
+      
   return (
     <div>
         <h3>Vistron</h3>  
         <div className='vistronContainer'>
-            <img src='../../Vistron/vistron.png' className='vistronImg' />
+            <Carousel>
+                {images.map((image, index) => (
+                    <div key={index}>
+                    <img src={image} alt={`Imagen ${index}`} />
+                    </div>
+                ))}
+            </Carousel>
+
+
             <ul>
                 <li>
                     Sistema de visión artificial para la evaluación automática de la calidad de impresión en la industria del embalaje y del cartón ondulado.
