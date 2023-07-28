@@ -11,7 +11,7 @@ function Brands({ brandArray }) {
   const dataBranding = [
     { name: 'Göpfert', logo: '../../brands/goepfert.png' },
     { name: 'Corrpal Systems', logo: '../../brands/CorrpalSystems.png' },
-    { name: 'Bahmüller', logo: '../../brands/bahmuller.png' },
+    { name: 'Bahmüller', logo: '../../brands/bahmuller.jpg' },
     { name: 'BGM Flexo Folder Gluer', logo: '../../brands/bgm.jpg' },
     { name: 'JB Machinery', logo: '../../brands/JBMachinery.png' },
     { name: 'Vistron', logo: '../../brands/Vistron.jpg' },
