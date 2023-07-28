@@ -12,10 +12,8 @@ function Vistron() {
   return (
     <div>
         <div style={{ textAlign: 'center' }}>
-
             {/* <h3>Vistron</h3> */}
             <img className='brandingLogo' src='../../brands/Vistron.jpg'/>
-
         </div>
         <div className='vistronContainer'>
             <Carousel>
