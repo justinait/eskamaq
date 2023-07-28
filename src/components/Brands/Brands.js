@@ -33,35 +33,38 @@ function Brands({ brandArray }) {
         switch (brand) {
           case 'Gopfert':
             brandToRender = <h3>{dataBranding[0].name}</h3>;
-            logoBrandToRender = <img src={dataBranding[0].logo}/>
+            logoBrandToRender = <img className='brandingLogo' src={dataBranding[0].logo}/>
             break;
           case 'Bahmuller':
             brandToRender = <h3>{dataBranding[2].name}</h3>;
-            logoBrandToRender = <img src={dataBranding[2].logo}/>
+            logoBrandToRender = <img className='brandingLogo' src={dataBranding[2].logo}/>
             break;
           case 'BGM':
             brandToRender = <h3>{dataBranding[3].name}</h3>;
-            logoBrandToRender = <img src={dataBranding[3].logo}/>
+            logoBrandToRender = <img className='brandingLogo' src={dataBranding[3].logo}/>
             break;
           case 'JBMachinery':
             brandToRender = <h3>{dataBranding[4].name}</h3>;
-            logoBrandToRender = <img src={dataBranding[4].logo}/>
+            logoBrandToRender = <img className='brandingLogo' src={dataBranding[4].logo}/>
             break;
           case 'StockMaschinenbau':
             brandToRender = <h3>{dataBranding[6].name}</h3>;
-            logoBrandToRender = <img src={dataBranding[6].logo}/>
+            logoBrandToRender = <img className='brandingLogo' src={dataBranding[6].logo}/>
             break;
 
-            default:
-            brandToRender = <h3>{brand}</h3>
+          default:
+          brandToRender = <h3>{brand}</h3>
         }
 
         console.log(dataBranding[0].logo);
         return (
           <div key={i}>
-            {/* <h3>{brand}</h3> */}
-            {brandToRender}
-            {logoBrandToRender}
+            <div style={{ textAlign: 'center' }}>
+              {/* {brandToRender} */}
+              {logoBrandToRender}
+
+            </div>
+            
             <ButtonGroup aria-label="Basic example" className='categoryByMachine'>
               <Button
                 className='machineButton'

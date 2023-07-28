@@ -16,9 +16,17 @@
     border-radius: 0px !important;
 }
 
+.brandingLogo {
+    width: 60vw;
+}
+
 @media (min-width: 800px){
     .categoryByMachine {
         flex-direction: row;
         margin: 5% 0 0 5%;
     }
+    .brandingLogo {
+        width: 20vw;
+    }
+    
 }

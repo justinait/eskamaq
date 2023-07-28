@@ -4,6 +4,10 @@ import './Minda.css'
 function Minda() {
   return (
     <div className='mindaContainer'>
+      <div style={{ textAlign: 'center' }}>
+        <img className='brandingLogo' src='../../brands/Minda.png'/>
+      </div>
+
       <div className='mindaYoutubeContainer'>
         <iframe className='mindaYoutube' src="https://www.youtube.com/embed/KjS_4SuPv0c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
