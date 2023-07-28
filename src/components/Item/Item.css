@@ -4,7 +4,9 @@
 
 .itemContainer {
     width: 100vw;
-    padding: 15%;
+    padding: 8%;
+    border: 1px solid black;
+    margin: 3%;
 }
 
 .carouselHome{
@@ -25,5 +27,11 @@
     .itemContainer {
         width: 30vw;
         padding: 4%;
+        margin: unset;
+        border: unset;
+    }
+    .itemContainer:hover {
+        /* background-color: #f0f0f0; */
+        border: 1px black solid;
     }
 }

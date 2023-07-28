@@ -5,7 +5,20 @@ import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 
 function Brands({ brandArray }) {
-  const [selected, setSelected] = useState('todas'); // Estado compartido para 'selected'
+
+  const [selected, setSelected] = useState('todas');
+  const [selectedBrand, setSelectedBrand] = useState();
+
+  const data = [
+    { name: 'Göpfert', logo: '../../brands/Goepfert.png' },
+    { name: 'Corrpal Systems', logo: './brands/CorrpalSystems.png' },
+    { name: 'Bahmüller', logo: './brands/bahmuller.png' },
+    { name: 'BGM Flexo Folder Gluer', logo: './brands/bgm.jpg' },
+    { name: 'JB Machinery', logo: './brands/JBMachinery.png' },
+    { name: 'Vistron', logo: './brands/Vistron.jpg' },
+    { name: 'Stock Maschinenbau', logo: './brands/StockM.jpg' },
+    { name: 'Minda', logo: './brands/Minda.png' },
+  ];
 
   return (
     <>
@@ -16,8 +29,8 @@ function Brands({ brandArray }) {
         const brand = values[longitud - 1];
         const machines = values[longitud - 2];
 
-        console.log(values);
 
+        console.log(data);
         return (
           <div key={i}>
             {/* category by machine */}
