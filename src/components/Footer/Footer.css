@@ -86,14 +86,16 @@ copied.active {
 
     .footerDiv{
         align-items: unset;
+        font-size: 12px;
+        width: 30%;
+    }
+
+    .logoFooter{
+        width: 60%;
     }
 
     .socialMediaIcon:hover {
         color:rgb(139, 145, 149);
-    }
-
-    .footerDiv {
-        font-size: 12px;
     }
     
     .socialMedia {
