@@ -1,36 +1,38 @@
 import React, { useState } from 'react'
 import './Footer.css'
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import EmailIcon from '@mui/icons-material/Email';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';
 
 function Footer() {
-    
-    const [showCopied, setShowCopied] = useState(false);
-
     const handleClick = () => {
         navigator.clipboard.writeText('sven@eskamaq.com')
-        setShowCopied(true);
-        setTimeout(() => {
-            setShowCopied(false);
-        }, 1000);
-    };
-
+    }
+    const renderTooltip = (props) => (
+        <Tooltip id="button-tooltip" {...props}>
+          Copiar Email
+        </Tooltip>
+      );
   return (
     <div className='footer'>
          
         <div className='socialMediaBox'>
         
             <div className='socialMedia'>
+            <OverlayTrigger
+                placement="top"
+                delay={{ show: 250, hide: 400 }}
+                overlay={renderTooltip}
+                >
                 <EmailIcon
                     onClick={handleClick}
                     className='socialMediaIcon'
                     fontSize='large'
                 />
-                {showCopied && (
-                    <div className={`copied ${showCopied ? 'active' : ''}`}>copiado </div>
-                )}
+            </OverlayTrigger>
+                
                 Sven@eskamaq.com
             </div>
             
