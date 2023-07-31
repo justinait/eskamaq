@@ -23,7 +23,7 @@ function Brands({ brandArray }) {
     <>
       {brandArray.map((e, i) => {
         const values = Object.values(e);
-        const valuesExceptLast = values.slice(0, values.length - 1);
+        const valuesExceptLast = values.slice(0, values.length - 2);
         const longitud = values.length;
         const brand = values[longitud - 1];
         const machines = values[longitud - 2];

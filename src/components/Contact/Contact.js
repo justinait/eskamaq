@@ -9,7 +9,7 @@ function Contact() {
     <div className='contactBox'>
         
       <a href='https://wa.link/znoo7b' target="_blank">
-          <WhatsAppIcon className='contactIcon' fontSize='large' />
+        <WhatsAppIcon className='contactIcon'/>
       </a>
         
     </div>
