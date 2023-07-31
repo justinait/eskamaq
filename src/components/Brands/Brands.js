@@ -9,7 +9,7 @@ function Brands({ brandArray }) {
   const [selected, setSelected] = useState('todas');
 
   const dataBranding = [
-    { name: 'Göpfert', logo: '../../brands/goepfert.png' },
+    { name: 'Göpfert', logo: '../../brands/goepfert.jpg' },
     { name: 'Corrpal Systems', logo: '../../brands/CorrpalSystems.png' },
     { name: 'Bahmüller', logo: '../../brands/bahmuller.jpg' },
     { name: 'BGM Flexo Folder Gluer', logo: '../../brands/bgm.jpg' },
@@ -41,7 +41,7 @@ function Brands({ brandArray }) {
             break;
           case 'BGM':
             brandToRender = <h3>{dataBranding[3].name}</h3>;
-            logoBrandToRender = <img className='brandingLogo' src={dataBranding[3].logo}/>
+            logoBrandToRender = <img className='brandingLogo toBig' src={dataBranding[3].logo}/>
             break;
           case 'JBMachinery':
             brandToRender = <h3>{dataBranding[4].name}</h3>;
