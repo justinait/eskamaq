@@ -23,7 +23,10 @@ function Item({dataItem}) {
             </div>
           ))}
         </Carousel>
-      ) : (        <img src={dataItem.image} alt={dataItem.name} />        )}
+      ) : (
+        <iframe width="315" height="315" src={dataItem.image} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>        
+        // <img src={dataItem.image} alt={dataItem.name} />        
+      )}
 
       <h5> {dataItem.name} </h5>
       <p>
