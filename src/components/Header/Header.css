@@ -21,6 +21,7 @@
 @media (min-width: 992px) {
     .navbar-expand-lg .navbar-collapse {
         font-size: 22px;
+        margin-right: 70px;
     }
     .logo {
         width: 20vw;

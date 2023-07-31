@@ -25,3 +25,29 @@
     }
 }
 
+/* copy paste */
+
+.homeImage {
+    height: unset;
+    width: 100vw;
+}
+
+@supports(object-fit: cover){
+    .homeImage {
+      width: 100vw;
+      object-fit: cover;
+      object-position: center center;
+    }
+}
+
+.carousel {
+    margin-top: -80px;
+}
+
+@media (min-width: 476px) {
+    
+}
+
+@media (min-width: 776px) {
+    
+}
