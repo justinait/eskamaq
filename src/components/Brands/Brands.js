@@ -9,7 +9,7 @@ function Brands({ brandArray }) {
   const [selected, setSelected] = useState('todas');
 
   const dataBranding = [
-    { name: 'Göpfert', logo: '../../brands/goepfert.jpg' },
+    { name: 'Göpfert', logo: '../../brands/Goepfert.jpg' },
     { name: 'Corrpal Systems', logo: '../../brands/CorrpalSystems.png' },
     { name: 'Bahmüller', logo: '../../brands/bahmuller.jpg' },
     { name: 'BGM Flexo Folder Gluer', logo: '../../brands/bgm.jpg' },
