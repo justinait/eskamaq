@@ -7,11 +7,15 @@
 }
 
 .vistronImg {
-    width: 40vw;
+    width: 100%;
 }
 
 @media (min-width: 600px){
     .vistronContainer {
         flex-direction: row;
     }   
+    .vistronImg {
+        width: 90%;
+    }
+    
 }

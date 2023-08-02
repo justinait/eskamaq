@@ -5,18 +5,19 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 function Vistron() {
     const images = [
-        '../../Vistron/vistron1.png',
-        '../../Vistron/vistron2.png'
+        '../../Vistron/vistron3.png',
+        '../../Vistron/vistron4.png',
+        '../../Vistron/vistron6.png'
     ];
       
   return (
     <div>
         <div style={{ textAlign: 'center' }}>
             {/* <h3>Vistron</h3> */}
-            <img className='brandingLogo' src='../../brands/Vistron.jpg'/>
+            <img className='brandingLogo' src='../../brands/Vistron.jpg' alt='VISTRON'/>
         </div>
         <div className='vistronContainer'>
-            <Carousel>
+            <Carousel className='vistronImg' >
                 {images.map((image, index) => (
                     <div key={index}>
                     <img src={image} alt={`Imagen ${index}`} />
