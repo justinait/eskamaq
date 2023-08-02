@@ -8,11 +8,12 @@ function Corrpal() {
           {/* <h3>Corrpal Systems</h3> */}
           <img className='brandingLogo' src='../../brands/CorrpalSystems.png'/>
         </div>
-        
-        <video controls width="640" height="360" className='videoCorrpal'>
-        <source src='../../Corrpal Systems/corrpaldraft.mp4' type="video/mp4" />
-        Tu navegador no admite el elemento de video.
-      </video>
+        <div style={{textAlign: 'center'}}>
+          <video controls width="640" height="360" className='videoCorrpal'>
+            <source src='../../Corrpal Systems/corrpaldraft.mp4' type="video/mp4" />
+            Tu navegador no admite el elemento de video.
+          </video>
+        </div> 
     </div>
   )
 }
