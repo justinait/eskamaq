@@ -16,6 +16,10 @@
     }
 }
 
+.videoItem {
+    width: 100%;
+}
+
 @media (min-width: 592px) {
     .itemContainer {
         width: 45vw;
@@ -31,7 +35,6 @@
         border: unset;
     }
     .itemContainer:hover {
-        /* background-color: #f0f0f0; */
         border: 1px black solid;
     }
 }

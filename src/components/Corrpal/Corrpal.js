@@ -6,7 +6,7 @@ function Corrpal() {
     <div>
         <div style={{ textAlign: 'center' }}>
           {/* <h3>Corrpal Systems</h3> */}
-          <img className='brandingLogo' src='../../brands/CorrpalSystems.png'/>
+          <img className='brandingLogo' src='../../brands/CorrpalSystems.png' alt='Corrpal Systems' />
         </div>
         <div style={{textAlign: 'center'}}>
           <video controls width="640" height="360" className='videoCorrpal'>

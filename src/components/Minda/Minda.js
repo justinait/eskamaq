@@ -5,7 +5,7 @@ function Minda() {
   return (
     <div className='mindaContainer'>
       <div style={{ textAlign: 'center' }}>
-        <img className='brandingLogo' src='../../brands/Minda.png'/>
+        <img className='brandingLogo' src='../../brands/Minda.png' alt='Minda' />
       </div>
 
       <div className='mindaYoutubeContainer'>

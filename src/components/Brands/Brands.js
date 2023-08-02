@@ -33,23 +33,23 @@ function Brands({ brandArray }) {
         switch (brand) {
           case 'Gopfert':
             brandToRender = <h3>{dataBranding[0].name}</h3>;
-            logoBrandToRender = <img className='brandingLogo' src={dataBranding[0].logo}/>
+            logoBrandToRender = <img className='brandingLogo' src={dataBranding[0].logo} alt={dataBranding[0].name} />
             break;
           case 'Bahmuller':
             brandToRender = <h3>{dataBranding[2].name}</h3>;
-            logoBrandToRender = <img className='brandingLogo' src={dataBranding[2].logo}/>
+            logoBrandToRender = <img className='brandingLogo' src={dataBranding[2].logo} alt={dataBranding[2].name} />
             break;
           case 'BGM':
             brandToRender = <h3>{dataBranding[3].name}</h3>;
-            logoBrandToRender = <img className='brandingLogo toBig' src={dataBranding[3].logo}/>
+            logoBrandToRender = <img className='brandingLogo toBig' src={dataBranding[3].logo} alt={dataBranding[3].name} />
             break;
           case 'JBMachinery':
             brandToRender = <h3>{dataBranding[4].name}</h3>;
-            logoBrandToRender = <img className='brandingLogo' src={dataBranding[4].logo}/>
+            logoBrandToRender = <img className='brandingLogo' src={dataBranding[4].logo} alt={dataBranding[4].name} />
             break;
           case 'StockMaschinenbau':
             brandToRender = <h3>{dataBranding[6].name}</h3>;
-            logoBrandToRender = <img className='brandingLogo' src={dataBranding[6].logo}/>
+            logoBrandToRender = <img className='brandingLogo' src={dataBranding[6].logo} alt={dataBranding[6].name} />
             break;
 
           default:
