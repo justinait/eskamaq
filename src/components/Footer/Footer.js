@@ -55,7 +55,8 @@ function Footer() {
         <div className='footerDiv'>
 
             <img src='./Logo-Blanco.png' alt="ESKAMAQ" className='logoFooter' />
-            ©2023 Eskamaq. Desarrollado por Justina Iturraspe
+            <p className='final'>©2023 Eskamaq. Desarrollado por Justina Iturraspe</p>
+            
         </div>
         
     </div>

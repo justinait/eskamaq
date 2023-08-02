@@ -48,8 +48,11 @@
     margin: 0px 20px;
 }
 
-@media (min-width: 592px) {
+.final {
+    font-size: xx-small;;
+}
 
+@media (min-width: 592px) {
     .footer {
         flex-direction: row;
         justify-content: space-between;
