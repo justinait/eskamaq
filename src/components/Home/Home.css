@@ -15,14 +15,11 @@
 
 .homeImage {
     width: 100%;
-    /* padding: 10vw; */
+    display: none;
 }
 
-
-@media (min-width: 992px) {
-    * {
-        font-size:20px;
-    }
+.homeImageMobile {
+    width: 100%;
 }
 
 .homeImage {
@@ -31,16 +28,29 @@
 }
 
 @supports(object-fit: cover){
-    .homeImage {
+    .homeImage, .homeImageMobile {
       width: 100vw;
       object-fit: cover;
       object-position: center center;
     }
 }
 @media (min-width: 476px) {
+
+    .homeImageMobile {
+        display: none;
+    }
     
+    .homeImage {
+        display: block;
+    }
+        
 }
 
 @media (min-width: 776px) {
     
+}
+@media (min-width: 992px) {
+    * {
+        font-size:20px;
+    }
 }
