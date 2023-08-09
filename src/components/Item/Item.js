@@ -31,6 +31,10 @@ function Item({dataItem}) {
       <p>
         {Array.isArray(dataItem.machine) ? dataItem.machine.join(', ') : dataItem.machine}
       </p>
+      <p style={{ fontWeight: '200' }}>
+        {dataItem.measure ? dataItem.measure : null}
+      </p>
+      
 
     </div>  
     
