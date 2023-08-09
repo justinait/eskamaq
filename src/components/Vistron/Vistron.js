@@ -9,12 +9,14 @@ function Vistron() {
         '../../Vistron/vistron4.png',
         '../../Vistron/vistron6.png'
     ];
-      
+
   return (
     <div>
         <div style={{ textAlign: 'center' }}>
-            {/* <h3>Vistron</h3> */}
-            <img className='brandingLogo' src='../../brands/Vistron.jpg' alt='VISTRON'/>
+            <a href='https://vistron.com/' target="_blank">
+                <img className='brandingLogo' src='../../brands/Vistron.jpg' alt='VISTRON'/>
+            </a>
+            
         </div>
         <div className='vistronContainer'>
             <Carousel className='vistronImg' >

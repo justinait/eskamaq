@@ -1,6 +1,4 @@
 import React from 'react'
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import './Contact.css'
 
