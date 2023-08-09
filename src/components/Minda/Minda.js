@@ -6,7 +6,7 @@ function Minda() {
     <div className='mindaContainer'>
       <div style={{ textAlign: 'center' }}> 
         <a href='https://www.minda.com/en/' target="_blank">
-          <img className='brandingLogo' src='../../brands/Minda.png' alt='Minda' />
+          <img className='brandingLogo toBig' src='../../brands/Minda.png' alt='Minda' />
         </a>        
       </div>
 

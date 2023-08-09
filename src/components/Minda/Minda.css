@@ -4,7 +4,7 @@
 } */
 
 .mindaInfo {
-    display: none;
+    padding: 10%;
 }
 
 .mindaYoutubeContainer {
@@ -31,6 +31,9 @@
     .mindaYoutube {
         height: 75%;
     }
+    .mindaInfo {
+        margin-top: -15%;
+    }
     
 }
 
@@ -41,6 +44,10 @@
     }
     .mindaYoutube {
         height: 65%;
+    }
+    .mindaInfo {
+        padding: 10% 15%;
+        margin-top: -25%;
     }
     
 }
