@@ -57,9 +57,15 @@
         flex-direction: row;
         justify-content: space-between;
     }    
+    .socialMediaBox {
+        width: 100vw;
+    }
 }
 @media (min-width: 992px) {
-
+   
+    .socialMediaBox {
+        width: unset;
+    }
     .footer {
         height: 30vh;
         align-items: center;
