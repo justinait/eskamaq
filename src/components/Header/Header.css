@@ -2,6 +2,14 @@
     width: 30vw;
 }
 
+a {
+    text-decoration: none !important;
+    color: rgba(64, 64, 64, 0.70) !important;
+}
+
+#auxiliar::after {
+    display: none;
+}
 .navbar {
     position: fixed !important;
     top: 0 !important;
@@ -10,22 +18,16 @@
     font-size: 20px !important;
 }
 
-.navbar-collapse {
-    flex-grow: 0 !important;
-}
-
-.navbar-expand-lg .navbar-collapse {
-    font-size: 22px;
-}
-
 
 @media (min-width: 992px) {
-    .navbar-expand-lg .navbar-collapse {
-        font-size: 22px;
-        margin-right: 70px;
-    }
     .logo {
         width: 20vw;
+    }
+    .rightNavbar {
+        display: flex;
+        flex-direction: row;
+        width: 20%;
+        justify-content: space-between;
     }
     
 }

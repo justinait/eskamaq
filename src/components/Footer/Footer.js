@@ -59,7 +59,7 @@ function Footer() {
         
 
         </div>
-        {/* <hr/> */}
+        
         <p className='final'>Copyright ©2023 Eskamaq. Desarrollado por Justina Iturraspe</p>
         
     </div>
