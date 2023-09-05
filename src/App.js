@@ -14,7 +14,7 @@ function App() {
     <BrowserRouter>
       <div className='app'>
         < Header />
-        < Contact />
+        {/* < Contact /> */}
         
         <div className='content'>
 
@@ -22,7 +22,6 @@ function App() {
             
             <Route path='/' element={< Home />} />
               
-            {/* <Route path='/contact' element={< Contact />} /> */}
             <Route path='/company' element={< Company />} />
 
             <Route path='/Minda' element={< Minda />} />

@@ -14,50 +14,53 @@ function Footer() {
         <Tooltip id="button-tooltip" {...props}>
           Copiar Email
         </Tooltip>
-      );
+    );
   return (
     <div className='footer'>
-         
-        <div className='socialMediaBox'>
-        
-            <div className='socialMedia'>
-            <OverlayTrigger
-                placement="top"
-                delay={{ show: 250, hide: 400 }}
-                overlay={renderTooltip}
-                >
-                <EmailIcon
-                    onClick={handleClick}
-                    className='socialMediaIcon'
-                    fontSize='large'
-                />
-            </OverlayTrigger>
+        <div className='footerContainer'>
+            
+            <div className='socialMediaBox'>
+            
+                <div className='socialMedia'>
+                <OverlayTrigger
+                    placement="top"
+                    delay={{ show: 250, hide: 400 }}
+                    overlay={renderTooltip}
+                    >
+                    <EmailIcon
+                        onClick={handleClick}
+                        className='socialMediaIcon'
+                        fontSize='small'
+                    />
+                </OverlayTrigger>
+                    Sven@eskamaq.com
+                </div>
                 
-                Sven@eskamaq.com
-            </div>
-            
-            <div className='socialMedia'>
-                <a href='https://wa.link/znoo7b' target="_blank">
-                    <WhatsAppIcon className='socialMediaIcon' fontSize='large' />
-                </a>
-                +54 9 343 503 4079 
-            </div>
-            
-            <div className='socialMedia linkedin'>
-                <a href='https://www.linkedin.com/in/sven-kloeckner-833728131/' target="_blank">
-                    <LinkedInIcon className='socialMediaIcon' fontSize='large' />
-                </a>
-                linkedin.com/in/sven-kloeckner-833728131
-            </div>
-            
-        </div>
+                <div className='socialMedia'>
+                    <a href='https://wa.link/znoo7b' target="_blank">
+                        <WhatsAppIcon className='socialMediaIcon' fontSize='small' />
+                    </a>
+                    +54 9 343 503 4079 
+                </div>
+                
+                <div className='socialMedia linkedin'>
+                    <a href='https://www.linkedin.com/in/sven-kloeckner-833728131/' target="_blank">
+                        <LinkedInIcon className='socialMediaIcon' fontSize='small' />
+                    </a>
+                    linkedin.com/in/sven-kloeckner-833728131
+                </div>
         
-        <div className='footerDiv'>
+            </div>
+        
+            <div className='svenFooter'>
+                <img src='./logoSK.png' alt="Sven Klockner" className='logoFooter' />
+                Sven Marcus Klockner
+            </div>
+        
 
-            <img src='./Logo-Blanco.png' alt="ESKAMAQ" className='logoFooter' />
-            <p className='final'>©2023 Eskamaq. Desarrollado por Justina Iturraspe</p>
-            
         </div>
+        {/* <hr/> */}
+        <p className='final'>Copyright ©2023 Eskamaq. Desarrollado por Justina Iturraspe</p>
         
     </div>
   )

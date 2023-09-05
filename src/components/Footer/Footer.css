@@ -5,8 +5,13 @@
     background-color: #070070;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
 }
-
+.footerContainer {
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+}
 .socialMediaBox {
     display: flex;
     text-align: center;
@@ -15,28 +20,26 @@
     align-items: flex-start;
     justify-content: space-evenly;
 }
-.footerDiv {
+.svenFooter {
     display: flex;
-    height: 60%;
-    flex-direction: column;
-    justify-content: space-evenly;
     color: white;
     align-items: center;
     font-size: 10px;
+    justify-content: space-evenly;
 }
 
 .socialMedia {
     color: white;
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 12px;
+    font-weight: 400;
 }
 
-.linkedin {
+/* .linkedin {
     font-size: 12px;
-}
+} */
 
 .logoFooter {
-    width: 45%;
+    width: 20px;
 }
 
 .socialMediaText{
@@ -49,7 +52,8 @@
 }
 
 .final {
-    font-size: xx-small;;
+    font-size: xx-small;
+    color: white;
 }
 
 @media (min-width: 592px) {
@@ -63,24 +67,30 @@
 }
 @media (min-width: 992px) {
    
+    .footerContainer {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 15vh;
+    }
     .socialMediaBox {
         width: unset;
+        height: 100%;
+        justify-content: space-between;
     }
     .footer {
-        height: 30vh;
-        align-items: center;
-        justify-content: space-around;
-        flex-direction: row;
+        height: 35vh;
+        justify-content: space-evenly;
+        flex-direction: column;
     }    
 
-    .footerDiv{
-        align-items: unset;
-        font-size: 12px;
-        width: 30%;
+    .svenFooter{
+        font-size: 17px;
+        width: 20%;
     }
 
     .logoFooter{
-        width: 60%;
+        width: 40px;
     }
 
     .socialMediaIcon:hover {
@@ -88,10 +98,17 @@
     }
     
     .socialMedia {
-        font-size: 16px;
+        font-size: 14px;
     }
     
-    .linkedin {
+    /* .linkedin {
         font-size: 14px;
+    } */
+    .final {
+        border-top: 1px solid white;
+        width: 85vw;
+        margin: 0 auto;
+        padding-top: 1%;
+        font-size: x-small;
     }
 }
