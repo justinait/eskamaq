@@ -63,7 +63,6 @@ function Brands({ brandArray }) {
           brandToRender = <h3>{brand}</h3>
         }
 
-        console.log(dataBranding[0].logo);
         return (
           <div key={i}>
             <div style={{ textAlign: 'center' }}>
