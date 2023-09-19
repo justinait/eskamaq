@@ -10,7 +10,6 @@ flex-shrink: 0;
 
 a {
     text-decoration: none !important;
-    color: rgba(64, 64, 64, 0.70) !important;
 }
 
 #auxiliar::after {
@@ -30,7 +29,6 @@ a {
     border-right: black 2px solid;
     margin: 0;
     color: #000;
-
 
     font-size: 1rem;
     font-style: normal;
@@ -67,7 +65,11 @@ a {
     }
     .dropdown a {
         color: black !important;
-        font-weight: 500;
-        margin: 1%;
+        /* margin: 1%; */
+        font-size: 1.2875rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 3rem; /* 177.778% */
+        letter-spacing: -0.04219rem;
     }
 }

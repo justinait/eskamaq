@@ -16,7 +16,7 @@ function Header() {
         
         <div className='rightNavbar'>
           
-          <p className='brandsButton' onClick={toggleDropdown}>Marcas</p>       
+          <Link className='brandsButton' onClick={toggleDropdown}>Marcas</Link>       
           <Link to="/company" className='companyButton'>La empresa</Link>
           
         </div>
