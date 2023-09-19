@@ -3,9 +3,7 @@ body {
 }
 
 .logo {
-    width: 13.4375rem;
-height: 2.3125rem;
-flex-shrink: 0;
+    width: 6.4375rem;
 }
 
 a {
@@ -17,7 +15,7 @@ a {
 }
 .companyButton {
     color: rgba(0, 0, 0, 0.65);
-    font-size: 1rem;
+    font-size: 0.5rem;
     font-style: normal;
     font-weight: 500;
     line-height: 1.875rem; /* 187.5% */
@@ -26,15 +24,18 @@ a {
 .brandsButton {
     font-family: 'red hat display';
     width: 45%;
-    border-right: black 2px solid;
+    height: 14px;
+    display: flex;
+    border-right: black 0.01px solid;
     margin: 0;
     color: #000;
-
-    font-size: 1rem;
+    font-size: 0.5rem;
     font-style: normal;
     font-weight: 500;
-    line-height: 1.875rem; /* 187.5% */
+    line-height: 1.875rem;
     letter-spacing: -0.03rem;
+    align-items: center;
+    margin-top: 5px;
 }
 .navbar {
     display: flex;
@@ -42,17 +43,39 @@ a {
     padding: 1.5% 0 !important;
 }
 
+.rightNavbar {
+    
+    width: 25vw;
+    display: flex;
+    
+    justify-content: space-between;
+}
+
 @media (min-width: 992px) {
     .logo {
-        /* width: 20vw; */
+        width: 13.4375rem;
+        height: 2.3125rem;
+        flex-shrink: 0;
     }
     
+    .brandsButton, .companyButton {
+        font-size: 1rem;
+    }
+    
+    .brandsButton {
+        border-right: black 2px solid;
+        height: unset;
+        margin-top: unset;
+        /* align-items: flex-end; */
+    }
     .rightNavbar {
         display: flex;
         flex-direction: row;
         width: 23%;
         justify-content: space-between;
         align-items: center;
+
+        
     }
     .dropdown {
         

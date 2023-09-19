@@ -19,8 +19,12 @@ function Item({dataItem}) {
         <h5> {name} </h5>
         <p className='swiperMachine'>{machine}</p>
       </div>
+      
       {Array.isArray(image) ? (
-        <img src={image[0]} alt={name} className='swiperImage'/>
+        <div>
+          <img src={image[0]} alt={name} className='swiperImage'/>
+        </div>
+        
       ) 
       : (
         <iframe width="300" height="300" src={image} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen className='videoItem' ></iframe>

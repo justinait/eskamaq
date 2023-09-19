@@ -8,6 +8,7 @@ import BrandsContainer from './components/BrandsContainer/BrandsContainer';
 import Minda from './components/Minda/Minda';
 import Corrpal from './components/Corrpal/Corrpal';
 import Vistron from './components/Vistron/Vistron';
+import CheckScroll from './CheckScroll';
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
         {/* < Contact /> */}
         
         <div className='content'>
-
+          <CheckScroll />
           <Routes >
             
             <Route path='/' element={< Home />} />

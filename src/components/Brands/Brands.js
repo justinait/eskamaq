@@ -77,25 +77,14 @@ function Brands({ brandArray }) {
 
             <div className='brandsContainer'>
               <Swiper
-                  className='swiperBrands'
-                  breakpoints={{
-                    320: {
-                      slidesPerView: 1,
-                      spaceBetween: 10,
-                    },
-                    767: {
-                      slidesPerView: 2,
-                      spaceBetween: 5,
-                    },
-                    1420: {
-                      slidesPerView: 2.6,
-                      spaceBetween: 10,
-                    },
-                  }}
+                className='swiperBrands'
+                freeMode={false} // Habilitar el modo free (sin bucle)
+                freeModeSticky={false} // Hacer que el tope sea "pegajoso"
+                // simulateTouch={true}
               >
                 {valuesExceptLast.map((e, i) => {
                   return(
-                    <SwiperSlide key={i}>
+                    <SwiperSlide key={i} className='swiperSlide'>
                       <Item dataItem={e} />
                     </SwiperSlide>
                   )
