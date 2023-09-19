@@ -80,16 +80,16 @@ function Brands({ brandArray }) {
                   className='swiperBrands'
                   breakpoints={{
                     320: {
-                      slidesPerView: 1.3,
+                      slidesPerView: 1,
                       spaceBetween: 10,
                     },
                     767: {
-                      slidesPerView: 2.5,
-                      spaceBetween: 10,
+                      slidesPerView: 2,
+                      spaceBetween: 5,
                     },
                     1420: {
-                      slidesPerView: 2.5,
-                      spaceBetween: 5,
+                      slidesPerView: 2.6,
+                      spaceBetween: 10,
                     },
                   }}
               >
