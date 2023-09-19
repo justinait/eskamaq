@@ -1,6 +1,7 @@
 import './Header.css'
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import CloseIcon from '@mui/icons-material/Close';
 
 function Header() {
   const [showDropdown, setShowDropdown] = useState(false)

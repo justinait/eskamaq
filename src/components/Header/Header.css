@@ -44,11 +44,26 @@ a {
 }
 
 .rightNavbar {
-    
     width: 25vw;
     display: flex;
-    
     justify-content: space-between;
+}
+.dropdown {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 55vw;
+    margin: 15% 20%;
+}
+.dropdown a {
+    color: black !important;
+    /* margin: 1%; */
+    font-size: 1.2875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3rem; /* 177.778% */
+    letter-spacing: -0.04219rem;
 }
 
 @media (min-width: 992px) {
@@ -75,24 +90,11 @@ a {
         justify-content: space-between;
         align-items: center;
 
-        
     }
     .dropdown {
-        
-        display: flex;
-        flex-direction: column;
-        position: relative;
+        height: unset;
         width: 40vw;
-        padding: 3% 5%;
-        /* left: 5vw; */
     }
-    .dropdown a {
-        color: black !important;
-        /* margin: 1%; */
-        font-size: 1.2875rem;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 3rem; /* 177.778% */
-        letter-spacing: -0.04219rem;
-    }
+    /* .dropdown a {
+    } */
 }
