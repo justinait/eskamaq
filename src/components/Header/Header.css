@@ -94,6 +94,8 @@ a {
     .dropdown {
         height: unset;
         width: 40vw;
+        padding: 3% 5%;
+        margin: unset;
     }
     /* .dropdown a {
     } */
