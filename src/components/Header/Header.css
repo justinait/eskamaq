@@ -1,9 +1,9 @@
-.logo {
-    width: 215px;
-}
-
 body {
     font-family: 'Red Hat Display', sans-serif;
+}
+
+.logo {
+    width: 215px;
 }
 
 a {
@@ -14,40 +14,20 @@ a {
 #auxiliar::after {
     display: none;
 }
-.navbar {
-    position: fixed !important;
-    top: 0 !important;
-    z-index: 10;
-    width: 100%;
-    font-size: 20px !important;
-}
-.card {
-    width: min-content !important;
-    background: transparent !important;
-    border: none !important;
-}
-.card-header {
-    
-    padding: 0 !important;
-    margin: 0 !important;
-    background: transparent !important;
-    border: none !important;
-}
-.marcasButton {
-    background: transparent;
-    border: none;
-    position: fixed;
-    right: 9%;
 
+.brandsButton {
+    font-family: 'red hat display';
+}
+.navbar {
+    display: flex;
+    justify-content: space-around !important;
 }
 
 @media (min-width: 992px) {
     .logo {
         width: 20vw;
     }
-    .navbar>.container {
-        align-items: flex-start !important;
-    }
+    
     .rightNavbar {
         display: flex;
         flex-direction: row;
@@ -55,14 +35,13 @@ a {
         justify-content: space-between;
     }
     .dropdown {
+        
         display: flex;
         flex-direction: column;
-        background: transparent;
-        border: none;
         position: relative;
-        right: 75vw;
-        margin-top: 15%;
-        width: 25vw;
+        width: 40vw;
+        padding: 5%;
+        /* left: 5vw; */
     }
     .dropdown a {
         color: black !important;
