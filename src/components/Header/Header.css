@@ -3,7 +3,9 @@ body {
 }
 
 .logo {
-    width: 215px;
+    width: 13.4375rem;
+height: 2.3125rem;
+flex-shrink: 0;
 }
 
 a {
@@ -19,28 +21,17 @@ a {
     font-family: 'red hat display';
     width: 45%;
     border-right: black 2px solid;
+    margin: 0;
 }
 .navbar {
     display: flex;
     justify-content: space-around !important;
     padding-top: 2% !important;
 }
-/* Estilo inicial del dropdown (oculto) */
-/* .dropdown {
-    opacity: 0;
-    max-height: 0;
-    transition: max-height 2s, opacity 0.3s ease;
-} */
-
-/* Estilo del dropdown cuando está visible */
-/* .dropdown.show {
-    opacity: 1;
-    max-height: auto;
-} */
 
 @media (min-width: 992px) {
     .logo {
-        width: 20vw;
+        /* width: 20vw; */
     }
     
     .rightNavbar {
@@ -48,6 +39,7 @@ a {
         flex-direction: row;
         width: 23%;
         justify-content: space-between;
+        align-items: center;
     }
     .dropdown {
         
