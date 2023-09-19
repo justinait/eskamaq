@@ -16,17 +16,32 @@ a {
 #auxiliar::after {
     display: none;
 }
-
+.companyButton {
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.875rem; /* 187.5% */
+    letter-spacing: -0.03rem;
+}
 .brandsButton {
     font-family: 'red hat display';
     width: 45%;
     border-right: black 2px solid;
     margin: 0;
+    color: #000;
+
+
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.875rem; /* 187.5% */
+    letter-spacing: -0.03rem;
 }
 .navbar {
     display: flex;
     justify-content: space-around !important;
-    padding-top: 2% !important;
+    padding: 1.5% 0 !important;
 }
 
 @media (min-width: 992px) {

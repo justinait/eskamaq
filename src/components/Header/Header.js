@@ -5,11 +5,9 @@ import { useState } from 'react';
 function Header() {
   const [showDropdown, setShowDropdown] = useState(false)
   
-  
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
   };
-
 
   return (
     <div>
@@ -19,7 +17,7 @@ function Header() {
         <div className='rightNavbar'>
           
           <p className='brandsButton' onClick={toggleDropdown}>Marcas</p>       
-          <Link to="/company">La empresa</Link>
+          <Link to="/company" className='companyButton'>La empresa</Link>
           
         </div>
       </div>
