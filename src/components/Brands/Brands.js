@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import './Brands.css';
 import Item from '../Item/Item';
-import Button from 'react-bootstrap/Button';
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 
@@ -74,7 +72,9 @@ function Brands({ brandArray }) {
               </a>
               
             </div>
-                
+            
+            <p className='brandsModel'>Todos los modelos</p>
+
             <div className='brandsContainer'>
               <Swiper
                   className='swiperBrands'

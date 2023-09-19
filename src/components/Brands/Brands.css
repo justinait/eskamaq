@@ -3,9 +3,17 @@
     flex-wrap: wrap;
     justify-content: space-between;
 }
-
+.brandsModel {
+    color: rgba(0, 0, 0, 0.80);
+    font-family: Red Hat Display;
+    font-size: 2.0625rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.875rem; /* 90.909% */
+    letter-spacing: -0.06188rem;
+    margin: 8% 8% 0;
+}
 .categoryByMachine {
-    margin-top: 15%;
     max-width: 80%;
     margin: 15% 0 0 10%;
     flex-direction: column;
