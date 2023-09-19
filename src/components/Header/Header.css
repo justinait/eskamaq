@@ -17,11 +17,26 @@ a {
 
 .brandsButton {
     font-family: 'red hat display';
+    width: 45%;
+    border-right: black 2px solid;
 }
 .navbar {
     display: flex;
     justify-content: space-around !important;
+    padding-top: 2% !important;
 }
+/* Estilo inicial del dropdown (oculto) */
+/* .dropdown {
+    opacity: 0;
+    max-height: 0;
+    transition: max-height 2s, opacity 0.3s ease;
+} */
+
+/* Estilo del dropdown cuando está visible */
+/* .dropdown.show {
+    opacity: 1;
+    max-height: auto;
+} */
 
 @media (min-width: 992px) {
     .logo {
@@ -40,7 +55,7 @@ a {
         flex-direction: column;
         position: relative;
         width: 40vw;
-        padding: 5%;
+        padding: 3% 5%;
         /* left: 5vw; */
     }
     .dropdown a {

@@ -25,7 +25,7 @@ function Header() {
       </div>
       
       {showDropdown && 
-        <div className='dropdown'>
+        <div className={`dropdown-content ${showDropdown ? 'show dropdown' : 'dropdown'}`}>
           <Link to="/Gopfert" onClick={toggleDropdown}>Göpfert</Link>
           <Link to="/Corrpal" onClick={toggleDropdown}>Corrpal Systems</Link>
           <Link to="/Bahmuller" onClick={toggleDropdown}>Bahmüller</Link>
