@@ -3,6 +3,8 @@ import './Brands.css';
 import Item from '../Item/Item';
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 
 function Brands({ brandArray }) {
 
@@ -63,7 +65,6 @@ function Brands({ brandArray }) {
           brandToRender = <h3>{brand}</h3>
         }
 
-        console.log(dataBranding[0].logo);
         return (
           <div key={i}>
             <div style={{ textAlign: 'center' }}>
@@ -71,11 +72,48 @@ function Brands({ brandArray }) {
               <a href={webBrand} target="_blank">
                 {logoBrandToRender}
               </a>
-                
               
             </div>
-            
-            <ButtonGroup aria-label="Basic example" className='categoryByMachine'>
+                
+            <div className='brandsContainer'>
+              <Swiper
+                  className='swiperBrands'
+                  breakpoints={{
+                    320: {
+                      slidesPerView: 1,
+                      spaceBetween: 10,
+                    },
+                    767: {
+                      slidesPerView: 2,
+                      spaceBetween: 5,
+                    },
+                    1420: {
+                      slidesPerView: 2.6,
+                      spaceBetween: 10,
+                    },
+                  }}
+              >
+                {valuesExceptLast.map((e, i) => {
+                  return(
+                    <SwiperSlide key={i}>
+                      <Item dataItem={e} />
+                    </SwiperSlide>
+                  )
+                  
+                })}
+              </Swiper>
+            </div>
+          </div>
+        );
+      })}
+    </>
+  );
+}
+
+export default Brands;
+
+
+            {/* <ButtonGroup aria-label="Basic example" className='categoryByMachine'>
               <Button
                 className='machineButton'
                 variant="outline-secondary"
@@ -96,21 +134,5 @@ function Brands({ brandArray }) {
                     {e}
                   </Button>
                 ))}
-            </ButtonGroup>
-
-            <div className='brandsContainer'>
-              {valuesExceptLast.map((e) => {
-                if (selected === 'todas' || (Array.isArray(machines) && selected === e.machine)) {
-                  return <Item key={e.id} dataItem={e} />;
-                }
-                return null;
-              })}
-            </div>
-          </div>
-        );
-      })}
-    </>
-  );
-}
-
-export default Brands;
+            </ButtonGroup> */}
+            {/* if (selected === 'todas' || (Array.isArray(machines) && selected === e.machine)) { */}

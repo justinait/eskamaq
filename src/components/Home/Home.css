@@ -8,9 +8,18 @@
     min-height: 100vh;
 }
 
+@font-face {
+    font-family: 'General Sans';
+    src: url('/GeneralSans-Light.otf');
+}
+p {
+    font-family: 'General Sans';
+}
+
 .content {
     flex: 1 0 auto;
-    margin-top: 10vh;
+    margin-top: 5vh;
+    background: #F5F5F7;
 }
 
 .homeImageMobile {
@@ -19,13 +28,13 @@
 
 .homeImage {
     height: unset;
-    width: 100vw;
+    width: 90%;
     display: none;
 }
 
 @supports(object-fit: cover){
     .homeImage, .homeImageMobile {
-      width: 100vw;
+      width: 100%;
       object-fit: cover;
       object-position: center center;
     }
