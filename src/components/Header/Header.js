@@ -5,7 +5,9 @@ import CloseIcon from '@mui/icons-material/Close';
 
 function Header() {
   const [showDropdown, setShowDropdown] = useState(false)
-  
+  const [marcasActive, setMarcasActive] = useState(false);
+  const [empresaActive, setEmpresaActive] = useState(false);
+
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
   };
@@ -13,12 +15,42 @@ function Header() {
   return (
     <div>
       <div className='navbar'>
-        <Link className='title' to="/">            <img src='./Logo-Azul.png' alt="ESKAMAQ" className='logo' />        </Link>
+        <Link 
+          className='title' 
+          onClick={() => {
+            setShowDropdown(false)
+            setEmpresaActive(false);
+            setMarcasActive(false);
+            }} to="/">    
+          <img src='./Logo-Azul.png' alt="ESKAMAQ" className='logo' />        
+        </Link>
         
         <div className='rightNavbar'>
-          
-          <Link className='brandsButton' onClick={toggleDropdown}>Marcas</Link>       
-          <Link to="/company" className='companyButton'>La empresa</Link>
+          <Link
+            className={`button ${marcasActive ? 'activeButton brandsButton' : 'brandsButton'}`}
+            onClick={() => {
+              toggleDropdown();
+              setMarcasActive(true);
+              setEmpresaActive(false);
+            }}
+          >
+            Marcas
+          </Link>
+          <Link
+            to="/company"
+            className={`button ${empresaActive ? 'activeButton companyButton' : 'companyButton'}`}
+            onClick={() => {
+              setEmpresaActive(true);
+              setMarcasActive(false);
+              setShowDropdown(false);
+            }}
+          >
+            La empresa
+          </Link>
+
+
+          {/* <Link className='brandsButton' onClick={toggleDropdown}>Marcas</Link>       
+          <Link to="/company" className='companyButton'>La empresa</Link> */}
           
         </div>
       </div>
