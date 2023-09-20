@@ -11,10 +11,10 @@ function Brands({ brandArray }) {
   const dataBranding = [
     { name: 'Göpfert', logo: '../../brands/Goepfert.jpg', web: 'https://goepfert.de/' },
     { name: 'Corrpal Systems', logo: '../../brands/CorrpalSystems.png', web: 'https://corrpal.com/maschinen/' },
-    { name: 'Bahmüller', logo: '../../brands/bahmuller.jpg', web: 'https://www.bahmueller.de/en-de/index.html' },
+    { name: 'Bahmüller', logo: '../../brands/bahmuller.png', web: 'https://www.bahmueller.de/en-de/index.html' },
     { name: 'BGM Flexo Folder Gluer', logo: '../../brands/bgm.jpg', web: 'https://www.bahmueller.de/en-us/corrugated-board-converting/products/bgm-flexo-folder-gluer.html' },
     { name: 'JB Machinery', logo: '../../brands/JBMachinery.png', web: 'https://www.jbmachinery.com/' },
-    { name: 'Vistron', logo: '../../brands/Vistron.jpg', web: 'https://vistron.com/' },
+    { name: 'Vistron', logo: '../../brands/Vistron1.png', web: 'https://vistron.com/' },
     { name: 'Stock Maschinenbau', logo: '../../brands/StockM.png', web: 'http://www.stock-maschinenbau.de/' },
     { name: 'Minda', logo: '../../brands/Minda.png', web: 'https://www.minda.com/en/' },
   ];

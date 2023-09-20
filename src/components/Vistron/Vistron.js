@@ -14,7 +14,7 @@ function Vistron() {
     <div>
         <div style={{ textAlign: 'center' }}>
             <a href='https://vistron.com/' target="_blank">
-                <img className='brandingLogo' src='../../brands/Vistron.jpg' alt='VISTRON'/>
+                <img className='brandingLogo' src='../../brands/Vistron.png' alt='VISTRON'/>
             </a>
             
         </div>
