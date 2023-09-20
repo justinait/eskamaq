@@ -2,10 +2,20 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-bottom: 25%;
 }
-
+.brandsModel {
+    color: rgba(0, 0, 0, 0.80);
+    font-family: Red Hat Display;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.875rem; /* 90.909% */
+    letter-spacing: -0.06188rem;
+    margin: 8%;
+    margin-bottom: 3%;
+}
 .categoryByMachine {
-    margin-top: 15%;
     max-width: 80%;
     margin: 15% 0 0 10%;
     flex-direction: column;
@@ -16,14 +26,15 @@
 }
 
 .brandingLogo {
-    width: 60vw;
+    width: 40vw;
+    margin: 15%;
 }
 
 .toBig {
     width: 40vw;
 }   
 
-@media (min-width: 800px){
+@media (min-width: 768px){
     .categoryByMachine {
         flex-direction: row;
         margin: 5% 0 0 5%;
@@ -37,4 +48,17 @@
     .toBig {
         width: 12vw;
     }   
+    .brandsModel {
+        font-size: 30px;
+        margin: 8% 8% 0;
+    }
+}
+
+@media (min-width: 1024px){
+    .brandsContainer {
+        padding-bottom: unset;
+    }
+    .brandsModel {
+        font-size: 35px;
+    }
 }

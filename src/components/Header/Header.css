@@ -1,72 +1,111 @@
-.logo {
-    width: 215px;
-}
-
 body {
     font-family: 'Red Hat Display', sans-serif;
 }
 
+.logo {
+    width: 6.4375rem;
+}
+
 a {
     text-decoration: none !important;
-    color: rgba(64, 64, 64, 0.70) !important;
+    color: rgba(0, 0, 0, 0.65) !important;
 }
 
 #auxiliar::after {
     display: none;
 }
-.navbar {
-    position: fixed !important;
-    top: 0 !important;
-    z-index: 10;
-    width: 100%;
-    font-size: 20px !important;
-}
-.card {
-    width: min-content !important;
-    background: transparent !important;
-    border: none !important;
-}
-.card-header {
-    
-    padding: 0 !important;
-    margin: 0 !important;
-    background: transparent !important;
-    border: none !important;
-}
-.marcasButton {
-    background: transparent;
-    border: none;
-    position: fixed;
-    right: 9%;
 
+  
+.companyButton {
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 0.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.875rem; /* 187.5% */
+    letter-spacing: -0.03rem;
+}
+.brandsButton {
+    font-family: 'red hat display';
+    width: 45%;
+    height: 14px;
+    display: flex;
+    border-right: black 0.01px solid;
+    margin: 0;
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 0.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.875rem;
+    letter-spacing: -0.03rem;
+    align-items: center;
+    margin-top: 5px;
+}
+a:hover,
+.activeButton {
+    color: black !important;
+}
+.inactiveButton {
+    color: rgba(0, 0, 0, 0.65);
+}
+.navbar {
+    display: flex;
+    justify-content: space-around !important;
+    padding: 1.5% 0 !important;
+}
+
+.rightNavbar {
+    width: 25vw;
+    display: flex;
+    justify-content: space-between;
+}
+.dropdown {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 55vw;
+    margin: 15% 20%;
+}
+.dropdown a {
+    color: black !important;
+    /* margin: 1%; */
+    font-size: 1.2875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3rem; /* 177.778% */
+    letter-spacing: -0.04219rem;
 }
 
 @media (min-width: 992px) {
     .logo {
-        width: 20vw;
+        width: 13.4375rem;
+        height: 2.3125rem;
+        flex-shrink: 0;
     }
-    .navbar>.container {
-        align-items: flex-start !important;
+    
+    .brandsButton, .companyButton {
+        font-size: 1rem;
+    }
+    
+    .brandsButton {
+        border-right: black 2px solid;
+        height: unset;
+        margin-top: unset;
+        /* align-items: flex-end; */
     }
     .rightNavbar {
         display: flex;
         flex-direction: row;
         width: 23%;
         justify-content: space-between;
+        align-items: center;
+
     }
     .dropdown {
-        display: flex;
-        flex-direction: column;
-        background: transparent;
-        border: none;
-        position: relative;
-        right: 75vw;
-        margin-top: 15%;
-        width: 25vw;
+        height: unset;
+        width: 40vw; 
+        margin: 3% 13%;
     }
-    .dropdown a {
-        color: black !important;
-        font-weight: 500;
-        margin: 1%;
-    }
+    /* .dropdown a {
+    } */
 }
