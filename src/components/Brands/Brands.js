@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './Brands.css';
 import Item from '../Item/Item';
-import Button from 'react-bootstrap/Button';
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 
 function Brands({ brandArray }) {
 
@@ -11,10 +11,10 @@ function Brands({ brandArray }) {
   const dataBranding = [
     { name: 'Göpfert', logo: '../../brands/Goepfert.jpg', web: 'https://goepfert.de/' },
     { name: 'Corrpal Systems', logo: '../../brands/CorrpalSystems.png', web: 'https://corrpal.com/maschinen/' },
-    { name: 'Bahmüller', logo: '../../brands/bahmuller.jpg', web: 'https://www.bahmueller.de/en-de/index.html' },
+    { name: 'Bahmüller', logo: '../../brands/bahmuller.png', web: 'https://www.bahmueller.de/en-de/index.html' },
     { name: 'BGM Flexo Folder Gluer', logo: '../../brands/bgm.jpg', web: 'https://www.bahmueller.de/en-us/corrugated-board-converting/products/bgm-flexo-folder-gluer.html' },
     { name: 'JB Machinery', logo: '../../brands/JBMachinery.png', web: 'https://www.jbmachinery.com/' },
-    { name: 'Vistron', logo: '../../brands/Vistron.jpg', web: 'https://vistron.com/' },
+    { name: 'Vistron', logo: '../../brands/Vistron1.png', web: 'https://vistron.com/' },
     { name: 'Stock Maschinenbau', logo: '../../brands/StockM.png', web: 'http://www.stock-maschinenbau.de/' },
     { name: 'Minda', logo: '../../brands/Minda.png', web: 'https://www.minda.com/en/' },
   ];
@@ -63,7 +63,6 @@ function Brands({ brandArray }) {
           brandToRender = <h3>{brand}</h3>
         }
 
-        console.log(dataBranding[0].logo);
         return (
           <div key={i}>
             <div style={{ textAlign: 'center' }}>
@@ -71,11 +70,67 @@ function Brands({ brandArray }) {
               <a href={webBrand} target="_blank">
                 {logoBrandToRender}
               </a>
-                
               
             </div>
             
-            <ButtonGroup aria-label="Basic example" className='categoryByMachine'>
+            <p className='brandsModel'>Todos los modelos</p>
+
+            <div className='brandsContainer'>
+              <Swiper
+                className='swiperBrands'
+                freeMode={false} // Habilitar el modo free (sin bucle)
+                freeModeSticky={false} // Hacer que el tope sea "pegajoso"
+                breakpoints={{
+                  320: {
+                    slidesPerView: 1.1,
+                    spaceBetween: 10,
+                  },
+                  640: {
+                    slidesPerView: 1.7,
+                    spaceBetween: 5,
+                  },
+                  767: {
+                    slidesPerView: 2,
+                    spaceBetween: 5,
+                  },
+                  1024: {
+                    slidesPerView: 2.3,
+                    spaceBetween: 5,
+                  },
+                  1280: {
+                    slidesPerView: 2.6,
+                    spaceBetween: 10,
+                  },
+                  1536: {
+                    slidesPerView: 3,
+                    spaceBetween: 10,
+                  },
+                  1700: {
+                    slidesPerView: 3.3,
+                  }
+                }}
+              >
+                {valuesExceptLast.map((e, i) => {
+                  return(
+                    <SwiperSlide key={i} className='swiperSlide'>
+                      <Item dataItem={e} />
+                    </SwiperSlide>
+                  )
+                  
+                })}
+              </Swiper>
+            </div>
+          </div>
+        );
+      })}
+    </>
+  );
+}
+
+export default Brands;
+
+
+            {/* <ButtonGroup aria-label="Basic example" className='categoryByMachine'>
               <Button
                 className='machineButton'
                 variant="outline-secondary"
@@ -96,21 +151,5 @@ function Brands({ brandArray }) {
                     {e}
                   </Button>
                 ))}
-            </ButtonGroup>
-
-            <div className='brandsContainer'>
-              {valuesExceptLast.map((e) => {
-                if (selected === 'todas' || (Array.isArray(machines) && selected === e.machine)) {
-                  return <Item key={e.id} dataItem={e} />;
-                }
-                return null;
-              })}
-            </div>
-          </div>
-        );
-      })}
-    </>
-  );
-}
-
-export default Brands;
+            </ButtonGroup> */}
+            {/* if (selected === 'todas' || (Array.isArray(machines) && selected === e.machine)) { */}

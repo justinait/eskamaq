@@ -1,35 +1,75 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import './Header.css'
-import { NavLink } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import CloseIcon from '@mui/icons-material/Close';
 
 function Header() {
+  const [showDropdown, setShowDropdown] = useState(false)
+  const [marcasActive, setMarcasActive] = useState(false);
+  const [empresaActive, setEmpresaActive] = useState(false);
+
+  const toggleDropdown = () => {
+    setShowDropdown(!showDropdown);
+  };
+
   return (
-    <Navbar bg="light" expand="lg">
-      <Container>
-        <NavLink className='title' href="/">            <img src='./Logo-Azul.png' alt="ESKAMAQ" className='logo' />        </NavLink>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="/">Inicio</Nav.Link>
-            {/* <Nav.Link href="/contact">Contacto</Nav.Link> */}
-            <Nav.Link href="/company">La empresa</Nav.Link>
-            <NavDropdown title="Marcas" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/Gopfert">Göpfert</NavDropdown.Item>
-              <NavDropdown.Item href="/Corrpal">Corrpal Systems</NavDropdown.Item>
-              <NavDropdown.Item href="/Bahmuller">Bahmüller</NavDropdown.Item>
-              <NavDropdown.Item href="/BGM">BGM Flexo Folder Gluer</NavDropdown.Item>
-              <NavDropdown.Item href="/JBMachinery">JB Machinery</NavDropdown.Item>
-              <NavDropdown.Item href="/Vistron">Vistron</NavDropdown.Item>
-              <NavDropdown.Item href="/StockMaschinenbau">Stock Maschinenbau</NavDropdown.Item>
-              <NavDropdown.Item href="/Minda">Minda</NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <div>
+      <div className='navbar'>
+        <Link 
+          className='title' 
+          onClick={() => {
+            setShowDropdown(false)
+            setEmpresaActive(false);
+            setMarcasActive(false);
+            }} to="/">    
+          <img src='./Logo-Azul.png' alt="ESKAMAQ" className='logo' />        
+        </Link>
+        
+        <div className='rightNavbar'>
+          <Link
+            className={`button ${marcasActive ? 'activeButton brandsButton' : 'brandsButton'}`}
+            onClick={() => {
+              toggleDropdown();
+              setMarcasActive(true);
+              setEmpresaActive(false);
+            }}
+          >
+            Marcas
+          </Link>
+          <Link
+            to="/company"
+            className={`button ${empresaActive ? 'activeButton companyButton' : 'companyButton'}`}
+            onClick={() => {
+              setEmpresaActive(true);
+              setMarcasActive(false);
+              setShowDropdown(false);
+            }}
+          >
+            La empresa
+          </Link>
+
+
+          {/* <Link className='brandsButton' onClick={toggleDropdown}>Marcas</Link>       
+          <Link to="/company" className='companyButton'>La empresa</Link> */}
+          
+        </div>
+      </div>
+      
+      {showDropdown && 
+        <div className={`dropdown-content ${showDropdown ? 'show dropdown' : 'dropdown'}`}>
+          <Link to="/Gopfert" onClick={toggleDropdown}>Göpfert</Link>
+          <Link to="/Corrpal" onClick={toggleDropdown}>Corrpal Systems</Link>
+          <Link to="/Bahmuller" onClick={toggleDropdown}>Bahmüller</Link>
+          <Link to="/BGM" onClick={toggleDropdown}>BGM Flexo Folder Gluer</Link>
+          <Link to="/JBMachinery" onClick={toggleDropdown}>JB Machinery</Link>
+          <Link to="/Vistron" onClick={toggleDropdown}>Vistron</Link>
+          <Link to="/StockMaschinenbau" onClick={toggleDropdown}>Stock Maschinenbau</Link>
+          <Link to="/Minda" onClick={toggleDropdown}>Minda</Link>
+        </div>
+      }
+
+    </div>
+
   );
 }
 

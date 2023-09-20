@@ -1,40 +1,75 @@
-.itemImage {
-    width: 100%;
+.swiperImage {
+    width: 130%;
+    position: relative;
+    right: 45px;
 }
 
 .itemContainer {
+    margin: 2%;
+    height: 400px;
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    
+    overflow: hidden;
+}
+.swiperBrands {
+    margin: 0 0 0 5% !important;
     width: 100vw;
-    padding: 8%;
-    border: 1px solid black;
-    margin: 3%;
 }
 
-.carouselHome{
-    .thumbs-wrapper
-    {
-        display: none;
-    }
+.swiperText h5 {
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px; /* 85.714% */
+    letter-spacing: -1.05px;
+}
+.swiperText {
+    padding: 30px 20px 0;
+}
+.swiperMachine {
+    color: #4A4A4A;
+    font-family: 'General Sans';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; /* 150% */
 }
 
 .videoItem {
     width: 100%;
 }
 
-@media (min-width: 592px) {
+
+@media (min-width: 768px) {
     .itemContainer {
-        width: 45vw;
-        padding: 7%;
+        height: 500px;
+    }
+    .swiperBrands {
+        padding: 4% !important;
+        width: 100vw;
+    }
+    
+    .swiperText h5 {
+        font-size: 30px;
+    }
+    .swiperMachine {
+        font-size: 18px;
     }
 }
 
-@media (min-width: 992px) {
-    .itemContainer {
+
+@media (min-width: 1024px) {
+    /* .itemContainer {
         width: 30vw;
-        padding: 4%;
         margin: unset;
         border: unset;
+    } */
+    .swiperText h5 {
+        font-size: 35px;
     }
-    .itemContainer:hover {
-        border: 1px black solid;
+    .swiperMachine {
+        font-size: 20px;
     }
 }

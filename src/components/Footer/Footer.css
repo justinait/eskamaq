@@ -2,11 +2,18 @@
     flex-shrink: 0;
     width: 100%;
     height: 40vh;
-    background-color: #070070;
+    background: #0018A5;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;    
+    align-items: center;
 }
-
+.footerContainer {
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .socialMediaBox {
     display: flex;
     text-align: center;
@@ -15,28 +22,26 @@
     align-items: flex-start;
     justify-content: space-evenly;
 }
-.footerDiv {
+.svenFooter {
     display: flex;
-    height: 60%;
-    flex-direction: column;
-    justify-content: space-evenly;
     color: white;
-    align-items: center;
     font-size: 10px;
+    justify-content: space-evenly;
+    align-items: flex-start;
 }
 
 .socialMedia {
     color: white;
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 12px;
+    font-weight: 400;
 }
 
-.linkedin {
+/* .linkedin {
     font-size: 12px;
-}
+} */
 
 .logoFooter {
-    width: 45%;
+    width: 20px;
 }
 
 .socialMediaText{
@@ -49,38 +54,56 @@
 }
 
 .final {
-    font-size: xx-small;;
+    border-top: 1px solid white;
+    color: white;
+    width: 85vw;
+    margin: 0 auto;
+    padding-top: 1%;
+    font-size: xx-small;
 }
 
 @media (min-width: 592px) {
     .footer {
-        flex-direction: row;
         justify-content: space-between;
     }    
     .socialMediaBox {
         width: 100vw;
     }
+    .final {
+        border-top: 1px solid white;
+        width: 85vw;
+        margin: 0 auto;
+        padding-top: 1%;
+        font-size: x-small;
+    }
 }
 @media (min-width: 992px) {
    
+    .footerContainer {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 15vh;
+    }
     .socialMediaBox {
         width: unset;
+        height: 100%;
+        justify-content: space-between;
     }
     .footer {
-        height: 30vh;
-        align-items: center;
-        justify-content: space-around;
-        flex-direction: row;
+        height: 35vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: unset;
     }    
 
-    .footerDiv{
-        align-items: unset;
-        font-size: 12px;
-        width: 30%;
+    .svenFooter{
+        font-size: 17px;
+        width: 20%;
     }
 
     .logoFooter{
-        width: 60%;
+        width: 40px;
     }
 
     .socialMediaIcon:hover {
@@ -88,10 +111,14 @@
     }
     
     .socialMedia {
-        font-size: 16px;
+        font-size: 14px;
     }
     
-    .linkedin {
-        font-size: 14px;
+    .final {
+        border-top: 1px solid white;
+        width: 85vw;
+        margin: 0 auto;
+        padding-top: 1%;
+        font-size: x-small;
     }
 }

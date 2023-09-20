@@ -8,21 +8,21 @@ import BrandsContainer from './components/BrandsContainer/BrandsContainer';
 import Minda from './components/Minda/Minda';
 import Corrpal from './components/Corrpal/Corrpal';
 import Vistron from './components/Vistron/Vistron';
+import CheckScroll from './CheckScroll';
 
 function App() {
   return (
     <BrowserRouter>
       <div className='app'>
         < Header />
-        < Contact />
+        {/* < Contact /> */}
         
         <div className='content'>
-
+          <CheckScroll />
           <Routes >
             
             <Route path='/' element={< Home />} />
               
-            {/* <Route path='/contact' element={< Contact />} /> */}
             <Route path='/company' element={< Company />} />
 
             <Route path='/Minda' element={< Minda />} />

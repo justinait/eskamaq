@@ -1,34 +1,110 @@
+body {
+    font-family: 'Red Hat Display', sans-serif;
+}
+
 .logo {
-    width: 30vw;
+    width: 6.4375rem;
 }
 
+a {
+    text-decoration: none !important;
+    color: rgba(0, 0, 0, 0.65) !important;
+}
+
+#auxiliar::after {
+    display: none;
+}
+  
+.companyButton {
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 0.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.875rem; /* 187.5% */
+    letter-spacing: -0.03rem;
+}
+.brandsButton {
+    font-family: 'red hat display';
+    width: 45%;
+    height: 14px;
+    display: flex;
+    border-right: black 0.01px solid;
+    margin: 0;
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 0.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.875rem;
+    letter-spacing: -0.03rem;
+    align-items: center;
+    margin-top: 5px;
+}
+a:hover,
+.activeButton {
+    color: black !important;
+}
+.inactiveButton {
+    color: rgba(0, 0, 0, 0.65);
+}
 .navbar {
-    position: fixed !important;
-    top: 0 !important;
-    z-index: 10;
-    width: 100%;
+    display: flex;
+    justify-content: space-around !important;
+    padding: 1.5% 0 !important;
 }
 
-.navbar-collapse {
-    flex-grow: 0 !important;
+.rightNavbar {
+    width: 25vw;
+    display: flex;
+    justify-content: space-between;
 }
-
-.navbar-expand-lg .navbar-collapse {
-    font-size: 22px;
+.dropdown {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 55vw;
+    margin: 15% 20%;
 }
-
+.dropdown a {
+    color: black !important;
+    /* margin: 1%; */
+    font-size: 1.2875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3rem; /* 177.778% */
+    letter-spacing: -0.04219rem;
+}
 
 @media (min-width: 992px) {
-    .navbar-expand-lg .navbar-collapse {
-        font-size: 22px;
-        margin-right: 70px;
-    }
     .logo {
-        width: 20vw;
+        width: 13.4375rem;
+        height: 2.3125rem;
+        flex-shrink: 0;
     }
     
-}
+    .brandsButton, .companyButton {
+        font-size: 1rem;
+    }
+    
+    .brandsButton {
+        border-right: black 2px solid;
+        height: unset;
+        margin-top: unset;
+        /* align-items: flex-end; */
+    }
+    .rightNavbar {
+        display: flex;
+        flex-direction: row;
+        width: 23%;
+        justify-content: space-between;
+        align-items: center;
 
-body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .dropdown {
+        height: unset;
+        width: 40vw; 
+        margin: 3% 13%;
+    }
+    /* .dropdown a {
+    } */
 }
