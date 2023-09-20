@@ -1,5 +1,7 @@
 .swiperImage {
-    width: 100%;
+    width: 130%;
+    position: relative;
+    right: 45px;
 }
 
 .itemContainer {
