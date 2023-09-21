@@ -17,12 +17,13 @@ a {
   
 .companyButton {
     color: rgba(0, 0, 0, 0.65);
-    font-size: 0.5rem;
+    font-size: 0.7rem;
     font-style: normal;
     font-weight: 500;
     line-height: 1.875rem; /* 187.5% */
     letter-spacing: -0.03rem;
 }
+
 .brandsButton {
     font-family: 'red hat display';
     width: 45%;
@@ -31,13 +32,13 @@ a {
     border-right: black 0.01px solid;
     margin: 0;
     color: rgba(0, 0, 0, 0.65);
-    font-size: 0.5rem;
+    font-size: 0.7rem;
     font-style: normal;
     font-weight: 500;
     line-height: 1.875rem;
     letter-spacing: -0.03rem;
     align-items: center;
-    margin-top: 5px;
+    margin-top: 6px;
 }
 a:hover,
 .activeButton {
@@ -75,15 +76,15 @@ a:hover,
     letter-spacing: -0.04219rem;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 678px) {
     .logo {
-        width: 13.4375rem;
-        height: 2.3125rem;
-        flex-shrink: 0;
+        
+        width: 10.4375rem;
+        height: unset;
     }
     
     .brandsButton, .companyButton {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
     
     .brandsButton {
@@ -107,4 +108,15 @@ a:hover,
     }
     /* .dropdown a {
     } */
+}
+
+
+@media (min-width: 1024px) {
+    .brandsButton, .companyButton {
+        font-size: 1rem;
+    }
+    .logo {
+        width: 13.4375rem;
+        height: 2.3125rem;
+    }
 }
