@@ -2,20 +2,33 @@
     display: flex;
     flex-direction: column;
     width: 80vw;
-    margin: auto;
-    padding: 4% 0;
+    margin: 0 auto 12% auto;
 }
 
 .vistronImg {
     width: 100%;
+    margin-bottom: 10%;
 }
 
-@media (min-width: 600px){
-    .vistronContainer {
-        flex-direction: row;
-    }   
+@media (min-width: 768px){
     .vistronImg {
         width: 90%;
+        margin: 5% auto 8% auto;
+    }
+    
+}
+
+@media (min-width: 1280px){
+    .vistronContainer {
+        flex-direction: row;
+        margin: 5% auto 8% auto;
+        align-items: flex-start;
+    }   
+    .vistronImg {
+        width: 50%;
+        margin: auto;
+        margin: 0;
+        object-fit: contain;
     }
     
 }

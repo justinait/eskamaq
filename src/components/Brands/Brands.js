@@ -17,6 +17,7 @@ function Brands({ brandArray }) {
     { name: 'Vistron', logo: '../../brands/Vistron1.png', web: 'https://vistron.com/' },
     { name: 'Stock Maschinenbau', logo: '../../brands/StockM.png', web: 'http://www.stock-maschinenbau.de/' },
     { name: 'Minda', logo: '../../brands/Minda.png', web: 'https://www.minda.com/en/' },
+    { name: 'Absolute', logo: '../../brands/Absolute.png', web: 'https://absolute-eng.com/' },
   ];
 
   return (
@@ -78,8 +79,6 @@ function Brands({ brandArray }) {
             <div className='brandsContainer'>
               <Swiper
                 className='swiperBrands'
-                freeMode={false} // Habilitar el modo free (sin bucle)
-                freeModeSticky={false} // Hacer que el tope sea "pegajoso"
                 breakpoints={{
                   320: {
                     slidesPerView: 1.1,
