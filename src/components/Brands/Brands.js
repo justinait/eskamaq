@@ -17,6 +17,7 @@ function Brands({ brandArray }) {
     { name: 'Vistron', logo: '../../brands/Vistron1.png', web: 'https://vistron.com/' },
     { name: 'Stock Maschinenbau', logo: '../../brands/StockM.png', web: 'http://www.stock-maschinenbau.de/' },
     { name: 'Minda', logo: '../../brands/Minda.png', web: 'https://www.minda.com/en/' },
+    { name: 'Absolute', logo: '../../brands/Absolute.png', web: 'https://absolute-eng.com/' },
   ];
 
   return (

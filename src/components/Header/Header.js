@@ -48,10 +48,6 @@ function Header() {
             La empresa
           </Link>
 
-
-          {/* <Link className='brandsButton' onClick={toggleDropdown}>Marcas</Link>       
-          <Link to="/company" className='companyButton'>La empresa</Link> */}
-          
         </div>
       </div>
       
@@ -65,6 +61,7 @@ function Header() {
           <Link to="/Vistron" onClick={toggleDropdown}>Vistron</Link>
           <Link to="/StockMaschinenbau" onClick={toggleDropdown}>Stock Maschinenbau</Link>
           <Link to="/Minda" onClick={toggleDropdown}>Minda</Link>
+          <Link to="/Absolute" onClick={toggleDropdown}>Absolute</Link>
         </div>
       }
 
