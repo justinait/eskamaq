@@ -78,8 +78,6 @@ function Brands({ brandArray }) {
             <div className='brandsContainer'>
               <Swiper
                 className='swiperBrands'
-                freeMode={false} // Habilitar el modo free (sin bucle)
-                freeModeSticky={false} // Hacer que el tope sea "pegajoso"
                 breakpoints={{
                   320: {
                     slidesPerView: 1.1,
