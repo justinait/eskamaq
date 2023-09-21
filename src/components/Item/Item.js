@@ -1,7 +1,5 @@
 import React from 'react'
 import './Item.css'
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 function Item({dataItem}) {
   
@@ -12,6 +10,7 @@ function Item({dataItem}) {
   }
 
   const {image, name, machine, measure} = dataItem;
+  const videoUrl = `${image}#t=7`;
 
   return (
     <div className='itemContainer'>
@@ -27,7 +26,7 @@ function Item({dataItem}) {
         
       ) 
       : (
-        <iframe width="300" height="300" src={image} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen className='videoItem' ></iframe>
+        <iframe width="300" height="300" src={videoUrl} muted allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen className='videoItem' ></iframe>
       )}
 
       {/* 
