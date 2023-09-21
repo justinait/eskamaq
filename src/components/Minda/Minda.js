@@ -11,7 +11,12 @@ function Minda() {
       </div>
 
       <div className='mindaYoutubeContainer'>
-        <iframe className='mindaYoutube' src="https://www.youtube.com/embed/KjS_4SuPv0c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        {/* <iframe className='mindaYoutube' src="https://www.youtube.com/embed/KjS_4SuPv0c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> */}
+        
+        <video controls width="640" height="360" className='videoCorrpal'>
+          <source src='https://res.cloudinary.com/dsgxxcikg/video/upload/v1695318622/eskamaq/V%C3%ADdeo_sin_t%C3%ADtulo_Hecho_con_Clipchamp_1_uhugbe.mp4' type="video/mp4" />
+          Tu navegador no admite el elemento de video.
+        </video>
       </div>
 
       <div className='mindaInfo'>

@@ -12,6 +12,7 @@ function Item({dataItem}) {
   }
 
   const {image, name, machine, measure} = dataItem;
+  const videoUrl = `${image}#t=7`; // Agregar ?start=2 al final de la URL
 
   return (
     <div className='itemContainer'>
@@ -27,7 +28,7 @@ function Item({dataItem}) {
         
       ) 
       : (
-        <iframe width="300" height="300" src={image} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen className='videoItem' ></iframe>
+        <iframe width="300" height="300" src={videoUrl} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen className='videoItem' ></iframe>
       )}
 
       {/* 
