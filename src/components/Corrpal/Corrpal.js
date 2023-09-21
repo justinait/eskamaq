@@ -9,6 +9,7 @@ function Corrpal() {
             <img className='brandingLogo' src='../../brands/CorrpalSystems.png' alt='Corrpal Systems' />
           </a>
         </div>
+        
         <div style={{textAlign: 'center'}}>
           <video controls width="640" height="360" className='videoCorrpal'>
             <source src='https://res.cloudinary.com/dsgxxcikg/video/upload/v1695132916/eskamaq/corrpaldraft_xj1j89.mp4' type="video/mp4" />

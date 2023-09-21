@@ -17,6 +17,7 @@ function Brands({ brandArray }) {
     { name: 'Vistron', logo: '../../brands/Vistron1.png', web: 'https://vistron.com/' },
     { name: 'Stock Maschinenbau', logo: '../../brands/StockM.png', web: 'http://www.stock-maschinenbau.de/' },
     { name: 'Minda', logo: '../../brands/Minda.png', web: 'https://www.minda.com/en/' },
+    { name: 'Absolute', logo: '../../brands/Absolute.png', web: 'https://absolute-eng.com/' },
   ];
 
   return (
@@ -58,6 +59,11 @@ function Brands({ brandArray }) {
             logoBrandToRender = <img className='brandingLogo' src={dataBranding[6].logo} alt={dataBranding[6].name} />
             webBrand = dataBranding[6].web;
             break;
+          case 'Absolute':
+          brandToRender = <h3>{dataBranding[8].name}</h3>;
+          logoBrandToRender = <img className='brandingLogo' src={dataBranding[8].logo} alt={dataBranding[8].name} />
+          webBrand = dataBranding[8].web;
+          break;
 
           default:
           brandToRender = <h3>{brand}</h3>
@@ -78,8 +84,6 @@ function Brands({ brandArray }) {
             <div className='brandsContainer'>
               <Swiper
                 className='swiperBrands'
-                freeMode={false} // Habilitar el modo free (sin bucle)
-                freeModeSticky={false} // Hacer que el tope sea "pegajoso"
                 breakpoints={{
                   320: {
                     slidesPerView: 1.1,

@@ -1,6 +1,5 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import Header from './components/Header/Header';
-import Contact from './components/Contact/Contact';
 import Home from './components/Home/Home';
 import Footer from './components/Footer/Footer';
 import Company from './components/Company/Company';
@@ -15,7 +14,6 @@ function App() {
     <BrowserRouter>
       <div className='app'>
         < Header />
-        {/* < Contact /> */}
         
         <div className='content'>
           <CheckScroll />
@@ -30,7 +28,8 @@ function App() {
             <Route path='/Vistron' element={< Vistron />} />
 
             <Route path='/:brand' element={< BrandsContainer />} />
-
+            
+            <Route path='*' element={<Navigate to="/" />} />
           </Routes>
         </div>
         < Footer />
