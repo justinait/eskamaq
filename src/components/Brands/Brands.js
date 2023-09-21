@@ -59,6 +59,11 @@ function Brands({ brandArray }) {
             logoBrandToRender = <img className='brandingLogo' src={dataBranding[6].logo} alt={dataBranding[6].name} />
             webBrand = dataBranding[6].web;
             break;
+          case 'Absolute':
+          brandToRender = <h3>{dataBranding[8].name}</h3>;
+          logoBrandToRender = <img className='brandingLogo' src={dataBranding[8].logo} alt={dataBranding[8].name} />
+          webBrand = dataBranding[8].web;
+          break;
 
           default:
           brandToRender = <h3>{brand}</h3>
