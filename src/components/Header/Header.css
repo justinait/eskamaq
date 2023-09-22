@@ -14,6 +14,17 @@ a {
 #auxiliar::after {
     display: none;
 }
+
+.closeButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #333;
+    right: 7px;
+    top: 7px;
+    position: absolute;
+}
   
 .companyButton {
     color: rgba(0, 0, 0, 0.65);
@@ -26,7 +37,7 @@ a {
 
 .brandsButton {
     font-family: 'red hat display';
-    width: 45%;
+    width: 41%;
     height: 14px;
     display: flex;
     border-right: black 0.01px solid;
@@ -91,6 +102,7 @@ a:hover,
         border-right: black 2px solid;
         height: unset;
         margin-top: unset;
+        width: 45%;
         /* align-items: flex-end; */
     }
     .rightNavbar {
@@ -106,8 +118,6 @@ a:hover,
         width: 40vw; 
         margin: 3% 13%;
     }
-    /* .dropdown a {
-    } */
 }
 
 
@@ -119,4 +129,12 @@ a:hover,
         width: 13.4375rem;
         height: 2.3125rem;
     }
+    
+    .dropdown a {        
+        color: rgba(0, 0, 0, 0.65) !important;
+    }
+    .dropdown a:hover {        
+        color: black !important;
+    }
+    
 }

@@ -4,7 +4,7 @@ import './Company.css'
 function Company() {
   return (
     <div className='company'>
-      <img src='./brands.png' className='brands' />
+      {/* <img src='./Bahmuller/Turbox.jpg' className='brands' /> */}
       <p>
         Somos un equipo jóven y dinámico dispuesto a aportar la mejor solución para sus necesidades en impresión, 
         flexográfica y troquelado. Involucrados desde hace años en el asesoramiento y venta de maquinaria
