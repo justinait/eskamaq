@@ -11,7 +11,7 @@ function Item({dataItem}) {
 
   const {image, name, machine, measure} = dataItem;
   const videoUrl = `${image}#t=7`;
-
+  
   return (
     <div className='itemContainer'>
       <div className='swiperText'>
@@ -26,7 +26,11 @@ function Item({dataItem}) {
         
       ) 
       : (
-        <iframe width="300" height="300" src={videoUrl} muted allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen className='videoItem' ></iframe>
+        // <iframe width="300" height="300" src={videoUrl} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen className='videoItem' ></iframe>
+        <video controls width="640" height="360" className='videoItem'>
+          <source src={videoUrl} type="video/mp4" />
+          Tu navegador no admite el elemento de video.
+        </video>
       )}
 
       {/* 
