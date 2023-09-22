@@ -29,7 +29,7 @@ function App() {
 
             <Route path='/:brand' element={< BrandsContainer />} />
             
-            <Route path='*' element={<Navigate to="/" />} />
+            {/* <Route path='*' element={<Navigate to="/" />} /> */}
           </Routes>
         </div>
         < Footer />
