@@ -14,6 +14,17 @@ a {
 #auxiliar::after {
     display: none;
 }
+
+.closeButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #333;
+    right: 7px;
+    top: 7px;
+    position: absolute;
+}
   
 .companyButton {
     color: rgba(0, 0, 0, 0.65);
