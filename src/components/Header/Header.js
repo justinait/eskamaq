@@ -14,90 +14,55 @@ function Header() {
     setShowDropdown(!showDropdown);
   };
 
+  const navbar = <>
+    <div className='navbar'>
+      <Link 
+        className='title' 
+        onClick={() => {
+          setShowDropdown(false)
+          setEmpresaActive(false);
+          setMarcasActive(false);
+          }} to="/">    
+        <img src='./Logo-Azul.png' alt="ESKAMAQ" className='logo' />        
+      </Link>
+      
+      <div className='rightNavbar'>
+        <Link
+          className={`button ${marcasActive ? 'activeButton brandsButton' : 'brandsButton'}`}
+          onClick={() => {
+            toggleDropdown();
+            setMarcasActive(true);
+            setEmpresaActive(false);
+          }}
+        >
+          Marcas
+        </Link>
+        <Link
+          to="/company"
+          className={`button ${empresaActive ? 'activeButton companyButton' : 'companyButton'}`}
+          onClick={() => {
+            setEmpresaActive(true);
+            setMarcasActive(false);
+            setShowDropdown(false);
+          }}
+        >
+          La empresa
+        </Link>
+
+      </div>
+    </div>
+  </>
+  
   return (
     <div>
-      
       {
       mediaQuery.matches?
       (showDropdown ?
         <button className='closeButton' onClick={() => setShowDropdown(false)}>
           <CloseIcon fontSize='large' />
-        </button>
-          :
-        <div className='navbar'>
-          <Link 
-            className='title' 
-            onClick={() => {
-              setShowDropdown(false)
-              setEmpresaActive(false);
-              setMarcasActive(false);
-              }} to="/">    
-            <img src='./Logo-Azul.png' alt="ESKAMAQ" className='logo' />        
-          </Link>
-          
-          <div className='rightNavbar'>
-            <Link
-              className={`button ${marcasActive ? 'activeButton brandsButton' : 'brandsButton'}`}
-              onClick={() => {
-                toggleDropdown();
-                setMarcasActive(true);
-                setEmpresaActive(false);
-              }}
-            >
-              Marcas
-            </Link>
-            <Link
-              to="/company"
-              className={`button ${empresaActive ? 'activeButton companyButton' : 'companyButton'}`}
-              onClick={() => {
-                setEmpresaActive(true);
-                setMarcasActive(false);
-                setShowDropdown(false);
-              }}
-            >
-              La empresa
-            </Link>
-
-          </div>
-        </div>)
-        
-        :
-        <div className='navbar'>
-          <Link 
-            className='title' 
-            onClick={() => {
-              setShowDropdown(false)
-              setEmpresaActive(false);
-              setMarcasActive(false);
-              }} to="/">    
-            <img src='./Logo-Azul.png' alt="ESKAMAQ" className='logo' />        
-          </Link>
-          
-          <div className='rightNavbar'>
-            <Link
-              className={`button ${marcasActive ? 'activeButton brandsButton' : 'brandsButton'}`}
-              onClick={() => {
-                toggleDropdown();
-                setMarcasActive(true);
-                setEmpresaActive(false);
-              }}
-            >
-              Marcas
-            </Link>
-            <Link
-              to="/company"
-              className={`button ${empresaActive ? 'activeButton companyButton' : 'companyButton'}`}
-              onClick={() => {
-                setEmpresaActive(true);
-                setMarcasActive(false);
-                setShowDropdown(false);
-              }}
-            >
-              La empresa
-            </Link>
-
-          </div>
-        </div>
+        </button> : 
+      navbar) :
+      navbar
       }
 
 
