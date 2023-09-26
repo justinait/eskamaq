@@ -23,6 +23,7 @@ p {
 
 .homeImageMobile {
     width: 100%;
+    height: 56vh;
 }
 
 .homeImage {
@@ -38,7 +39,7 @@ p {
       object-position: center center;
     }
 }
-@media (min-width: 676px) {
+@media (min-width: 876px) {
 
     .homeImageMobile {
         display: none;
