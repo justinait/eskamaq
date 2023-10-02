@@ -4,14 +4,16 @@
 
 .company {
     text-align: center;
-    margin: 7%;
+    margin: 20%;
 }
 
 .company p {
-    text-align: justify;
+    text-align: left;
 }
 
 @media (min-width: 992px){
-    
+    .company {
+        margin: 10% 20%;
+    }
 
 }
