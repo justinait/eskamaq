@@ -23,13 +23,16 @@
 }
 
 .companyTitle {
-    font-family: 'General Sans Medium';
+    font-family: General Sans Medio;
     font-size: 31px;
     font-style: normal;
     line-height: 106.5%;
     letter-spacing: -1.2px;
+    font-weight: 600;
 }
 .companySubtitle {
+    width: 72%;
+    margin: auto;
     color: #5991FF;
     font-family: General Sans;
     font-size: 15px;
@@ -47,18 +50,19 @@
     padding: 4% 0 25%;
 }
 .about p {
-    font-family: 'General Sans regular';
+    font-family: General Sans Regular;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
 }
 .about h4 {
-    font-family: 'General Sans semibold';
+    font-family: General Sans Semibold;
     font-size: 30px;
     font-style: normal;
     letter-spacing: -1.2px;
     margin-bottom: 5%;
+    font-weight: 600;
 }
 @media (min-width: 992px){
     .companyTitle {

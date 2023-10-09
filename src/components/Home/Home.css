@@ -9,26 +9,26 @@
 }
 
 @font-face {
-    font-family: 'General Sans';
+    font-family: General Sans;
     src: url('/GeneralSans-Light.otf');
 }
 @font-face {
-    font-family: 'General Sans Semibold';
+    font-family: General Sans Semibold;
     src: url('/GeneralSans-Semibold.otf');
 }
 
 @font-face {
-    font-family: 'General Sans Medium';
+    font-family: General Sans Medio;
     src: url('/GeneralSans-Medium.otf');
 }
 
 @font-face {
-    font-family: 'General Sans Regular';
+    font-family: General Sans Regular;
     src: url('/GeneralSans-Regular.otf');
 }
 
 p {
-    font-family: 'General Sans';
+    font-family: General Sans;
 }
 
 .content {
@@ -36,7 +36,7 @@ p {
     background: #F5F5F7;
 }
 
-/* .title {
+/* .homeTitle {
     display: flex;
     height: 4.6875rem;
     flex-direction: column;
@@ -45,7 +45,7 @@ p {
 
     color: #000;
     text-align: center;
-    font-family: 'General Sans Medium';
+    font-family: General Sans Medio;
     font-size: 3.125rem;
     font-style: normal;
     font-weight: 600;
