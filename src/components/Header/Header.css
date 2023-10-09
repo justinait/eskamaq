@@ -61,7 +61,6 @@ a:hover,
 .navbar {
     display: flex;
     justify-content: space-around !important;
-    padding: 1.5% 0 !important;
 }
 
 .rightNavbar {
