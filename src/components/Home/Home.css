@@ -36,7 +36,7 @@ p {
     background: #F5F5F7;
 }
 
-.title {
+/* .title {
     display: flex;
     height: 4.6875rem;
     flex-direction: column;
@@ -49,9 +49,9 @@ p {
     font-size: 3.125rem;
     font-style: normal;
     font-weight: 600;
-    line-height: 115%; /* 3.59375rem */
+    line-height: 115%;
     letter-spacing: -0.1125rem;
-}
+} */
 
 .homeImageMobile {
     width: 100%;
