@@ -1,19 +1,89 @@
 .brands {
     width: 100%;
 }
+.companyContainer {
+    background-color: #000;
+}
 
-.company {
+.companyContainer {
+    color: white;
+    height: 100%;
+    margin-bottom: -1.9%;
+}
+
+.companyIntroContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15% 0 12%;
+}
+.companyIntro {
     text-align: center;
-    margin: 20%;
+    padding: 10%;
 }
 
-.company p {
-    text-align: left;
+.companyTitle {
+    font-family: 'General Sans Medium';
+    font-size: 31px;
+    font-style: normal;
+    line-height: 106.5%;
+    letter-spacing: -1.2px;
+}
+.companySubtitle {
+    color: #5991FF;
+    font-family: General Sans;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.companyIntroContainer img {
+    width: 70%;
 }
 
+.about {
+    width: 65vw;
+    margin: auto;
+    padding: 4% 0 28%;
+}
+.about p {
+    font-family: 'General Sans regular';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.about h4 {
+    font-family: 'General Sans semibold';
+    font-size: 30px;
+    font-style: normal;
+    letter-spacing: -1.2px;
+    margin-bottom: 5%;
+}
 @media (min-width: 992px){
-    .company {
-        margin: 10% 20%;
+    
+    .companyIntroContainer img {
+        width: 33%;
+    }
+    
+    .companyIntroContainer {
+        flex-direction: row;
     }
 
+    .companyIntro {
+        padding: 0 10%;
+    }
+
+    .companyIntroContainer img {
+        width: 33%;
+    }
+    .companyIntro {
+        padding: 3%;
+    }
+    .about h4 {
+        font-size: 40px;
+    }
+    .about p {
+        font-size: 20px;
+    }
 }
