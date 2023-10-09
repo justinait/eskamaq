@@ -61,7 +61,9 @@
     margin-bottom: 5%;
 }
 @media (min-width: 992px){
-    
+    .companyTitle {
+        font-size: 40px;
+    }
     .companyIntroContainer img {
         width: 33%;
     }
@@ -70,15 +72,12 @@
         flex-direction: row;
     }
 
-    .companyIntro {
-        padding: 0 10%;
-    }
-
     .companyIntroContainer img {
-        width: 33%;
+        width: 33.3%;
     }
     .companyIntro {
         padding: 3%;
+        width: 33.3%;
     }
     .about h4 {
         font-size: 40px;
