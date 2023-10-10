@@ -119,6 +119,7 @@ a:hover,
         height: unset;
         width: 40vw; 
         margin: 3% 13%;
+        z-index: 20 !important;
     }
 }
 
