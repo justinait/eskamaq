@@ -27,41 +27,50 @@
     src: url('/GeneralSans-Regular.otf');
 }
 
-p {
-    font-family: General Sans;
-}
-
 .content {
     flex: 1 0 auto;
     background: #F5F5F7;
 }
 
-/* .homeTitle {
-    display: flex;
-    height: 4.6875rem;
-    flex-direction: column;
-    justify-content: center;
-    flex-shrink: 0;
-
-    color: #000;
+.homeDescription {
+    color: #F5F5F5;
     text-align: center;
-    font-family: General Sans Medio;
-    font-size: 3.125rem;
+    font-family: General Sans Semibold;
     font-style: normal;
-    font-weight: 600;
+    z-index: 10;
     line-height: 115%;
-    letter-spacing: -0.1125rem;
-} */
+    display: flex;
+    width: 66vw;
+    flex-direction: column;
+    flex-shrink: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 32%;
+}
+.homeTitle {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 115%; /* 69px */
+    letter-spacing: -1.8px;
+}
 
 .homeImageMobile {
     width: 100%;
     height: 56vh;
+    filter: brightness(0.7) blur(0.5px) !important;
 }
 
 .homeImage {
     height: unset;
     width: 90%;
     display: none;
+    filter: brightness(0.7) blur(0.5px) !important;
+}
+
+.homeSubtitle {
+    font-size: smaller;
+    font-family: 'General Sans regular';
 }
 
 @supports(object-fit: cover){
@@ -81,7 +90,19 @@ p {
         display: block;
     }
         
+    .homeTitle {
+        font-size: 60px;
+    }
+    .homeDescription { 
+        top: 60%;
+    }
+    .homeSubtitle {
+        font-size: inherit;
+        font-family: 'General Sans Semibold';
+    }
 }
+
+
 
 @media (min-width: 992px) {
     * {

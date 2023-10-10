@@ -7,6 +7,7 @@
     flex-direction: column;
     justify-content: space-around;    
     align-items: center;
+    font-family: 'Red Hat Display';
 }
 .footerContainer {
     height: 60%;

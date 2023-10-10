@@ -1,6 +1,6 @@
-/* body {
+body {
     font-family: 'Red Hat Display', sans-serif;
-} */
+}
 
 .logo {
     width: 6.4375rem;
@@ -27,12 +27,14 @@ a {
 }
   
 .companyButton {
-    color: rgba(0, 0, 0, 0.65);
     font-size: 0.7rem;
+    color: rgba(0, 0, 0, 0.65);
+    font-family: 'Red Hat Display';
+    /* font-size: 16px; */
     font-style: normal;
     font-weight: 500;
-    line-height: 1.875rem; /* 187.5% */
-    letter-spacing: -0.03rem;
+    line-height: 30px; /* 187.5% */
+    letter-spacing: -0.48px;
 }
 
 .brandsButton {
@@ -46,8 +48,8 @@ a {
     font-size: 0.7rem;
     font-style: normal;
     font-weight: 500;
-    line-height: 1.875rem;
-    letter-spacing: -0.03rem;
+    line-height: 30px; /* 187.5% */
+    letter-spacing: -0.48px;
     align-items: center;
     margin-top: 6px;
 }
@@ -76,14 +78,15 @@ a:hover,
     width: 55vw;
     margin: 15% 20%;
 }
-.dropdown a {
+.dropdown a { 
+    font-family: 'Red Hat Display';
     color: black !important;
     /* margin: 1%; */
-    font-size: 1.2875rem;
+    font-size: 24px;
     font-style: normal;
     font-weight: 700;
-    line-height: 3rem; /* 177.778% */
-    letter-spacing: -0.04219rem;
+    line-height: 46px; /* 191.667% */
+    letter-spacing: -0.6px;
 }
 
 @media (min-width: 678px) {
@@ -122,11 +125,10 @@ a:hover,
 
 @media (min-width: 1024px) {
     .brandsButton, .companyButton {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
     .logo {
-        width: 13.4375rem;
-        height: 2.3125rem;
+        width: 215px;
     }
     
     .dropdown a {        
