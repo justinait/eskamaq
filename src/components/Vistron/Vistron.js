@@ -10,7 +10,6 @@ function Vistron() {
                 <img className='vistronLogo' src='../../brands/Vistron.png' alt='VISTRON'/>
                 {/* className='brandingLogo' */}
             </a>
-            
         </div>
         <div className='vistronIntro'>
             <p className='vistronTitle'>Tecnología clave para el control de procesos.</p>
@@ -22,29 +21,36 @@ function Vistron() {
 
         </div>
         
-        <div className='vistronInfoContainer'>
-
-            <img src='../../Vistron/vistronImagen.png' className='vistronImg'/>
-            <p>
-            <ul>
-                <li>
-                    Sistema de visión artificial para la evaluación automática de la calidad de impresión en la industria del embalaje y del cartón ondulado.
-                </li>
-                <li>
-                    Control al 100 % de la producción de su RDC, FFG e impresora según diversos criterios relacionados con la impresión. Detección instantánea de errores.
-                </li>
-                <li>
-                    Reduce las reclamaciones y aumenta la satisfacción y fidelidad de los clientes.
-                </li>
-                <li>
-                    Puede instalarse en máquinas de conversión de casi todos los fabricantes.
-                </li>
-            </ul>
-
-            </p>
-            
-        </div>  
+        <p className='printInspect'>Print Inspect</p>
         
+        <div className='printInspectContainer'>
+
+            <div className='vistronInfoContainer'>
+                
+                <img src='../../Vistron/vistronImagen1.png' className='vistronImg'/>
+                
+                <p className='vistron1'>
+                    Sistema de visión artificial para la 
+                    <span className='blue'> evaluación automática de la calidad de impresión </span>
+                    en la industria del embalaje y del cartón ondulado.
+                    <span className='blue'> Control al 100 % de la producción </span>
+                    de su RDC, FFG e impresora según diversos criterios relacionados con la impresión. 
+                    <span className='blue'> Detección instantánea de errores. </span>
+                </p>
+                
+            </div>  
+            <div className='vistronInfoContainer reverse'>
+                
+                <p className='vistron1'>
+                    Reduce las quejas y 
+                    <span className='blue'> aumenta la satisfacción y fidelidad de los clientes. </span>
+                    Puede instalarse en máquinas de conversión de casi todos los fabricantes.
+                </p>
+                
+                <img src='../../Vistron/printInspect.jpg' className='vistronImg'/>
+                
+            </div>  
+        </div>
     </div>
   )
 }
