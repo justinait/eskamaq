@@ -1,8 +1,14 @@
+.vistronLogo {
+    width: 300px;
+    margin: 17% auto 10%;
+}
 .vistronInfoContainer {
     display: flex;
     flex-direction: column;
-    width: 80vw;
+    width: 90vw;
     margin: 0 auto 12% auto;
+    align-items: center;
+    justify-content: space-around;
 }
 .vistronIntro {
     width: 80vw;
@@ -13,24 +19,49 @@
 .vistronTitle{
     color: #000;
     font-family: General Sans Semibold;
-    font-size: 45px;
+    font-size: 30px;
     line-height: 123%; /* 55.35px */
     letter-spacing: -1.35px;
 }
 .vistronDescription {
     color: #000;
     font-family: General Sans Semibold;
-    font-size: 26px;
+    font-size: 16px;
     line-height: 122.8%; /* 31.928px */
     letter-spacing: -0.78px;
 }
 .gray {
     color: #898989;
-    font-size: 26px;
+    font-size: 16px;
 }
 .vistronImg {
     width: 100%;
     margin-bottom: 10%;
+}
+.printInspect {
+    font-family: General Sans Semibold;
+    font-size: 35px;
+    margin-left: 10%;
+    line-height: 30px; /* 60% */
+    letter-spacing: -1.5px;
+}
+
+.vistron1 {
+    color: #898989;
+    font-family: General Sans Semibold;
+    font-size: 14px;
+    width: 80vw;
+}
+.blue {
+    color: #001CFF;
+    font-family: General Sans Semibold;
+    font-size: 14px;
+}
+.printInspectContainer {
+    margin: 5% auto 15%;
+}
+.reverse {
+    flex-direction: column-reverse;
 }
 
 @media (min-width: 768px){
@@ -41,21 +72,40 @@
     
 }
 
-@media (min-width: 1280px){
+@media (min-width: 1024px){
+    
+    .reverse {
+        flex-direction: row;
+    }
     .vistronInfoContainer {
         flex-direction: row;
-        margin: 5% auto 8% auto;
-        align-items: flex-start;
+        margin: auto;
+        justify-content: space-between;
     }   
     .vistronImg {
-        width: 50%;
-        margin: auto;
-        margin: 0;
         object-fit: contain;
+        width: 50%;
+        margin: 0;
     }
     .vistronLogo {
         width: 400px;
-        margin: 8% 0 0 0;
+        margin: 7% 0 0 0;
+    }
+    
+    .vistronTitle{
+        font-size: 45px;
+    }
+    .vistronDescription, .gray {
+        font-size: 26px;
+    }
+    
+    .printInspect {
+        font-size: 50px;
+    }
+    .vistron1, .blue {
+        font-size: 20px;
+        width: 430px;
+        margin: auto;
     }
     
 }
