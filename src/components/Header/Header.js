@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
 
-function Header() {
+function Header({ setContentBlurred }) {
   const [showDropdown, setShowDropdown] = useState(false)
   const [marcasActive, setMarcasActive] = useState(false);
   const [empresaActive, setEmpresaActive] = useState(false);
@@ -12,6 +12,7 @@ function Header() {
   
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
+    setContentBlurred(!showDropdown);
   };
 
   const navbar = <>
@@ -34,9 +35,8 @@ function Header() {
             setMarcasActive(true);
             setEmpresaActive(false);
           }}
-        >
-          Marcas
-        </Link>
+        >     Marcas    </Link>
+        <div className='separationLine'>   </div>
         <Link
           to="/company"
           className={`button ${empresaActive ? 'activeButton companyButton' : 'companyButton'}`}

@@ -34,7 +34,6 @@
 
 .homeDescription {
     color: #F5F5F5;
-    text-align: center;
     font-family: General Sans Semibold;
     font-style: normal;
     z-index: 1;
@@ -58,13 +57,14 @@
 
 .homeImageMobile {
     width: 100%;
-    height: 56vh;
+    /* height: 56vh; */
+    height: 95vh;
     filter: brightness(0.7) blur(0.5px) !important;
     position: relative;
 }
 
 .homeImage {
-    height: unset;
+    height: 94vh;
     width: 90%;
     display: none;
     filter: brightness(0.7) blur(0.5px) !important;
@@ -92,7 +92,10 @@
     .homeImage {
         display: block;
     }
-        
+}
+
+@media (min-width: 1400px){
+    
     .homeTitle {
         font-size: 58px;
     }
@@ -103,10 +106,10 @@
         font-size: inherit;
         font-family: 'General Sans Semibold';
     }
+
 }
 
-
-@media (min-width: 1500px) {    
+@media (min-width: 1400px) {    
     .homeDescription { 
         top: 70%;
     }

@@ -8,14 +8,17 @@ import Minda from './components/Minda/Minda';
 import Corrpal from './components/Corrpal/Corrpal';
 import Vistron from './components/Vistron/Vistron';
 import CheckScroll from './CheckScroll';
+import { useState } from 'react';
 
 function App() {
+  const [contentBlurred, setContentBlurred] = useState(false);
+
   return (
     <BrowserRouter>
       <div className='app'>
-        < Header />
+        < Header setContentBlurred={setContentBlurred} />
         
-        <div className='content'>
+        <div className={`content ${contentBlurred ? 'blurred' : ''}`}>
           <CheckScroll />
           <Routes >
             

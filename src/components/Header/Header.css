@@ -1,7 +1,11 @@
 body {
     font-family: 'Red Hat Display', sans-serif;
 }
-
+.blurred {
+    filter: blur(5px); /* Puedes ajustar el valor del desenfoque según tus preferencias */
+    transition: filter 0.3s ease-in-out; /* Agrega una transición suave */
+}
+  
 .logo {
     width: 6.4375rem;
 }
@@ -26,32 +30,19 @@ a {
     position: absolute;
 }
   
-.companyButton {
+.companyButton, .brandsButton {
     font-size: 0.7rem;
     color: rgba(0, 0, 0, 0.65);
     font-family: 'Red Hat Display';
-    /* font-size: 16px; */
     font-style: normal;
     font-weight: 500;
-    line-height: 30px; /* 187.5% */
+    line-height: 30px; 
     letter-spacing: -0.48px;
 }
 
-.brandsButton {
-    font-family: 'red hat display';
-    width: 41%;
-    height: 14px;
-    display: flex;
+.separationLine{
     border-right: black 0.01px solid;
-    margin: 0;
-    color: rgba(0, 0, 0, 0.65);
-    font-size: 0.7rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 30px; /* 187.5% */
-    letter-spacing: -0.48px;
-    align-items: center;
-    margin-top: 6px;
+    height: 10px;
 }
 a:hover,
 .activeButton {
@@ -61,14 +52,16 @@ a:hover,
     color: rgba(0, 0, 0, 0.65);
 }
 .navbar {
-    display: flex;
-    justify-content: space-around !important;
+    display: flex;    
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .rightNavbar {
     width: 25vw;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .dropdown {
     height: 100vh;
@@ -100,36 +93,32 @@ a:hover,
         font-size: 0.8rem;
     }
     
-    .brandsButton {
-        border-right: black 2px solid;
-        height: unset;
-        margin-top: unset;
-        width: 45%;
-        /* align-items: flex-end; */
-    }
     .rightNavbar {
         display: flex;
         flex-direction: row;
-        width: 23%;
-        justify-content: space-between;
+        width: 15%;
+        justify-content: space-evenly;
         align-items: center;
-
     }
     .dropdown {
         height: unset;
-        width: 40vw; 
-        margin: 3% 13%;
+        width: 100%;
+        padding: 3% 10%;
         z-index: 20 !important;
+        position: absolute !important;
+        background: white;
+        margin: 0;
+        margin-top: -6px;
     }
 }
 
 
 @media (min-width: 1024px) {
     .brandsButton, .companyButton {
-        font-size: 0.8rem;
+        font-size: 12px;
     }
     .logo {
-        width: 215px;
+        width: 150px;
     }
     
     .dropdown a {        
@@ -138,5 +127,14 @@ a:hover,
     .dropdown a:hover {        
         color: black !important;
     }
+    /* .dropdown-content {
+        top: 100%;
+        left: 0;
+        display: none;
+       
+      }
     
+      .show.dropdown-content {
+        display: block;
+      } */
 }
