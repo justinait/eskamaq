@@ -7,6 +7,7 @@ import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
 
 function Footer() {
+    
     const handleClick = () => {
         navigator.clipboard.writeText('sven@eskamaq.com')
     }
@@ -15,6 +16,7 @@ function Footer() {
           Copiar Email
         </Tooltip>
     );
+    
   return (
     <div className='footer'>
         <div className='footerContainer'>

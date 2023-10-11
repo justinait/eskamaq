@@ -9,26 +9,22 @@
 }
 
 @font-face {
-    font-family: 'General Sans';
+    font-family: General Sans;
     src: url('/GeneralSans-Light.otf');
 }
 @font-face {
-    font-family: 'General Sans Semibold';
+    font-family: General Sans Semibold;
     src: url('/GeneralSans-Semibold.otf');
 }
 
 @font-face {
-    font-family: 'General Sans Medium';
+    font-family: General Sans Medio;
     src: url('/GeneralSans-Medium.otf');
 }
 
 @font-face {
-    font-family: 'General Sans Regular';
+    font-family: General Sans Regular;
     src: url('/GeneralSans-Regular.otf');
-}
-
-p {
-    font-family: 'General Sans';
 }
 
 .content {
@@ -36,32 +32,48 @@ p {
     background: #F5F5F7;
 }
 
-/* .title {
-    display: flex;
-    height: 4.6875rem;
-    flex-direction: column;
-    justify-content: center;
-    flex-shrink: 0;
-
-    color: #000;
-    text-align: center;
-    font-family: 'General Sans Medium';
-    font-size: 3.125rem;
+.homeDescription {
+    color: #F5F5F5;
+    font-family: General Sans Semibold;
     font-style: normal;
-    font-weight: 600;
+    z-index: 1;
     line-height: 115%;
-    letter-spacing: -0.1125rem;
-} */
+    display: flex;
+    width: 70vw;
+    flex-direction: column;
+    flex-shrink: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.homeTitle {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 115%; /* 69px */
+    letter-spacing: -1.8px;
+}
 
 .homeImageMobile {
     width: 100%;
-    height: 56vh;
+    /* height: 56vh; */
+    height: 95vh;
+    filter: brightness(0.7) blur(0.5px) !important;
+    position: relative;
 }
 
 .homeImage {
-    height: unset;
+    height: 94vh;
     width: 90%;
     display: none;
+    filter: brightness(0.7) blur(0.5px) !important;
+    position: relative;
+}
+
+.homeSubtitle {
+    font-size: smaller;
+    font-family: 'General Sans regular';
 }
 
 @supports(object-fit: cover){
@@ -80,11 +92,33 @@ p {
     .homeImage {
         display: block;
     }
-        
 }
+
+@media (min-width: 1400px){
+    
+    .homeTitle {
+        font-size: 58px;
+    }
+    .homeDescription { 
+        top: 60%;
+    }
+    .homeSubtitle {
+        font-size: inherit;
+        font-family: 'General Sans Semibold';
+    }
+
+}
+
+@media (min-width: 1400px) {    
+    .homeDescription { 
+        top: 70%;
+    }
+}
+
 
 @media (min-width: 992px) {
     * {
         font-size:20px;
     }
+    
 }
