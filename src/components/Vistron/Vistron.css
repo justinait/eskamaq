@@ -1,10 +1,33 @@
-.vistronContainer {
+.vistronInfoContainer {
     display: flex;
     flex-direction: column;
     width: 80vw;
     margin: 0 auto 12% auto;
 }
-
+.vistronIntro {
+    width: 80vw;
+    margin: 7% auto;
+    font-style: normal;
+    font-weight: 600;
+}
+.vistronTitle{
+    color: #000;
+    font-family: General Sans Semibold;
+    font-size: 45px;
+    line-height: 123%; /* 55.35px */
+    letter-spacing: -1.35px;
+}
+.vistronDescription {
+    color: #000;
+    font-family: General Sans Semibold;
+    font-size: 26px;
+    line-height: 122.8%; /* 31.928px */
+    letter-spacing: -0.78px;
+}
+.gray {
+    color: #898989;
+    font-size: 26px;
+}
 .vistronImg {
     width: 100%;
     margin-bottom: 10%;
@@ -19,7 +42,7 @@
 }
 
 @media (min-width: 1280px){
-    .vistronContainer {
+    .vistronInfoContainer {
         flex-direction: row;
         margin: 5% auto 8% auto;
         align-items: flex-start;
@@ -29,6 +52,10 @@
         margin: auto;
         margin: 0;
         object-fit: contain;
+    }
+    .vistronLogo {
+        width: 400px;
+        margin: 8% 0 0 0;
     }
     
 }

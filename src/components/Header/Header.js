@@ -14,6 +14,10 @@ function Header({ setContentBlurred }) {
     setShowDropdown(!showDropdown);
     setContentBlurred(!showDropdown);
   };
+  const handleCloseButton = () => {
+    setShowDropdown(false);
+    setContentBlurred(false);
+  }
 
   const navbar = <>
     <div className='navbar'>
@@ -58,7 +62,7 @@ function Header({ setContentBlurred }) {
       {
       mediaQuery.matches?
       (showDropdown ?
-        <button className='closeButton' onClick={() => setShowDropdown(false)}>
+        <button className='closeButton' onClick={handleCloseButton}>
           <CloseIcon fontSize='large' />
         </button> : 
       navbar) :
