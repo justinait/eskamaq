@@ -47,7 +47,7 @@ function Vistron() {
                     Puede instalarse en máquinas de conversión de casi todos los fabricantes.
                 </p>
                 
-                <img src='../../Vistron/printInspect.jpg' className='vistronImg'/>
+                <img src='../../Vistron/PrintInspect.jpg' className='vistronImg'/>
                 
             </div>  
         </div>
