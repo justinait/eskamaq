@@ -64,6 +64,7 @@
     margin: 0 auto;
     padding-top: 1%;
     font-size: xx-small;
+    font-family: var(--font-general-regular);
 }
 
 @media (min-width: 592px) {

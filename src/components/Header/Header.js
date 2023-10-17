@@ -27,6 +27,7 @@ function Header({ setContentBlurred }) {
           setShowDropdown(false)
           setEmpresaActive(false);
           setMarcasActive(false);
+          setContentBlurred(false);
           }} to="/">    
         <img src='./Logo-Azul.png' alt="ESKAMAQ" className='logo' />        
       </Link>
@@ -48,6 +49,7 @@ function Header({ setContentBlurred }) {
             setEmpresaActive(true);
             setMarcasActive(false);
             setShowDropdown(false);
+            setContentBlurred(false);
           }}
         >
           La empresa

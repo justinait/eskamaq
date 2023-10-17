@@ -10,6 +10,10 @@ function Corrpal() {
           </a>
         </div>
         
+        <div className='descriptionContainer'>
+          <p className='descriptionBrand'>Calidad hecha en Suecia</p>
+          <p className='textDescriptionBrand'>La compañía ha estado diseñando y produciendo principalmente paletizadores y interruptores desde 1995, 100% "Hecho en Suecia".</p>
+        </div>
         <div style={{textAlign: 'center'}}>
           <video controls width="640" height="360" className='videoCorrpal'>
             <source src='https://res.cloudinary.com/dsgxxcikg/video/upload/v1695132916/eskamaq/corrpaldraft_xj1j89.mp4' type="video/mp4" />

@@ -5,22 +5,34 @@
     padding-bottom: 25%;
 }
 .brandsModel {
-    color: rgba(0, 0, 0, 0.80);
-    font-family: 'Red Hat Display';
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 1.875rem; /* 90.909% */
-    letter-spacing: -0.06188rem;
-    margin: 8%;
-    margin-bottom: 3%;
+    border: none;
+    background: transparent;
+    margin: 8% 0% 0 8%;
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 30px; /* 136.364% */
+    letter-spacing: -0.66px;
 }
-.categoryByMachine {
-    max-width: 80%;
-    margin: 15% 0 0 10%;
-    flex-direction: column;
+.brandsModel.active{
+    text-decoration-line: underline;
 }
-
+.descriptionBrand {
+    font-size: 45px;
+    font-weight: 600;
+    line-height: 123%;
+    letter-spacing: -1.35px;
+}
+.textDescriptionBrand {
+    color: #898989;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 123%;
+    width: 76vw;
+}
+.descriptionContainer {
+    padding: 10% 0 0 10%;
+}
 .machineButton {
     border-radius: 0px !important;
 }
@@ -49,8 +61,7 @@
         width: 12vw;
     }   
     .brandsModel {
-        font-size: 30px;
-        margin: 8% 8% 0;
+        font-size: 20px;
     }
 }
 
@@ -59,6 +70,6 @@
         padding-bottom: unset;
     }
     .brandsModel {
-        font-size: 35px;
+        font-size: 22px;
     }
 }
