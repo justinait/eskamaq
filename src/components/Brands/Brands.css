@@ -14,7 +14,7 @@
     line-height: 30px; /* 136.364% */
     letter-spacing: -0.66px;
 }
-.brandsModel.active{
+.brandsModelActive{
     text-decoration-line: underline;
 }
 .descriptionBrand {

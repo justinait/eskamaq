@@ -115,9 +115,8 @@ function Brands({ brandArray }) {
               machines?.map((e, index) => (
                 <button
                   key={index}
-                  className='brandsModel'
+                  className={`brandsModel ${selected === e ? 'brandsModelActive' : ''}`}
                   onClick={() => setSelected(e)}
-                  active={selected === e}
                 >
                   {e}
                 </button>
@@ -158,24 +157,14 @@ function Brands({ brandArray }) {
                   }
                 }}
               >
-                {/* {(selected === 'Todos los modelos' || gopfert && selected === e.divisor)
-                &&
-                valuesExceptLast.map((e, i) => {
-                  return(
+                {valuesExceptLast
+                  .filter((e) => selected === 'Todos los modelos' || (gopfert && selected === e.divisor))
+                  .map((e, i) => (
                     <SwiperSlide key={i} className='swiperSlide'>
                       <Item dataItem={e} />
                     </SwiperSlide>
-                  )
-                  
-                })} */}
-                {valuesExceptLast
-  .filter((e) => selected === 'Todos los modelos' || (gopfert && selected === e.divisor))
-  .map((e, i) => (
-    <SwiperSlide key={i} className='swiperSlide'>
-      <Item dataItem={e} />
-    </SwiperSlide>
-  ))
-}
+                  ))
+                }
 
               </Swiper>
             </div>
@@ -187,29 +176,3 @@ function Brands({ brandArray }) {
 }
 
 export default Brands;
-
-
-            
-                    {/* <ButtonGroup aria-label="Basic example" className='categoryByMachine'>
-                      <Button
-                        className='machineButton'
-                        variant="outline-secondary"
-                        onClick={() => setSelected('todas')}
-                        active={selected === 'todas'}
-                      >
-                        Todas
-                      </Button>
-                      {Array.isArray(machines) &&
-                        machines.map((e, index) => (
-                          <Button
-                            key={index}
-                            className='machineButton'
-                            variant="outline-secondary"
-                            onClick={() => setSelected(e)}
-                            active={selected === e}
-                          >
-                            {e}
-                          </Button>
-                        ))}
-                    </ButtonGroup> */}
-                    {/* if (selected === 'todas' || (Array.isArray(machines) && selected === e.machine)) { */}
