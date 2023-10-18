@@ -18,7 +18,7 @@
     width: 100vw;
 }
 
-.swiperText h5 {
+.swiperText h3 {
     font-size: 22px;
     font-style: normal;
     font-weight: 700;
@@ -52,7 +52,7 @@
         width: 100vw;
     }
     
-    .swiperText h5 {
+    .swiperText h3 {
         font-size: 30px;
     }
     .swiperMachine {
@@ -67,7 +67,7 @@
         margin: unset;
         border: unset;
     } */
-    .swiperText h5 {
+    .swiperText h3 {
         font-size: 35px;
     }
     .swiperMachine {

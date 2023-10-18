@@ -1,11 +1,72 @@
+* {
+  font-size: 14px;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+@font-face {
+  font-family: General Sans;
+  src: url('/GeneralSans-Light.otf');
+}
+@font-face {
+  font-family: General Sans Semibold;
+  src: url('/GeneralSans-Semibold.otf');
+}
+
+@font-face {
+  font-family: General Sans Medio;
+  src: url('/GeneralSans-Medium.otf');
+}
+
+@font-face {
+  font-family: General Sans Regular;
+  src: url('/GeneralSans-Regular.otf');
+}
+:root {
+  /* --color-white: #FAFAFA;
+  --color-orange: #E5B233;
+  --dark-grey: #7E7E80;
+  --color-grey: #B9B9BA; */
+
+  --font-general-regular: General Sans Regular;
+  --font-general-medio: General Sans Medio;
+  --font-general-light: General Sans;
+  --font-general-semibold: General Sans Semibold;
+
+  --font-size-titles: 26px;
+  --font-size-titles-mobile: 20px;
+  --font-size-subtitles: 23px;
+  --font-size-subtitles-mobile: 18px;
+}
+.content {
+  flex: 1 0 auto;
+  background: #F5F5F7;
+}
+
 body {
   margin: 0;
 }
-ul {
-  /* font-family: 'Roboto Slab', serif; */
-  font-weight: 200;
+
+h3 {
+  font-family: 'Red Hat Display';
 }
-h3, h5, h6 {
-  /* font-family: 'Roboto Slab', serif; */
-  font-weight:400;
+
+p {
+  font-family: General Sans Semibold;
+}
+
+a {
+  text-decoration: none !important;
+  color: rgba(0, 0, 0, 0.65) !important;
+}
+
+@media (min-width: 992px) {
+  * {
+    font-size:20px;
+  }
+  
 }

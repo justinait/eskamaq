@@ -1,40 +1,6 @@
-* {
-    font-size: 14px;
-}
-
-.app {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-@font-face {
-    font-family: General Sans;
-    src: url('/GeneralSans-Light.otf');
-}
-@font-face {
-    font-family: General Sans Semibold;
-    src: url('/GeneralSans-Semibold.otf');
-}
-
-@font-face {
-    font-family: General Sans Medio;
-    src: url('/GeneralSans-Medium.otf');
-}
-
-@font-face {
-    font-family: General Sans Regular;
-    src: url('/GeneralSans-Regular.otf');
-}
-
-.content {
-    flex: 1 0 auto;
-    background: #F5F5F7;
-}
 
 .homeDescription {
     color: #F5F5F5;
-    font-family: General Sans Semibold;
     font-style: normal;
     z-index: 1;
     line-height: 115%;
@@ -113,12 +79,4 @@
     .homeDescription { 
         top: 70%;
     }
-}
-
-
-@media (min-width: 992px) {
-    * {
-        font-size:20px;
-    }
-    
 }

@@ -15,7 +15,7 @@ function Item({dataItem}) {
   return (
     <div className='itemContainer'>
       <div className='swiperText'>
-        <h5> {name} </h5>
+        <h3> {name} </h3>
         <p className='swiperMachine'>{machine}</p>
       </div>
       

@@ -10,6 +10,11 @@ function Minda() {
         </a>        
       </div>
 
+      <div className='descriptionContainer'>
+        <p className='descriptionBrand'>Intralogística. Plantas. Transporte.</p>
+        <p className='textDescriptionBrand'>Para los sectores intralogística, construcción de plantas y tecnología de transportador, le ofrecemos soluciones individuales para diferentes industrias. Conocimiento y creatividad, confiabilidad y flexibilidad: estas características son la base de nuestro trabajo.</p>
+      </div>
+        
       <div className='mindaYoutubeContainer'>
         {/* <iframe className='mindaYoutube' src="https://www.youtube.com/embed/KjS_4SuPv0c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> */}
         
