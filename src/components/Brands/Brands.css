@@ -26,6 +26,7 @@
     font-weight: 600;
     line-height: 123%;
     letter-spacing: -1.35px;
+    min-height: 50px;
 }
 .textDescriptionBrand {
     color: #898989;
@@ -35,7 +36,7 @@
     width: 76vw;
 }
 .descriptionContainer {
-    padding: 10% 0 0 10%;
+    padding: 0 0 0 10%;
 }
 .machineButton {
     border-radius: 0px !important;
@@ -49,6 +50,11 @@
 .toBig {
     width: 40vw;
 }   
+
+.divBrandingLogo {
+    height: 200px;
+    text-align: center;
+}
 
 @media (min-width: 768px){
     .categoryByMachine {
@@ -83,5 +89,9 @@
     .brandsModel {
         margin: 8% 0% 0 8%;
         font-size: 22px;
+    }
+    
+    .divBrandingLogo {
+        height: 350px;
     }
 }

@@ -110,7 +110,7 @@ function Brands({ brandArray }) {
 
         return (
           <div key={i}>
-            <div style={{ textAlign: 'center' }}>
+            <div className='divBrandingLogo'>
               
               <a href={webBrand} target="_blank">
                 {logoBrandToRender}
@@ -123,9 +123,9 @@ function Brands({ brandArray }) {
               <p className='textDescriptionBrand'>{textDescriptionBrand}</p>
             </div>
 
-            { gopfert ?
-            <div style={{ marginLeft: '10%' }}>
-                {machines?.map((e, index) => (
+            {Array.isArray(machines) ? (
+              <div style={{ marginLeft: '10%' }}>
+                {machines.map((e, index) => (
                   <button
                     key={index}
                     className={`brandsModel ${selected === e ? 'brandsModelActive' : ''}`}
@@ -133,10 +133,12 @@ function Brands({ brandArray }) {
                   >
                     {e}
                   </button>
-                ))}              
-              </div> :
+                ))}
+              </div>
+            ) : (
               <h3 className='brandsModel'>Todos los modelos</h3>
-            }
+            )}
+
 
             <div className='brandsContainer'>
               <Swiper
