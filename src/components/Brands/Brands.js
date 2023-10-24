@@ -63,6 +63,10 @@ function Brands({ brandArray }) {
       setSelectedItem(null);
     }
   }, [isModalOpen]);
+
+  useEffect(() => {
+    console.log("selectedItem changed:", selectedItem);
+  }, [selectedItem]);
   let valuesExceptLast
   return (
     <>
@@ -206,13 +210,12 @@ function Brands({ brandArray }) {
                   ))
                 }
 
+                <Detail isModalOpen={isModalOpen} onCloseModal={closeModal} dataItem={valuesExceptLast} selectedItem={selectedItem}/>
               </Swiper>
             </div>
           </div>
         );
       })}
-      {/* dataItem={valuesExceptLast} selectedItem={selectedItem} */}
-      <Detail isOpen={isModalOpen} onCloseModal={closeModal} dataItem={valuesExceptLast} selectedItem={selectedItem}/>
     </>
   );
 }

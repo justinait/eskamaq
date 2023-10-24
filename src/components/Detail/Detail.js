@@ -1,19 +1,24 @@
-import React from 'react';
-import './Detail.css'; // Importa los estilos del Detail
+import React, { useEffect } from 'react';
+import './Detail.css';
 
-function Detail({ isOpen, onCloseModal, valuesExceptLast, selectedItem }) {
+function Detail({ isModalOpen, onCloseModal, valuesExceptLast, selectedItem }) {
   console.log(selectedItem);
+  
+  useEffect(()=> {
+    console.log('detail');
+  }, [isModalOpen])
+
   return (
-    isOpen && (
+    isModalOpen ? (
       <div className="modal">
         <div className="modalContent">
-          <span className="close" onClick={onCloseModal}>&times;</span>
-          <h2>{selectedItem.name}</h2> 
+          <span className="close" onClick={onCloseModal}>x</span>
+          <h3>{selectedItem.name}</h3> 
           <p>{selectedItem.description}</p> 
           <p>{selectedItem.otraPropiedad}</p> 
         </div>
       </div>
-    )
+    ): null
   );
 }
 
