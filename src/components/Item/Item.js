@@ -20,28 +20,14 @@ function Item({dataItem}) {
       </div>
       
       {Array.isArray(image) ? (
-        // <div>
-          <img src={image[0]} alt={name} className='swiperImage'/>
-        // </div>
-        
+        <img src={image[0]} alt={name} className='swiperImage'/>
       ) 
       : (
-        // <iframe width="300" height="300" src={videoUrl} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen className='videoItem' ></iframe>
         <video controls width="640" height="360" className='videoItem'>
           <source src={videoUrl} type="video/mp4" />
           Tu navegador no admite el elemento de video.
         </video>
       )}
-
-      {/* 
-        <p>
-          {Array.isArray(machine) ? machine.join(', ') : machine}
-        </p> */}
-
-        {/* <p style={{ fontWeight: '200' }}>
-          {measure ? measure : null}
-        </p> 
-      */}
       
     </div>  
     
