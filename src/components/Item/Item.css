@@ -2,6 +2,7 @@
     width: 130%;
     position: relative;
     right: 45px;
+    height: 76%;
 }
 
 .itemContainer {
@@ -40,6 +41,7 @@
 .videoItem {
     width: 100%;
     object-fit: cover;
+    height: 90%;
 }
 
 

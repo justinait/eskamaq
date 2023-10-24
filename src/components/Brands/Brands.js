@@ -12,10 +12,22 @@ function Brands({ brandArray }) {
   const [gopfert, setGopfert] = useState(false);
 
   const dataBranding = [
-    { name: 'Göpfert', logo: '../../brands/Goepfert.jpg', web: 'https://goepfert.de/', description: 'La calidad es el camino.\nDurante más de siete décadas.', textDescription: 'Es un fabricante líder a nivel internacional y globalmente activo de máquinas para el procesamiento de cartón corrugado. Las máquinas Göpfert se caracterizan por su excelente calidad, robustez, larga vida útil y características de diseño innovadoras.' },
+    { name: 'Göpfert', logo: '../../brands/Goepfert.jpg', web: 'https://goepfert.de/', description: (
+      <div className='descriptionBrand'>
+        La calidad es el camino.<br />
+        Durante más de siete décadas.
+      </div>
+    ), textDescription: 'Es un fabricante líder a nivel internacional y globalmente activo de máquinas para el procesamiento de cartón corrugado. Las máquinas Göpfert se caracterizan por su excelente calidad, robustez, larga vida útil y características de diseño innovadoras.' },
     { name: 'Corrpal Systems', logo: '../../brands/CorrpalSystems.png', web: 'https://corrpal.com/maschinen/', description: 'Calidad hecha en Suecia', textDescription: 'La compañía ha estado diseñando y produciendo principalmente paletizadores y interruptores desde 1995, 100% "Hecho en Suecia".' },
     { name: 'Bahmüller', logo: '../../brands/bahmuller.png', web: 'https://www.bahmueller.de/en-de/index.html', description: 'Invierte en éxito', textDescription: 'Bahmüller lleva ofreciendo soluciones innovadoras más de 70 años en todo el mundo en tres sectores diferentes: maquinaria para el cartón ondulado, maquinaria de rectificado de precisión y portaherramientas de precisión.' },
-    { name: 'BGM Flexo Folder Gluer', logo: '../../brands/bgm.jpg', web: 'https://www.bahmueller.de/en-us/corrugated-board-converting/products/bgm-flexo-folder-gluer.html', description: 'Dos socios confiables: BGM Bahmüller y Göpfert Maschinen', textDescription: 'La Alianza Franconia-Suabia garantiza para sistemas en línea la impresión multicolor en una calidad convincente y excelentes resultados incluso en cartón corrugado de servicio pesado. Desde 1982, las máquinas BGM han sido utilizadas en todo el mundo por reconocidos fabricantes y marcas.' },
+    { name: 'BGM Flexo Folder Gluer', logo: '../../brands/bgm.jpg', web: 'https://www.bahmueller.de/en-us/corrugated-board-converting/products/bgm-flexo-folder-gluer.html', description: 
+    (
+      <div className='descriptionBrand'>
+        Dos socios confiables: <br />
+        BGM Bahmüller y Göpfert Maschinen
+      </div>
+    ),
+    textDescription: 'La Alianza Franconia-Suabia garantiza para sistemas en línea la impresión multicolor en una calidad convincente y excelentes resultados incluso en cartón corrugado de servicio pesado. Desde 1982, las máquinas BGM han sido utilizadas en todo el mundo por reconocidos fabricantes y marcas.' },
     { name: 'JB Machinery', logo: '../../brands/jbm.png', web: 'https://www.jbmachinery.com/', description: '', textDescription: 'JB Machinery ofrece productos y servicios de alta calidad a empresas de conversión y fabricantes de equipos originales. Con más de 60 años de experiencia en la industria, nuestros diseños únicos y eficientes de sistemas de secado por infrarrojos y curado por rayos ultravioleta han generado una extensa lista de clientes satisfechos de todo el mundo.' },
     { name: 'Vistron', logo: '../../brands/Vistron1.png', web: 'https://vistron.com/', description: '', textDescription: '' },
     { name: 'Stock Maschinenbau', logo: '../../brands/StockM.png', web: 'http://www.stock-maschinenbau.de/', description: '', textDescription: 'Stock Maschinenbau desarrolla y fabrica máquinas para la producción económica de envases y materiales publicitarios. Desde su fundación en 1970,  se ha convertido en uno de los principales fabricantes y especialistas mundiales en máquinas laminadoras.' },
@@ -98,7 +110,7 @@ function Brands({ brandArray }) {
 
         return (
           <div key={i}>
-            <div style={{ textAlign: 'center' }}>
+            <div className='divBrandingLogo'>
               
               <a href={webBrand} target="_blank">
                 {logoBrandToRender}
@@ -111,18 +123,22 @@ function Brands({ brandArray }) {
               <p className='textDescriptionBrand'>{textDescriptionBrand}</p>
             </div>
 
-            { gopfert ?
-              machines?.map((e, index) => (
-                <button
-                  key={index}
-                  className={`brandsModel ${selected === e ? 'brandsModelActive' : ''}`}
-                  onClick={() => setSelected(e)}
-                >
-                  {e}
-                </button>
-              )):
+            {Array.isArray(machines) ? (
+              <div style={{ marginLeft: '10%' }}>
+                {machines.map((e, index) => (
+                  <button
+                    key={index}
+                    className={`brandsModel ${selected === e ? 'brandsModelActive' : ''}`}
+                    onClick={() => setSelected(e)}
+                  >
+                    {e}
+                  </button>
+                ))}
+              </div>
+            ) : (
               <h3 className='brandsModel'>Todos los modelos</h3>
-            }
+            )}
+
 
             <div className='brandsContainer'>
               <Swiper

@@ -4,7 +4,7 @@ import './Corrpal.css'
 function Corrpal() {
   return (
     <div>
-        <div style={{ textAlign: 'center' }}>
+        <div className='divBrandingLogo'>
           <a href='https://corrpal.com/maschinen/' target="_blank">
             <img className='brandingLogo' src='../../brands/CorrpalSystems.png' alt='Corrpal Systems' />
           </a>

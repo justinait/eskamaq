@@ -13,25 +13,30 @@
     font-weight: 600;
     line-height: 30px; /* 136.364% */
     letter-spacing: -0.66px;
+
+    margin: 8% 0% 0 0%;
+    color: #000;
+    font-size: 11px;
 }
 .brandsModelActive{
     text-decoration-line: underline;
 }
 .descriptionBrand {
-    font-size: 45px;
+    font-size: 24px;
     font-weight: 600;
     line-height: 123%;
     letter-spacing: -1.35px;
+    min-height: 50px;
 }
 .textDescriptionBrand {
     color: #898989;
-    font-size: 26px;
+    font-size: 10px;
     font-weight: 600;
     line-height: 123%;
     width: 76vw;
 }
 .descriptionContainer {
-    padding: 10% 0 0 10%;
+    padding: 0 0 0 10%;
 }
 .machineButton {
     border-radius: 0px !important;
@@ -45,6 +50,11 @@
 .toBig {
     width: 40vw;
 }   
+
+.divBrandingLogo {
+    height: 200px;
+    text-align: center;
+}
 
 @media (min-width: 768px){
     .categoryByMachine {
@@ -69,7 +79,19 @@
     .brandsContainer {
         padding-bottom: unset;
     }
+    .descriptionBrand {
+        font-size: 45px;
+    }
+    .textDescriptionBrand {
+        font-size: 26px;
+    }
+    
     .brandsModel {
+        margin: 8% 0% 0 8%;
         font-size: 22px;
+    }
+    
+    .divBrandingLogo {
+        height: 350px;
     }
 }
