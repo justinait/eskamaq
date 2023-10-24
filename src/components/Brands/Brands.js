@@ -124,15 +124,17 @@ function Brands({ brandArray }) {
             </div>
 
             { gopfert ?
-              machines?.map((e, index) => (
-                <button
-                  key={index}
-                  className={`brandsModel ${selected === e ? 'brandsModelActive' : ''}`}
-                  onClick={() => setSelected(e)}
-                >
-                  {e}
-                </button>
-              )):
+            <div style={{ marginLeft: '10%' }}>
+                {machines?.map((e, index) => (
+                  <button
+                    key={index}
+                    className={`brandsModel ${selected === e ? 'brandsModelActive' : ''}`}
+                    onClick={() => setSelected(e)}
+                  >
+                    {e}
+                  </button>
+                ))}              
+              </div> :
               <h3 className='brandsModel'>Todos los modelos</h3>
             }
 

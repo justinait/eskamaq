@@ -13,6 +13,10 @@
     font-weight: 600;
     line-height: 30px; /* 136.364% */
     letter-spacing: -0.66px;
+
+    margin: 8% 0% 0 0%;
+    color: #000;
+    font-size: 11px;
 }
 .brandsModelActive{
     text-decoration-line: underline;
@@ -69,13 +73,15 @@
     .brandsContainer {
         padding-bottom: unset;
     }
-    .brandsModel {
-        font-size: 22px;
-    }
     .descriptionBrand {
         font-size: 45px;
     }
     .textDescriptionBrand {
         font-size: 26px;
+    }
+    
+    .brandsModel {
+        margin: 8% 0% 0 8%;
+        font-size: 22px;
     }
 }
