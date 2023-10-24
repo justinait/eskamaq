@@ -18,14 +18,14 @@
     text-decoration-line: underline;
 }
 .descriptionBrand {
-    font-size: 45px;
+    font-size: 24px;
     font-weight: 600;
     line-height: 123%;
     letter-spacing: -1.35px;
 }
 .textDescriptionBrand {
     color: #898989;
-    font-size: 26px;
+    font-size: 10px;
     font-weight: 600;
     line-height: 123%;
     width: 76vw;
@@ -71,5 +71,11 @@
     }
     .brandsModel {
         font-size: 22px;
+    }
+    .descriptionBrand {
+        font-size: 45px;
+    }
+    .textDescriptionBrand {
+        font-size: 26px;
     }
 }
