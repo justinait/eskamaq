@@ -5,7 +5,7 @@ function Vistron() {
 
   return (
     <div>
-        <div style={{ textAlign: 'center' }}>
+        <div className='divBrandingLogo'>
             <a href='https://vistron.com/' target="_blank">
                 <img className='vistronLogo' src='../../brands/Vistron.png' alt='VISTRON'/>
                 {/* className='brandingLogo' */}

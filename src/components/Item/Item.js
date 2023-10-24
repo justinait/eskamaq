@@ -20,9 +20,9 @@ function Item({dataItem}) {
       </div>
       
       {Array.isArray(image) ? (
-        <div>
+        // <div>
           <img src={image[0]} alt={name} className='swiperImage'/>
-        </div>
+        // </div>
         
       ) 
       : (

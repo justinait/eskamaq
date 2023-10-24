@@ -4,7 +4,7 @@ import './Minda.css'
 function Minda() {
   return (
     <div className='mindaContainer'>
-      <div style={{ textAlign: 'center' }}> 
+      <div className='divBrandingLogo'>
         <a href='https://www.minda.com/en/' target="_blank">
           <img className='brandingLogo toBig' src='../../brands/Minda.png' alt='Minda' />
         </a>        
