@@ -9,7 +9,8 @@
     .videoCorrpal {
         margin: 5% auto 10%;
         object-fit: cover;
-        height: 75vh;
+        height: 82vh;
+        object-position: bottom;
     }
     
 }
