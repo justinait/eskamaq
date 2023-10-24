@@ -4,11 +4,26 @@ import Item from '../Item/Item';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { useParams } from 'react-router-dom';
+import Detail from '../Detail/Detail';
 
 function Brands({ brandArray }) {
+  
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedItem, setSelectedItem] = useState(false);
+
+  const handleClick = (e) => {
+    
+    setIsModalOpen(true);
+    setSelectedItem(e);
+    console.log(e);
+  }
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   const { brand } = useParams();
-  const [selected, setSelected] = useState('Todos los modelos');
+  const [selectedCategory, setSelectedCategory] = useState('Todos los modelos');
   const [gopfert, setGopfert] = useState(false);
 
   const dataBranding = [
@@ -43,11 +58,17 @@ function Brands({ brandArray }) {
     }
   }, [brand]);
 
+  useEffect(() => {
+    if (!isModalOpen) {
+      setSelectedItem(null);
+    }
+  }, [isModalOpen]);
+  let valuesExceptLast
   return (
     <>
       {brandArray.map((e, i) => {
         const values = Object.values(e);
-        const valuesExceptLast = values.slice(0, values.length - 2);
+        valuesExceptLast = values.slice(0, values.length - 2);
         const longitud = values.length;
         const brand = values[longitud - 1];
         const machines = values[longitud - 2];
@@ -128,8 +149,8 @@ function Brands({ brandArray }) {
                 {machines.map((e, index) => (
                   <button
                     key={index}
-                    className={`brandsModel ${selected === e ? 'brandsModelActive' : ''}`}
-                    onClick={() => setSelected(e)}
+                    className={`brandsModel ${selectedCategory === e ? 'brandsModelActive' : ''}`}
+                    onClick={() => setSelectedCategory(e)}
                   >
                     {e}
                   </button>
@@ -174,10 +195,13 @@ function Brands({ brandArray }) {
                 }}
               >
                 {valuesExceptLast
-                  .filter((e) => selected === 'Todos los modelos' || (gopfert && selected === e.divisor))
+                  .filter((e) => selectedCategory === 'Todos los modelos' || (gopfert && selectedCategory === e.divisor))
                   .map((e, i) => (
                     <SwiperSlide key={i} className='swiperSlide'>
-                      <Item dataItem={e} />
+                      <div onClick={()=> handleClick(e)}>
+                        <Item dataItem={e} />
+                        
+                      </div>
                     </SwiperSlide>
                   ))
                 }
@@ -187,6 +211,8 @@ function Brands({ brandArray }) {
           </div>
         );
       })}
+      {/* dataItem={valuesExceptLast} selectedItem={selectedItem} */}
+      <Detail isOpen={isModalOpen} onCloseModal={closeModal} dataItem={valuesExceptLast} selectedItem={selectedItem}/>
     </>
   );
 }

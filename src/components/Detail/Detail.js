@@ -1,36 +1,19 @@
-import React from 'react'
-import './Detail.css'
-import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
+import React from 'react';
+import './Detail.css'; // Importa los estilos del Detail
 
-function Detail() {
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
+function Detail({ isOpen, onCloseModal, valuesExceptLast, selectedItem }) {
+  console.log(selectedItem);
   return (
-    <>
-      {/* <Button variant="primary" onClick={handleShow}>
-        Launch demo modal
-      </Button> */}
-
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Woohoo, you are reading this text in a modal!</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button>
-        </Modal.Footer>
-      </Modal>
-    </>
+    isOpen && (
+      <div className="modal">
+        <div className="modalContent">
+          <span className="close" onClick={onCloseModal}>&times;</span>
+          <h2>{selectedItem.name}</h2> 
+          <p>{selectedItem.description}</p> 
+          <p>{selectedItem.otraPropiedad}</p> 
+        </div>
+      </div>
+    )
   );
 }
 
