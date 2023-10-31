@@ -4,7 +4,6 @@ import Item from '../Item/Item';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { useParams } from 'react-router-dom';
-import Detail from '../Detail/Detail';
 
 function Brands({ brandArray }) {
   
@@ -22,10 +21,6 @@ function Brands({ brandArray }) {
     setIsModalOpen(false);
   };
 
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
 
   
   const { brand } = useParams();
@@ -217,7 +212,6 @@ function Brands({ brandArray }) {
                   ))
                 }
 
-                <Detail isModalOpen={isModalOpen} onCloseModal={closeModal} dataItem={valuesExceptLast} selectedItem={selectedItem}/>
               </Swiper>
             </div>
           </div>
