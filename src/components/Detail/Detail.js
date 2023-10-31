@@ -1,5 +1,3 @@
-import React from 'react'
-import './Detail.css'
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
@@ -12,9 +10,9 @@ function Detail() {
 
   return (
     <>
-      {/* <Button variant="primary" onClick={handleShow}>
+      <Button variant="primary" onClick={handleShow}>
         Launch demo modal
-      </Button> */}
+      </Button>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>

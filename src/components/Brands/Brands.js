@@ -7,6 +7,12 @@ import { useParams } from 'react-router-dom';
 
 function Brands({ brandArray }) {
 
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  
   const { brand } = useParams();
   const [selected, setSelected] = useState('Todos los modelos');
   const [gopfert, setGopfert] = useState(false);
@@ -123,6 +129,7 @@ function Brands({ brandArray }) {
               <p className='textDescriptionBrand'>{textDescriptionBrand}</p>
             </div>
 
+            {/* categorys */}
             {Array.isArray(machines) ? (
               <div style={{ marginLeft: '10%' }}>
                 {machines.map((e, index) => (
@@ -177,7 +184,9 @@ function Brands({ brandArray }) {
                   .filter((e) => selected === 'Todos los modelos' || (gopfert && selected === e.divisor))
                   .map((e, i) => (
                     <SwiperSlide key={i} className='swiperSlide'>
-                      <Item dataItem={e} />
+                      <div onClick={show}>
+                        <Item dataItem={e} />
+                      </div>
                     </SwiperSlide>
                   ))
                 }
