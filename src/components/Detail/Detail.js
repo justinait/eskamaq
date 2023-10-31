@@ -1,12 +1,15 @@
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import React, { useEffect } from 'react';
+import './Detail.css';
 
-function Detail() {
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+function Detail({ isModalOpen, onCloseModal, valuesExceptLast, selectedItem }) {
+  console.log(selectedItem);
+  
+  useEffect(()=> {
+    console.log('detail');
+  }, [isModalOpen])
 
   return (
     <>
