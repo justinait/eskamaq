@@ -64,3 +64,11 @@
     font-weight: 500;
     line-height: 35px; /* 175% */
 }
+
+.dataTableRow {
+    display: flex;
+}
+.dataTableRow p {
+    width: 50%;
+    padding: 2%;
+}

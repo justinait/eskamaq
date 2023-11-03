@@ -38,7 +38,7 @@ function ItemDetail({dataItem}) {
           <p className='dataSubtitle'>{dataName ? dataName : name}</p>
 
           {technicalData && Object.keys(technicalData).map((key, index) => (
-            <div key={index}>
+            <div key={index} className='dataTableRow'>
               <p>{key}</p>
               <p>{technicalData[key]}</p>
             </div>

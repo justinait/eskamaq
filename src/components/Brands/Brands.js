@@ -208,6 +208,7 @@ function Brands({ brandArray }) {
                         <Modal.Header closeButton />
                         <Modal.Body>
                           <ItemDetail dataItem={selectedItem} />
+                          {/* aca voy a necesitar pasarle mas info, todos los nombres y el selected */}
                         </Modal.Body>
                       </Modal>
                     
