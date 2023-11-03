@@ -4,24 +4,24 @@ import Item from '../Item/Item';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { useParams } from 'react-router-dom';
+// import { Modal } from 'react-bootstrap';
+import Modal from 'react-bootstrap/Modal';
+import ItemDetail from '../ItemDetail/ItemDetail';
+
 
 function Brands({ brandArray }) {
   
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState(false);
 
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+
   const handleClick = (e) => {
-    
-    setIsModalOpen(true);
+    setShow(true);
     setSelectedItem(e);
     console.log(e);
   }
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
-
-
   
   const { brand } = useParams();
   const [selectedCategory, setSelectedCategory] = useState('Todos los modelos');
@@ -59,15 +59,17 @@ function Brands({ brandArray }) {
     }
   }, [brand]);
 
-  useEffect(() => {
-    if (!isModalOpen) {
-      setSelectedItem(null);
-    }
-  }, [isModalOpen]);
+  // useEffect(()=> {
+
+  // }, [selectedItem])
 
   useEffect(() => {
-    console.log("selectedItem changed:", selectedItem);
-  }, [selectedItem]);
+    if (!show) {
+      setSelectedItem(null);
+    }
+  }, [show]);
+
+
   let valuesExceptLast
   return (
     <>
@@ -92,7 +94,6 @@ function Brands({ brandArray }) {
             webBrand = dataBranding[0].web;
             descriptionBrand = dataBranding[0].description;
             textDescriptionBrand = dataBranding[0].textDescription;
-            // setGopfert(true)
             break;
           case 'Bahmuller':
             brandToRender = <h3>{dataBranding[2].name}</h3>;
@@ -204,10 +205,17 @@ function Brands({ brandArray }) {
                   .filter((e) => selectedCategory === 'Todos los modelos' || (gopfert && selectedCategory === e.divisor))
                   .map((e, i) => (
                     <SwiperSlide key={i} className='swiperSlide'>
-                      <div onClick={()=> handleClick(e)}>
-                        <Item dataItem={e} />
-                        
+                      <div  onClick={()=> handleClick(e)}>
+                        <Item dataItem={e}/>
                       </div>
+
+                      <Modal show={show} onHide={handleClose}>
+                        <Modal.Header closeButton />
+                        <Modal.Body>
+                          <ItemDetail dataItem={e} />
+                        </Modal.Body>
+                      </Modal>
+                    
                     </SwiperSlide>
                   ))
                 }

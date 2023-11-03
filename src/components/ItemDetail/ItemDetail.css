@@ -1,0 +1,66 @@
+.itemDetailContainer {
+    display: flex;
+}
+.detailImageContainer {
+    width: 50%;
+}
+.detailImage {
+    width: 110%;
+}
+.textContainer {
+    width: 50%;
+    padding: 4%;
+}
+
+.modal-backdrop.show {
+    opacity: 0.12 !important;
+}
+
+.modal-dialog {
+    max-width: 80vw!important;
+    width: 80vw;
+}
+
+.modal-content {
+    border: none;
+}
+
+.detailText h3 {
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: -1.35px;
+}
+
+.detailMachine {
+    color: #4A4A4A;
+    font-family: var(--font-general-medio);
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px; /* 136.364% */
+}
+
+.detailDescription {
+    font-family:  var(--font-general-regular);
+    font-size: 22px;
+    line-height: normal;
+    line-height: 28px;
+}
+
+.dataTitle {
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px; /* 115.385% */
+}
+
+.dataSubtitle {
+    color: #0015BF;
+    font-family:  var(--font-general-medio);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 35px; /* 175% */
+}
