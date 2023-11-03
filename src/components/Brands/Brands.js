@@ -11,7 +11,7 @@ import ItemDetail from '../ItemDetail/ItemDetail';
 
 function Brands({ brandArray }) {
   
-  const [selectedItem, setSelectedItem] = useState(false);
+  const [selectedItem, setSelectedItem] = useState(null);
 
   const [show, setShow] = useState(false);
 
@@ -20,7 +20,6 @@ function Brands({ brandArray }) {
   const handleClick = (e) => {
     setShow(true);
     setSelectedItem(e);
-    console.log(e);
   }
   
   const { brand } = useParams();
@@ -59,15 +58,11 @@ function Brands({ brandArray }) {
     }
   }, [brand]);
 
-  // useEffect(()=> {
-
-  // }, [selectedItem])
-
-  useEffect(() => {
-    if (!show) {
-      setSelectedItem(null);
-    }
-  }, [show]);
+  // useEffect(() => {
+  //   if (!show) {
+  //     setSelectedItem(null);
+  //   }
+  // }, [show]);
 
 
   let valuesExceptLast
@@ -212,7 +207,7 @@ function Brands({ brandArray }) {
                       <Modal show={show} onHide={handleClose}>
                         <Modal.Header closeButton />
                         <Modal.Body>
-                          <ItemDetail dataItem={e} />
+                          <ItemDetail dataItem={selectedItem} />
                         </Modal.Body>
                       </Modal>
                     

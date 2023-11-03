@@ -3,7 +3,7 @@ import './ItemDetail.css'
 
 function ItemDetail({dataItem}) {
   
-  let objectLength = Object.keys(dataItem).length;
+  let objectLength = dataItem && Object.keys(dataItem).length;
   let array=[];
   for(let i=1; i<objectLength; i++){
     array = [...array, i];
@@ -37,7 +37,6 @@ function ItemDetail({dataItem}) {
           <p className='dataTitle'>Datos técnicos</p>
           <p className='dataSubtitle'>{dataName ? dataName : name}</p>
 
-          {console.log({technicalData})}
           {technicalData && Object.keys(technicalData).map((key, index) => (
             <div key={index}>
               <p>{key}</p>
@@ -45,11 +44,6 @@ function ItemDetail({dataItem}) {
             </div>
           ))}
 
-          {/* {
-            technicalData?.map((e, i)=> {
-
-            })
-          } */}
         </div>
 
       </div>
