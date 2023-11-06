@@ -12,14 +12,21 @@ import ItemDetail from '../ItemDetail/ItemDetail';
 function Brands({ brandArray }) {
   
   const [selectedItem, setSelectedItem] = useState(null);
+  const [showModal, setShowModal] = useState(false);
 
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
+  const handleClose = () => {
+    setShowModal(false)
+    setSelectedItem(null);
+  }
 
   const handleClick = (e) => {
-    setShow(true);
-    setSelectedItem(e);
+    // setSelectedItem(e);
+    if(gopfert){
+      if (!showModal) {
+        setSelectedItem(e);
+        setShowModal(true);
+      }
+    }
   }
   
   const { brand } = useParams();
@@ -57,13 +64,6 @@ function Brands({ brandArray }) {
       setGopfert(false);
     }
   }, [brand]);
-
-  // useEffect(() => {
-  //   if (!show) {
-  //     setSelectedItem(null);
-  //   }
-  // }, [show]);
-
 
   let valuesExceptLast
   return (
@@ -200,21 +200,23 @@ function Brands({ brandArray }) {
                   .filter((e) => selectedCategory === 'Todos los modelos' || (gopfert && selectedCategory === e.divisor))
                   .map((e, i) => (
                     <SwiperSlide key={i} className='swiperSlide'>
-                      <div  onClick={()=> handleClick(e)}>
+                      <div onClick={()=> handleClick(e)}>
                         <Item dataItem={e}/>
                       </div>
-
-                      <Modal show={show} onHide={handleClose}>
-                        <Modal.Header closeButton />
-                        <Modal.Body>
-                          <ItemDetail dataItem={selectedItem} />
-                          {/* aca voy a necesitar pasarle mas info, todos los nombres y el selected */}
-                        </Modal.Body>
-                      </Modal>
-                    
                     </SwiperSlide>
                   ))
                 }
+                
+                { gopfert && selectedItem && (
+                  <Modal show={showModal} onHide={handleClose}>
+                    <Modal.Header closeButton />
+                    <Modal.Body>
+                      <ItemDetail dataItem={selectedItem} />
+                      {/* aca voy a necesitar pasarle mas info, todos los nombres y el selected */}
+                    </Modal.Body>
+                    <Modal.Footer/>
+                  </Modal>
+                )}
 
               </Swiper>
             </div>
