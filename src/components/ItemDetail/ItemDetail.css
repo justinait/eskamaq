@@ -3,17 +3,18 @@
 }
 .detailImageContainer {
     width: 50%;
+    overflow: hidden; 
+    text-align: center;
 }
 .detailImage {
     width: 110%;
+    width: 190%;
+    display: inline-block; /* Hace que la imagen se comporte como un elemento en línea */
+    transform: translateX(-35%);
 }
 .textContainer {
     width: 50%;
     padding: 4%;
-}
-
-.modal-backdrop.show {
-    opacity: 0.12 !important;
 }
 
 .modal-dialog {
