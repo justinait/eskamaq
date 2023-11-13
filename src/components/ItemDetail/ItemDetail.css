@@ -150,8 +150,8 @@
     color: white;
     margin: 1% auto;
     height: 92%;
-    padding: 6.5% 4%;
-
+    padding: 7.5% 4%;
+    font-size: 18px;
     width: fit-content;
 }
 
@@ -185,16 +185,20 @@
     .modalSwiper{
         height: 45px;
         top: -75px;
-        width: 75vw !important;
-        left: 10% ;
+        width: 80vw !important;
+        left: 6%;
     }
-    .modalCategorys {
-        margin: 10% 0;
+    .modalCategorys{
+        margin: 12% auto;
+        font-size: 12px;
     }
     .modalCategorysActive {
-        margin: 2.5% 0;
+        padding: 9% 4%;
         height: 89%;
-        padding: 8% 0;
-        
+        font-size: 12px;
+        margin: 2.5% auto;
+    }
+    .detailText h3 {
+        font-size: 35px;
     }
 }
