@@ -152,3 +152,18 @@
 .modal-content {
     border-radius: 25px !important;
 }
+
+@media (max-width:600px){
+    .itemDetailContainer{
+        flex-direction: column;
+    }
+    .detailImageContainer{
+        width: 100%;
+    }
+    .detailImage {  
+        margin-top: 17%;
+    }
+    .textContainer {
+        width: 100%;
+    }
+}
