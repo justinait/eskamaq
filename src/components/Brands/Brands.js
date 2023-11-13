@@ -211,7 +211,7 @@ function Brands({ brandArray }) {
                   <Modal show={showModal} onHide={handleClose}>
                     <Modal.Header closeButton />
                     <Modal.Body>
-                      <ItemDetail dataItem={selectedItem} />
+                      <ItemDetail dataItem={selectedItem} category={selectedCategory} allItems={valuesExceptLast} />
                       {/* aca voy a necesitar pasarle mas info, todos los nombres y el selected */}
                     </Modal.Body>
                     <Modal.Footer/>
