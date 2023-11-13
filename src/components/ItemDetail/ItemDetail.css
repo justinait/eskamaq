@@ -21,7 +21,7 @@
 }
 
 .modal-dialog {
-    max-width: 80vw!important;
+    max-width: 95vw!important;
     width: 80vw;
 }
 
@@ -51,6 +51,7 @@
     font-size: 22px;
     line-height: normal;
     line-height: 28px;
+    padding-top: 3%;
 }
 
 .dataTitle {
@@ -74,7 +75,8 @@
 }
 .dataTableRow p {
     width: 50%;
-    padding: 2%;
+    padding: 3% 3% 1% 0;
+    border-top: 1px black solid;
 }
 
 .carousel {
@@ -114,7 +116,7 @@
     overflow: hidden;
     position: absolute;
     top: -10%;
-    left: 12.5%;
+    left: 17.5%;
     overflow: hidden;
     margin-bottom: 50px !important;
     
@@ -124,7 +126,7 @@
 
 .modalCategorys {
     text-align: center;
-    margin:7% 0;
+    margin:6% 0;
 }
 .modal-header {
     display: none !important;
@@ -136,12 +138,17 @@
     transform: none;
     position: relative !important;
     top: 25%;
+    margin-bottom: 20%;
 }
 .modalCategorysActive {
     border-radius: 45px;
     background: #0018A5;
     color: white;
-    margin: 3px 0;
-    height: 56px;
+    margin: 1% 0;
+    height: 92%;
     padding: 5% 0;
+}
+
+.modal-content {
+    border-radius: 25px !important;
 }

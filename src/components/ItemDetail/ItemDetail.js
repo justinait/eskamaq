@@ -38,10 +38,8 @@ function ItemDetail({dataItem, category, allItems}) {
           .filter((e) => category === 'Todos los modelos' || (category === e.divisor))
           .map((e, i) => (
             <SwiperSlide key={i} className='swiperSlide'>
-              <div onClick={()=> handleClick(e)}>
-                <p className={`modalCategorys ${e.name == selectedItem.name ? 'modalCategorysActive' : ''}`}>{e.name}</p>
+              <p onClick={()=> handleClick(e)} className={`modalCategorys ${e.name == selectedItem.name ? 'modalCategorysActive' : ''}`}>{e.name}</p>
                 
-              </div>
             </SwiperSlide>
           ))
         }
