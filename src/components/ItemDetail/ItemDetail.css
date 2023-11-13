@@ -111,11 +111,12 @@
     display: flex;
     width: 60vw !important;
     margin: auto !important;
-    height: 60px;
+    height: 65px;
     background: white;
     overflow: hidden;
     position: absolute;
-    top: -10%;
+    
+    top: -100px;
     left: 17.5%;
     overflow: hidden;
     margin-bottom: 50px !important;
@@ -126,7 +127,10 @@
 
 .modalCategorys {
     text-align: center;
-    margin:6% 0;
+    margin: 8% auto;
+    
+    width: fit-content;
+    padding: 0;
 }
 .modal-header {
     display: none !important;
@@ -144,15 +148,22 @@
     border-radius: 45px;
     background: #0018A5;
     color: white;
-    margin: 1% 0;
+    margin: 1% auto;
     height: 92%;
-    padding: 5% 0;
+    padding: 7.5% 4%;
+    font-size: 18px;
+    width: fit-content;
 }
 
 .modal-content {
     border-radius: 25px !important;
 }
 
+@media (max-width:1550px){
+    .modalSwiper{
+        height: 60px;
+    }
+}
 @media (max-width:600px){
     .itemDetailContainer{
         flex-direction: column;
@@ -173,14 +184,21 @@
     }
     .modalSwiper{
         height: 45px;
-        top: -6%;
+        top: -75px;
+        width: 80vw !important;
+        left: 6%;
     }
-    .modalCategorys {
-        margin: 10% 0;
+    .modalCategorys{
+        margin: 12% auto;
+        font-size: 12px;
     }
     .modalCategorysActive {
-        margin: 2.5% 0;
+        padding: 9% 4%;
         height: 89%;
-        padding: 8% 0;
+        font-size: 12px;
+        margin: 2.5% auto;
+    }
+    .detailText h3 {
+        font-size: 35px;
     }
 }

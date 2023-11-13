@@ -25,11 +25,11 @@ function ItemDetail({dataItem, category, allItems}) {
           className='modalSwiper'
           breakpoints={{
             320: {
-              slidesPerView: 2,
+              slidesPerView: 2.3,
               spaceBetween: 10,
             },
             1280: {
-              slidesPerView: 3.7,
+              slidesPerView: 5,
               spaceBetween: 3,
             },
           }}
