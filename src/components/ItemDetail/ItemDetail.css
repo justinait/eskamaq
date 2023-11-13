@@ -21,7 +21,7 @@
 }
 
 .modal-dialog {
-    max-width: 95vw!important;
+    max-width: 96vw!important;
     width: 80vw;
 }
 
@@ -163,7 +163,24 @@
     .detailImage {  
         margin-top: 17%;
     }
+    .detailDescription {
+        font-size: 17px;
+        line-height: normal;
+        line-height: 25px;
+    }
     .textContainer {
         width: 100%;
+    }
+    .modalSwiper{
+        height: 45px;
+        top: -6%;
+    }
+    .modalCategorys {
+        margin: 10% 0;
+    }
+    .modalCategorysActive {
+        margin: 2.5% 0;
+        height: 89%;
+        padding: 8% 0;
     }
 }
