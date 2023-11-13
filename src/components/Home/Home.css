@@ -30,7 +30,7 @@
 }
 
 .homeImage {
-    height: 94vh;
+    height: 96vh;
     width: 90%;
     display: none;
     filter: brightness(0.7) blur(0.5px) !important;
