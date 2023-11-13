@@ -106,7 +106,7 @@ function Brands({ brandArray }) {
             break;
           case 'JBMachinery':
             brandToRender = <h3>{dataBranding[4].name}</h3>;
-            logoBrandToRender = <img className='brandingLogo' src={dataBranding[4].logo} alt={dataBranding[4].name} />
+            logoBrandToRender = <img className='brandingLogo toBig' src={dataBranding[4].logo} alt={dataBranding[4].name} />
             webBrand = dataBranding[4].web;
             descriptionBrand = dataBranding[4].description;
             textDescriptionBrand = dataBranding[4].textDescription;

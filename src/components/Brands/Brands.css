@@ -64,7 +64,7 @@
     }
     .brandingLogo {
         width: 20vw;
-        margin: 5% 0 0 0;
+        margin: 8% 0;
     }
  
     .toBig {
@@ -92,6 +92,7 @@
     }
     
     .divBrandingLogo {
-        height: 350px;
+        /* height: 350px; */
+        height: unset;
     }
 }
