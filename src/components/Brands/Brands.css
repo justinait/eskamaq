@@ -55,6 +55,17 @@
     height: 200px;
     text-align: center;
 }
+.allModels {
+    color: #000;
+    font-family: 'Red Hat Display';
+    font-size: 33px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px; /* 90.909% */
+    letter-spacing: -0.99px;
+    padding: 5% 6% 1% 6%;
+
+}
 
 @media (min-width: 768px){
     .categoryByMachine {
@@ -64,7 +75,7 @@
     }
     .brandingLogo {
         width: 20vw;
-        margin: 5% 0 0 0;
+        margin: 8% 0;
     }
  
     .toBig {
@@ -87,11 +98,12 @@
     }
     
     .brandsModel {
-        margin: 8% 0% 0 8%;
+        margin: 5% 0% 0 8%;
         font-size: 22px;
     }
     
     .divBrandingLogo {
-        height: 350px;
+        /* height: 350px; */
+        height: unset;
     }
 }

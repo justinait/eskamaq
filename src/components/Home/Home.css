@@ -2,17 +2,14 @@
 .homeDescription {
     color: #F5F5F5;
     font-style: normal;
-    z-index: 1;
-    line-height: 115%;
+    z-index: 50;
     display: flex;
-    width: 70vw;
+    width: 100vw;
     flex-direction: column;
     flex-shrink: 0;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 50%;
-    transform: translate(-50%, -50%);
+    bottom: 200px;
+    text-align: center;
 }
 .homeTitle {
     font-size: 30px;
@@ -38,8 +35,12 @@
 }
 
 .homeSubtitle {
-    font-size: smaller;
     font-family: 'General Sans regular';
+    color: #FFF;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 132%; /* 30.36px */
 }
 
 @supports(object-fit: cover){
@@ -67,10 +68,6 @@
     }
     .homeDescription { 
         top: 60%;
-    }
-    .homeSubtitle {
-        font-size: inherit;
-        font-family: 'General Sans Semibold';
     }
 
 }

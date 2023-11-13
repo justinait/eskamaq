@@ -106,7 +106,7 @@ function Brands({ brandArray }) {
             break;
           case 'JBMachinery':
             brandToRender = <h3>{dataBranding[4].name}</h3>;
-            logoBrandToRender = <img className='brandingLogo' src={dataBranding[4].logo} alt={dataBranding[4].name} />
+            logoBrandToRender = <img className='brandingLogo toBig' src={dataBranding[4].logo} alt={dataBranding[4].name} />
             webBrand = dataBranding[4].web;
             descriptionBrand = dataBranding[4].description;
             textDescriptionBrand = dataBranding[4].textDescription;
@@ -147,7 +147,7 @@ function Brands({ brandArray }) {
 
             {/* categorys */}
             {Array.isArray(machines) ? (
-              <div style={{ marginLeft: '10%' }}>
+              <div>
                 {machines.map((e, index) => (
                   <button
                     key={index}
@@ -159,7 +159,7 @@ function Brands({ brandArray }) {
                 ))}
               </div>
             ) : (
-              <h3 className='brandsModel'>Todos los modelos</h3>
+              <h3 className='allModels'>Todos los modelos</h3>
             )}
 
 
