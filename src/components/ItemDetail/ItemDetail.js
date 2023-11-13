@@ -29,7 +29,7 @@ function ItemDetail({dataItem, category, allItems}) {
               spaceBetween: 10,
             },
             1280: {
-              slidesPerView: 3.7,
+              slidesPerView: 5,
               spaceBetween: 3,
             },
           }}
