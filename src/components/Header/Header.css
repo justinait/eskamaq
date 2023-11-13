@@ -1,6 +1,5 @@
 .blurred {
     filter: blur(3px); /* Puedes ajustar el valor del desenfoque según tus preferencias */
-    transition: filter 0.3s ease-in-out; /* Agrega una transición suave */
 }
   
 .logo {
@@ -109,7 +108,8 @@ a:hover,
 
 @media (min-width: 1024px) {
     .brandsButton, .companyButton {
-        font-size: 12px;
+        font-size: 13px;
+        letter-spacing: normal;
     }
     .logo {
         width: 150px;
