@@ -4,11 +4,33 @@ import Item from '../Item/Item';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { useParams } from 'react-router-dom';
+// import { Modal } from 'react-bootstrap';
+import Modal from 'react-bootstrap/Modal';
+import ItemDetail from '../ItemDetail/ItemDetail';
+
 
 function Brands({ brandArray }) {
+  
+  const [selectedItem, setSelectedItem] = useState(null);
+  const [showModal, setShowModal] = useState(false);
 
+  const handleClose = () => {
+    setShowModal(false)
+    setSelectedItem(null);
+  }
+
+  const handleClick = (e) => {
+    // setSelectedItem(e);
+    if(gopfert){
+      if (!showModal) {
+        setSelectedItem(e);
+        setShowModal(true);
+      }
+    }
+  }
+  
   const { brand } = useParams();
-  const [selected, setSelected] = useState('Todos los modelos');
+  const [selectedCategory, setSelectedCategory] = useState('Todos los modelos');
   const [gopfert, setGopfert] = useState(false);
 
   const dataBranding = [
@@ -43,11 +65,12 @@ function Brands({ brandArray }) {
     }
   }, [brand]);
 
+  let valuesExceptLast
   return (
     <>
       {brandArray.map((e, i) => {
         const values = Object.values(e);
-        const valuesExceptLast = values.slice(0, values.length - 2);
+        valuesExceptLast = values.slice(0, values.length - 2);
         const longitud = values.length;
         const brand = values[longitud - 1];
         const machines = values[longitud - 2];
@@ -66,7 +89,6 @@ function Brands({ brandArray }) {
             webBrand = dataBranding[0].web;
             descriptionBrand = dataBranding[0].description;
             textDescriptionBrand = dataBranding[0].textDescription;
-            // setGopfert(true)
             break;
           case 'Bahmuller':
             brandToRender = <h3>{dataBranding[2].name}</h3>;
@@ -123,13 +145,14 @@ function Brands({ brandArray }) {
               <p className='textDescriptionBrand'>{textDescriptionBrand}</p>
             </div>
 
+            {/* categorys */}
             {Array.isArray(machines) ? (
               <div style={{ marginLeft: '10%' }}>
                 {machines.map((e, index) => (
                   <button
                     key={index}
-                    className={`brandsModel ${selected === e ? 'brandsModelActive' : ''}`}
-                    onClick={() => setSelected(e)}
+                    className={`brandsModel ${selectedCategory === e ? 'brandsModelActive' : ''}`}
+                    onClick={() => setSelectedCategory(e)}
                   >
                     {e}
                   </button>
@@ -174,13 +197,26 @@ function Brands({ brandArray }) {
                 }}
               >
                 {valuesExceptLast
-                  .filter((e) => selected === 'Todos los modelos' || (gopfert && selected === e.divisor))
+                  .filter((e) => selectedCategory === 'Todos los modelos' || (gopfert && selectedCategory === e.divisor))
                   .map((e, i) => (
                     <SwiperSlide key={i} className='swiperSlide'>
-                      <Item dataItem={e} />
+                      <div onClick={()=> handleClick(e)}>
+                        <Item dataItem={e}/>
+                      </div>
                     </SwiperSlide>
                   ))
                 }
+                
+                { gopfert && selectedItem && (
+                  <Modal show={showModal} onHide={handleClose}>
+                    <Modal.Header closeButton />
+                    <Modal.Body>
+                      <ItemDetail dataItem={selectedItem} category={selectedCategory} allItems={valuesExceptLast} />
+                      {/* aca voy a necesitar pasarle mas info, todos los nombres y el selected */}
+                    </Modal.Body>
+                    <Modal.Footer/>
+                  </Modal>
+                )}
 
               </Swiper>
             </div>

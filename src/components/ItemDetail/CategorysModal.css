@@ -1,0 +1,11 @@
+
+.modalSwiper {
+    display: flex;
+    width: 60vw !important;
+    margin: auto !important;
+}
+
+.modalCategorys {
+    
+    text-align: center;
+}
