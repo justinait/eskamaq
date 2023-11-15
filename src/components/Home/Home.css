@@ -4,7 +4,7 @@
     font-style: normal;
     z-index: 50;
     display: flex;
-    width: 100vw;
+    width: 100%;
     flex-direction: column;
     flex-shrink: 0;
     position: absolute;
