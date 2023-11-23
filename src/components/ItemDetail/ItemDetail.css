@@ -11,7 +11,6 @@
 .detailImage {
     width: 110%;
     width: 190%;
-    margin-top: 40%;
     display: inline-block; /* Hace que la imagen se comporte como un elemento en línea */
     transform: translateX(-35%);
 }
@@ -172,7 +171,7 @@
         width: 100%;
     }
     .detailImage {  
-        margin-top: 17%;
+        margin-top: 6%;
     }
     .detailDescription {
         font-size: 17px;
