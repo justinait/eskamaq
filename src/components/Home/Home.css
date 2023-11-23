@@ -12,10 +12,10 @@
     text-align: center;
 }
 .homeTitle {
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 600;
     line-height: 115%; /* 69px */
-    letter-spacing: -1.8px;
+    letter-spacing: -0.8px;
 }
 
 .homeImageMobile {
@@ -37,10 +37,12 @@
 .homeSubtitle {
     font-family: 'General Sans regular';
     color: #FFF;
-    font-size: 23px;
+    font-size: 17px;
     font-style: normal;
     font-weight: 500;
     line-height: 132%; /* 30.36px */
+    text-align: left;
+    margin: auto;
 }
 
 @supports(object-fit: cover){
@@ -65,15 +67,22 @@
     
     .homeTitle {
         font-size: 58px;
+        letter-spacing: -1.8px;
     }
     .homeDescription { 
-        top: 60%;
+        top: 63%;
+    }
+    .homeSubtitle{
+        font-size: 23px;
+
     }
 
 }
 
-@media (min-width: 1400px) {    
-    .homeDescription { 
-        top: 70%;
+@media (min-width: 1600px){
+    
+    .homeTitle {
+        margin: 0;
     }
+
 }
