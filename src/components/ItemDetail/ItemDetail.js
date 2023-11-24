@@ -2,8 +2,14 @@ import React, { useState } from 'react'
 import './ItemDetail.css'
 import Carousel from 'react-bootstrap/Carousel';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/keyboard';
+import 'swiper/css/mousewheel';
+import { Keyboard, Mousewheel } from 'swiper/modules'; // Importa el módulo Keyboard
+
 
 function ItemDetail({dataItem, category, allItems}) {
+  
 
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -18,7 +24,7 @@ function ItemDetail({dataItem, category, allItems}) {
   
   const handleClick = (e) => {
     setSelectedItem(e);
-    setActiveIndex(0); // Reiniciar el índice activo al cambiar de máquina
+    setActiveIndex(0);
   }
   
   return (
@@ -36,6 +42,9 @@ function ItemDetail({dataItem, category, allItems}) {
               spaceBetween: 3,
             },
           }}
+          modules={[Keyboard, Mousewheel]} // Alternativamente, puedes pasar los módulos directamente al componente Swiper
+          keyboard={{ enabled: true }} // Configura las opciones del módulo Keyboard según sea necesario
+    
         >
         {allItems
           .filter((e) => category === 'Todos los modelos' || (category === e.divisor))

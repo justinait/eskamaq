@@ -4,7 +4,6 @@ import Item from '../Item/Item';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { useParams } from 'react-router-dom';
-// import { Modal } from 'react-bootstrap';
 import Modal from 'react-bootstrap/Modal';
 import ItemDetail from '../ItemDetail/ItemDetail';
 

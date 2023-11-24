@@ -67,15 +67,18 @@
 
 }
 
+@media (min-width: 600px){
+
+    .brandingLogo {
+        width: 20vw;
+        margin: 8% 0;
+    }
+}
 @media (min-width: 768px){
     .categoryByMachine {
         flex-direction: row;
         margin: 5% 0 0 5%;
         max-width: 100%;
-    }
-    .brandingLogo {
-        width: 20vw;
-        margin: 8% 0;
     }
  
     .toBig {
