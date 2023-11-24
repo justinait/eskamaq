@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/keyboard';
 import 'swiper/css/mousewheel';
-import { Keyboard, Mousewheel } from 'swiper/modules'; // Importa el módulo Keyboard
+import { Keyboard, Mousewheel } from 'swiper/modules';
 
 
 function ItemDetail({dataItem, category, allItems}) {
@@ -42,9 +42,9 @@ function ItemDetail({dataItem, category, allItems}) {
               spaceBetween: 3,
             },
           }}
-          modules={[Keyboard, Mousewheel]} // Alternativamente, puedes pasar los módulos directamente al componente Swiper
-          keyboard={{ enabled: true }} // Configura las opciones del módulo Keyboard según sea necesario
-    
+          modules={[Keyboard, Mousewheel]}
+          keyboard={{ enabled: true }}
+          mousewheel={{enabled:true}}
         >
         {allItems
           .filter((e) => category === 'Todos los modelos' || (category === e.divisor))
