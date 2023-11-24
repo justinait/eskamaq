@@ -77,8 +77,8 @@
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1600px) {
     .itemContainer {
-        height: 600px;
+        height: 580px;
     }
 }
