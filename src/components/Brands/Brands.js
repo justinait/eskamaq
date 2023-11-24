@@ -205,12 +205,13 @@ function Brands({ brandArray }) {
                   .filter((e) => selectedCategory === 'Todos los modelos' || (gopfert && selectedCategory === e.divisor))
                   .map((e, i) => (
                     <SwiperSlide key={i} className='swiperSlide'>
-                      <div onClick={()=> handleClick(e)}>
-                        <Item dataItem={e}/>
+                      <div onClick={() => handleClick(e)} style={gopfert ? { cursor: 'pointer' } : null}>
+                        <Item dataItem={e} />
                       </div>
                     </SwiperSlide>
                   ))
                 }
+
                 
                 { gopfert && selectedItem && (
                   <Modal show={showModal} onHide={handleClose}>
