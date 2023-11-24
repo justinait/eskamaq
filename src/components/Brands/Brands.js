@@ -3,8 +3,10 @@ import './Brands.css';
 import Item from '../Item/Item';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import 'swiper/css/keyboard';
+import 'swiper/css/mousewheel';
+import { Keyboard, Mousewheel } from 'swiper/modules';
 import { useParams } from 'react-router-dom';
-// import { Modal } from 'react-bootstrap';
 import Modal from 'react-bootstrap/Modal';
 import ItemDetail from '../ItemDetail/ItemDetail';
 
@@ -195,6 +197,9 @@ function Brands({ brandArray }) {
                     slidesPerView: 3.3,
                   }
                 }}
+                modules={[Keyboard, Mousewheel]}
+                keyboard={{ enabled: true }}
+                mousewheel={{enabled:true}}
               >
                 {valuesExceptLast
                   .filter((e) => selectedCategory === 'Todos los modelos' || (gopfert && selectedCategory === e.divisor))
