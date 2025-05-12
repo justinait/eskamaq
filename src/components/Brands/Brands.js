@@ -64,6 +64,7 @@ function Brands({ brandArray }) {
       setGopfert(true);
     } else {
       setGopfert(false);
+      setSelectedCategory('Todos los modelos');
     }
   }, [brand]);
 
