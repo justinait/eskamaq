@@ -3,8 +3,10 @@ import './Brands.css';
 import Item from '../Item/Item';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import 'swiper/css/keyboard';
+import 'swiper/css/mousewheel';
+import { Keyboard, Mousewheel } from 'swiper/modules';
 import { useParams } from 'react-router-dom';
-// import { Modal } from 'react-bootstrap';
 import Modal from 'react-bootstrap/Modal';
 import ItemDetail from '../ItemDetail/ItemDetail';
 
@@ -106,7 +108,7 @@ function Brands({ brandArray }) {
             break;
           case 'JBMachinery':
             brandToRender = <h3>{dataBranding[4].name}</h3>;
-            logoBrandToRender = <img className='brandingLogo' src={dataBranding[4].logo} alt={dataBranding[4].name} />
+            logoBrandToRender = <img className='brandingLogo toBig' src={dataBranding[4].logo} alt={dataBranding[4].name} />
             webBrand = dataBranding[4].web;
             descriptionBrand = dataBranding[4].description;
             textDescriptionBrand = dataBranding[4].textDescription;
@@ -147,7 +149,7 @@ function Brands({ brandArray }) {
 
             {/* categorys */}
             {Array.isArray(machines) ? (
-              <div style={{ marginLeft: '10%' }}>
+              <div>
                 {machines.map((e, index) => (
                   <button
                     key={index}
@@ -159,7 +161,7 @@ function Brands({ brandArray }) {
                 ))}
               </div>
             ) : (
-              <h3 className='brandsModel'>Todos los modelos</h3>
+              <h3 className='allModels'>Todos los modelos</h3>
             )}
 
 
@@ -195,17 +197,21 @@ function Brands({ brandArray }) {
                     slidesPerView: 3.3,
                   }
                 }}
+                modules={[Keyboard, Mousewheel]}
+                keyboard={{ enabled: true }}
+                mousewheel={{enabled:true}}
               >
                 {valuesExceptLast
                   .filter((e) => selectedCategory === 'Todos los modelos' || (gopfert && selectedCategory === e.divisor))
                   .map((e, i) => (
                     <SwiperSlide key={i} className='swiperSlide'>
-                      <div onClick={()=> handleClick(e)}>
-                        <Item dataItem={e}/>
+                      <div onClick={() => handleClick(e)} style={gopfert ? { cursor: 'pointer' } : null}>
+                        <Item dataItem={e} />
                       </div>
                     </SwiperSlide>
                   ))
                 }
+
                 
                 { gopfert && selectedItem && (
                   <Modal show={showModal} onHide={handleClose}>

@@ -2,9 +2,17 @@ import React, { useState } from 'react'
 import './ItemDetail.css'
 import Carousel from 'react-bootstrap/Carousel';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/keyboard';
+import 'swiper/css/mousewheel';
+import { Keyboard, Mousewheel } from 'swiper/modules';
+
 
 function ItemDetail({dataItem, category, allItems}) {
   
+
+  const [activeIndex, setActiveIndex] = useState(0);
+
   let objectLength = dataItem && Object.keys(dataItem).length;
   let array=[];
   for(let i=1; i<objectLength; i++){
@@ -15,9 +23,10 @@ function ItemDetail({dataItem, category, allItems}) {
   const {image, name, machine, description, dataName, technicalData} = selectedItem;
   
   const handleClick = (e) => {
-    setSelectedItem(e)
+    setSelectedItem(e);
+    setActiveIndex(0);
   }
-
+  
   return (
     <div>
       <div className=''>
@@ -33,13 +42,15 @@ function ItemDetail({dataItem, category, allItems}) {
               spaceBetween: 3,
             },
           }}
+          modules={[Keyboard, Mousewheel]}
+          keyboard={{ enabled: true }}
+          mousewheel={{enabled:true}}
         >
         {allItems
           .filter((e) => category === 'Todos los modelos' || (category === e.divisor))
           .map((e, i) => (
             <SwiperSlide key={i} className='swiperSlide'>
               <p onClick={()=> handleClick(e)} className={`modalCategorys ${e.name == selectedItem.name ? 'modalCategorysActive' : ''}`}>{e.name}</p>
-                
             </SwiperSlide>
           ))
         }
@@ -50,15 +61,16 @@ function ItemDetail({dataItem, category, allItems}) {
 
         <div className='detailImageContainer'>
           {Array.isArray(image) && (
-            <Carousel interval={null}>
-              {image.map((e, i)=> {
+            <Carousel activeIndex={activeIndex} onSelect={(selectedIndex, e) => setActiveIndex(selectedIndex)}>
+              {image.map((e, i) => {
                 return (
-                  <Carousel.Item>
-                    <img src={e} alt={name} className='detailImage' key={i}/>
+                  <Carousel.Item key={i}>
+                    <img src={e} alt={name} className='detailImage' />
                   </Carousel.Item>
-                )
+                );
               })}
             </Carousel>
+
           )}
         </div>
 

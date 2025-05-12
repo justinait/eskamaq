@@ -56,7 +56,7 @@ function Footer() {
         
             <div className='svenFooter'>
                 <img src='./logoSK.png' alt="Sven Klockner" className='logoFooter' />
-                Sven Kloeckner
+                Sven Klockner
             </div>
         
 
