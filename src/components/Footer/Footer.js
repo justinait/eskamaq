@@ -9,7 +9,7 @@ import Tooltip from 'react-bootstrap/Tooltip';
 function Footer() {
     
     const handleClick = () => {
-        navigator.clipboard.writeText('sven@eskamaq.com')
+        navigator.clipboard.writeText('info@eskamaq.com')
     }
     const renderTooltip = (props) => (
         <Tooltip id="button-tooltip" {...props}>
@@ -35,14 +35,14 @@ function Footer() {
                         fontSize='small'
                     />
                 </OverlayTrigger>
-                    Sven@eskamaq.com
+                    info@eskamaq.com
                 </div>
                 
                 <div className='socialMedia'>
-                    <a href='https://wa.link/znoo7b' target="_blank">
+                    <a href='https://wa.link/7l0q5g' target="_blank">
                         <WhatsAppIcon className='socialMediaIcon' fontSize='small' />
                     </a>
-                    +54 9 343 503 4079 
+                    +54 343 508 0659
                 </div>
                 
                 <div className='socialMedia linkedin'>
