@@ -38,25 +38,25 @@ function Footer() {
                     info@eskamaq.com
                 </div>
                 
-                <div className='socialMedia'>
+                {/* <div className='socialMedia'>
                     <a href='https://wa.link/7l0q5g' target="_blank">
                         <WhatsAppIcon className='socialMediaIcon' fontSize='small' />
                     </a>
                     +54 343 508 0659
-                </div>
+                </div> */}
                 
-                <div className='socialMedia linkedin'>
+                {/* <div className='socialMedia linkedin'>
                     <a href='https://www.linkedin.com/in/sven-kloeckner-833728131/' target="_blank">
                         <LinkedInIcon className='socialMediaIcon' fontSize='small' />
                     </a>
                     linkedin.com/in/sven-kloeckner-833728131
-                </div>
+                </div> */}
         
             </div>
         
             <div className='svenFooter'>
-                <img src='./logoSK.png' alt="Sven Klockner" className='logoFooter' />
-                Sven Klockner
+                <img src='./Logo-Blanco.png' alt="Eskamaq" className='logoFooter' />
+                {/* Sven Klockner */}
             </div>
         
 
